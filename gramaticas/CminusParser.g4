@@ -37,7 +37,7 @@ statement: expression_stmt | compound_stmt | selection_stmt | iteration_stmt | r
 expression_stmt: (expression PUNTOCOMA) | PUNTOCOMA;
 
 selection_stmt: (IF PARENTESIS_ABRIR expression PARENTESIS_CERRAR statement) | 
-                (IF PARENTESIS_ABRIR expression PARENTESIS_CERRAR ELSE statement);
+                (IF PARENTESIS_ABRIR expression PARENTESIS_CERRAR statement ELSE statement);
 
 iteration_stmt: WHILE PARENTESIS_ABRIR expression PARENTESIS_CERRAR statement;
 
