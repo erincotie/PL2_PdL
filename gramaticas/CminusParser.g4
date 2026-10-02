@@ -42,8 +42,8 @@ selection_stmt: (IF PARENTESIS_ABRIR expression PARENTESIS_CERRAR statement) |
 iteration_stmt: WHILE PARENTESIS_ABRIR expression PARENTESIS_CERRAR statement;
 
 //si se puede implementar la recursividad, como en el ejemplo 06 es necesario
-// modificar esta linea para permitir return funcion()
-return_stmt: (RETURN PUNTOCOMA) | (RETURN expression);
+// modificar esta linea para permitir return funcion(args) -> call
+return_stmt: (RETURN PUNTOCOMA) | (RETURN (expression | call) PUNTOCOMA);
 
 expression: (var ASIG expression) | simple_expression;
 
