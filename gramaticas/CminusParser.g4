@@ -16,7 +16,8 @@ comentario: COMENTARIOABRIR COMENTARIOCERRAR;
 var_declaration: (type_specifier ID PUNTOCOMA )| 
                 (type_specifier ID CORCH_ABRIR NUM CORCH_CERRAR PUNTOCOMA);
 
-type_specifier: INT | VOID;
+//Ampliacion para incluir el tipo char y el tipo bool
+type_specifier: INT | VOID | CHAR | BOOL;
 
 fun_declaration: type_specifier ID PARENTESIS_ABRIR params PARENTESIS_CERRAR compound_stmt;
 
@@ -38,7 +39,8 @@ expression_stmt: (expression PUNTOCOMA) | PUNTOCOMA;
 
 selection_stmt: IF PARENTESIS_ABRIR expression PARENTESIS_CERRAR statement (ELSE statement)?;
 
-iteration_stmt: WHILE PARENTESIS_ABRIR expression PARENTESIS_CERRAR 
+//Ampliacion con el uso del bucle for
+iteration_stmt: (WHILE | FOR) PARENTESIS_ABRIR expression PARENTESIS_CERRAR 
                 ((LLAVES_ABRIR statement LLAVES_CERRAR) | statement);
 
 //si se puede implementar la recursividad, como en el ejemplo 06 es necesario
@@ -51,7 +53,9 @@ var: ID | (ID CORCH_ABRIR expression CORCH_CERRAR);
 
 simple_expression: (add_expression relop add_expression) (relop add_expression)*| add_expression;
 
-relop: MAYOR | MAYORIGUAL | MENOR | MENORIGUAL | IGUALDAD | NOIGUAL;
+//Ampliacion para considerar los operadores logicos, por ahora estan en la misma prioridad
+// que el resto de operaciones de comparacion, pero esto podria cambiar si se indica en el diseño
+relop: MAYOR | MAYORIGUAL | MENOR | MENORIGUAL | IGUALDAD | NOIGUAL | OP_AND | OP_OR | OP_NOT;
 
 add_expression: term (addop term)*;
 
@@ -59,9 +63,11 @@ addop: SUMA | RESTA;
 
 term: factor(mulop factor)*;
 
-mulop: MULT | DIV;
+// Ampliacion con el uso del modulo -> se añade en las operaciones de 
+// multiplicacion y division porque tiene la misma prioridad
+mulop: MULT | DIV | MODULO;
 
-factor: (PARENTESIS_ABRIR expression PARENTESIS_CERRAR) | var | call | NUM;
+factor: (PARENTESIS_ABRIR expression PARENTESIS_CERRAR) | var | call | NUM | TRUE | CHAR| FALSE;
 
 call: (ID |INPUT | OUTPUT) PARENTESIS_ABRIR args PARENTESIS_CERRAR;
 

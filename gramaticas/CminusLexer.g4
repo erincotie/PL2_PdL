@@ -11,11 +11,19 @@ INT: 'int';
 RETURN: 'return';
 VOID: 'void';
 WHILE: 'while';
+//Ampliacion con el uso del bucle for y el tipo char y bool
+FOR: 'for';
+CHAR_TIPO: 'char';
+BOOL: 'bool';
 INPUT: 'input';
 OUTPUT: 'output';
+TRUE: 'true';
+FALSE: 'false';
 
 //Otros tokens especiales serán los ID y los NUM que se componen de fragmentos
 
+//Ampliacion para añadir un caracter, que debe estar entre comillas simples
+CHAR: '\'' . '\'';
 fragment LETRA: [a-zA-Z];
 fragment DIGITO: [0-9];
 ID: LETRA(LETRA)*;
@@ -27,12 +35,18 @@ SUMA: '+';
 RESTA: '-';
 MULT: '*';
 DIV: '/';
+//Ampliacion con el uso del modulo
+MODULO: '%';
 MENORIGUAL: '<=';
 MENOR: '<';
 MAYORIGUAL: '>=';
 MAYOR: '>';
 IGUALDAD: '==';
 NOIGUAL: '!=';
+//Amplacion para incluir los operadores logicos
+OP_AND: '&&';
+OP_OR: '||';
+OP_NOT:'!';
 ASIG: '=';
 PUNTOCOMA: ';';
 COMA: ',';
