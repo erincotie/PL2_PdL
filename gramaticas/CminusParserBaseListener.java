@@ -208,13 +208,37 @@ public class CminusParserBaseListener implements CminusParserListener {
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterIteration_stmt(CminusParser.Iteration_stmtContext ctx) { }
+	@Override public void enterWhile_stmt(CminusParser.While_stmtContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitIteration_stmt(CminusParser.Iteration_stmtContext ctx) { }
+	@Override public void exitWhile_stmt(CminusParser.While_stmtContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterFor_stmt(CminusParser.For_stmtContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitFor_stmt(CminusParser.For_stmtContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterCondiciones_for_stmt(CminusParser.Condiciones_for_stmtContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitCondiciones_for_stmt(CminusParser.Condiciones_for_stmtContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *

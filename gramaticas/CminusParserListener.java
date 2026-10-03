@@ -167,15 +167,35 @@ public interface CminusParserListener extends ParseTreeListener {
 	 */
 	void exitSelection_stmt(CminusParser.Selection_stmtContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link CminusParser#iteration_stmt}.
+	 * Enter a parse tree produced by {@link CminusParser#while_stmt}.
 	 * @param ctx the parse tree
 	 */
-	void enterIteration_stmt(CminusParser.Iteration_stmtContext ctx);
+	void enterWhile_stmt(CminusParser.While_stmtContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link CminusParser#iteration_stmt}.
+	 * Exit a parse tree produced by {@link CminusParser#while_stmt}.
 	 * @param ctx the parse tree
 	 */
-	void exitIteration_stmt(CminusParser.Iteration_stmtContext ctx);
+	void exitWhile_stmt(CminusParser.While_stmtContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link CminusParser#for_stmt}.
+	 * @param ctx the parse tree
+	 */
+	void enterFor_stmt(CminusParser.For_stmtContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link CminusParser#for_stmt}.
+	 * @param ctx the parse tree
+	 */
+	void exitFor_stmt(CminusParser.For_stmtContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link CminusParser#condiciones_for_stmt}.
+	 * @param ctx the parse tree
+	 */
+	void enterCondiciones_for_stmt(CminusParser.Condiciones_for_stmtContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link CminusParser#condiciones_for_stmt}.
+	 * @param ctx the parse tree
+	 */
+	void exitCondiciones_for_stmt(CminusParser.Condiciones_for_stmtContext ctx);
 	/**
 	 * Enter a parse tree produced by {@link CminusParser#return_stmt}.
 	 * @param ctx the parse tree

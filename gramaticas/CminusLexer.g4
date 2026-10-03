@@ -23,7 +23,7 @@ FALSE: 'false';
 //Otros tokens especiales serán los ID y los NUM que se componen de fragmentos
 
 //Ampliacion para añadir un caracter, que debe estar entre comillas simples
-CHAR: '\'' . '\'';
+CHAR: '\'' ('\\'. | .) '\'';
 fragment LETRA: [a-zA-Z];
 fragment DIGITO: [0-9];
 ID: LETRA(LETRA)*;
