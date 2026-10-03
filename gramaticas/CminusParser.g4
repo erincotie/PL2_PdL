@@ -36,10 +36,10 @@ statement: expression_stmt | compound_stmt | selection_stmt | iteration_stmt | r
 
 expression_stmt: (expression PUNTOCOMA) | PUNTOCOMA;
 
-selection_stmt: (IF PARENTESIS_ABRIR expression PARENTESIS_CERRAR statement) | 
-                (IF PARENTESIS_ABRIR expression PARENTESIS_CERRAR statement ELSE statement);
+selection_stmt: IF PARENTESIS_ABRIR expression PARENTESIS_CERRAR statement (ELSE statement)?;
 
-iteration_stmt: WHILE PARENTESIS_ABRIR expression PARENTESIS_CERRAR statement;
+iteration_stmt: WHILE PARENTESIS_ABRIR expression PARENTESIS_CERRAR 
+                ((LLAVES_ABRIR statement LLAVES_CERRAR) | statement);
 
 //si se puede implementar la recursividad, como en el ejemplo 06 es necesario
 // modificar esta linea para permitir return funcion(args) -> call
@@ -49,7 +49,7 @@ expression: (var ASIG expression) | simple_expression;
 
 var: ID | (ID CORCH_ABRIR expression CORCH_CERRAR);
 
-simple_expression: (add_expression relop add_expression) | add_expression;
+simple_expression: (add_expression relop add_expression) (relop add_expression)*| add_expression;
 
 relop: MAYOR | MAYORIGUAL | MENOR | MENORIGUAL | IGUALDAD | NOIGUAL;
 
