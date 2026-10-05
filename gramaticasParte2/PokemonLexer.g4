@@ -14,6 +14,7 @@ EXCLAMACION: '!';
 //Bloque inicial -> Setup y Turnos
 SETUP: 'Setup';
 TURN: 'turn';
+TURN_MAYUS: 'Turn';
 
 //Robo de cartas
 DREW: 'drew';
