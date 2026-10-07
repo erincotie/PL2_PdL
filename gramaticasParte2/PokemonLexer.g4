@@ -11,10 +11,20 @@ PARENTESIS_CERRAR: ')';
 EXCLAMACION: '!';
 
 //Palabras reservadas
-//Bloque inicial -> Setup y Turnos
+//Bloque inicial -> Setup, coin toss y decidir Turnos
 SETUP: 'Setup';
 TURN: 'turn';
 TURN_MAYUS: 'Turn';
+CHOSE: 'chose';
+HEADS: 'heads';
+TAILS: 'tails';
+COIN: 'coin';
+FLIP: 'flip';
+WON: 'won';
+TOSS: 'toss';
+DECIDED: 'decided';
+GO:'go';
+FIRST: 'first';
 
 //Robo de cartas
 DREW: 'drew';
@@ -26,6 +36,7 @@ FOR: 'for';
 THE: 'the';
 OPENING: 'opening';
 HAND: 'hand';
+SEVEN: '7';
 //faltan para los nombres de las cartas
 
 //Jugar una carta
@@ -54,8 +65,7 @@ TOTAL: 'Total';
 
 //Consecuencias del combate
 WAS: 'was';
-KNOCKED: 'Knocked';
-OUT: 'Out';
+K_O: 'Knocked Out !';
 TOOK: 'took';
 PRIZE: 'Prize';
 A_MAYUS: 'A';
