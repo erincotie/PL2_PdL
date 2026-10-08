@@ -91,6 +91,8 @@ ALL: 'All';
 WERE: 'were';
 TAKEN: 'taken';
 WINS: 'wins';
+OPPONENT: 'opponent';
+CONCEDED: 'conceded';
 
 
 

@@ -48,8 +48,6 @@ for_stmt: FOR PARENTESIS_ABRIR condiciones_for_stmt PARENTESIS_CERRAR
 
 condiciones_for_stmt: var ASIG expression PUNTOCOMA var relop expression PUNTOCOMA var ASIG expression;
 
-//si se puede implementar la recursividad, como en el ejemplo 06 es necesario
-// modificar esta linea para permitir return funcion(args) -> call
 return_stmt: (RETURN PUNTOCOMA) | (RETURN (expression | call) PUNTOCOMA);
 
 expression: (var ASIG expression) | simple_expression;
@@ -62,7 +60,7 @@ simple_expression: (add_expression relop add_expression) (relop add_expression)*
 // que el resto de operaciones de comparacion, pero esto podria cambiar si se indica en el diseño
 relop: MAYOR | MAYORIGUAL | MENOR | MENORIGUAL | IGUALDAD | NOIGUAL | OP_AND | OP_OR;
 
-add_expression: term (addop term)*;
+add_expression: term addop term;
 
 addop: SUMA | RESTA;
 
