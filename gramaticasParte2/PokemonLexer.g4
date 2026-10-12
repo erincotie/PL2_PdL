@@ -157,7 +157,7 @@ ULTRA_BALL: 'Ultra Ball';
 BLACK_BELT: 'Black Belt''s Training';
 BOSS: 'Boss''s Orders';
 DAWN: 'Dawn';
-HILDS: 'Hilda';
+HILDA: 'Hilda';
 LILLIE: 'Lillie''s Determination';
 TEAM_ROCKET: 'Team Rocket''s Petrel';
 //Energy
