@@ -94,6 +94,44 @@ WINS: 'wins';
 OPPONENT: 'opponent';
 CONCEDED: 'conceded';
 
+//CARTAS DEL MAZO MEW EX
+//Pokemons
+LILLIE_CLEFAIRY: 'Lillie''s Clefairy ex';
+MEW: 'Mew ex';
+DEINO: 'Deino';
+ZWEILOUS: 'Zweilous';
+HYDREIGON: 'Hydreigon ex';
+FEZANDIPITI: 'Fezandipiti ex';
+GENESECT: 'Genesect ex';
+STEVEN_BELDUM: 'Steven''s Beldum';
+STEVEN_METANG: 'Steven''s Metang';
+STEVEN_METAGROSS: 'Steven''s Metagross ex';
+LATIOS: 'Latios';
+MEGA_LATIAS: 'Mega Latias ex';
+MEOWTH: 'Meowth ex';
+//Items
+BUDDY_POFFIN: 'Buddy-Buddy Poffin';
+ENERGY_RECYCLER: 'Energy Recycler';
+NIGHT_STRETCHER: 'Night Stretcher';
+POKE_PAD: 'Poké Pad'; 
+RARE_CANDY: 'Rare Candy';
+SCRAMBLE_SWITCH: 'Scramble Switch';
+ULTRA_BALL: 'Ultra Ball';
+//Supporter
+BLACK_BELT: 'Black Belt''s Training';
+BOSS: 'Boss''s Orders';
+DAWN: 'Dawn';
+HILDS: 'Hilda';
+LILLIE: 'Lillie''s Determination';
+TEAM_ROCKET: 'Team Rocket''s Petrel';
+//Energy
+PRISM_ENERGY: 'Prism Energy';
+BASIC_DARK: 'Basic Dark Energy';
+BASIC_METALLIC: 'Basic Metallic Energy';
+BASIC_PSYCHIC: 'Basic Psychic Energy';
+
+
+
 
 
 //Números y letras
