@@ -95,20 +95,56 @@ OPPONENT: 'opponent';
 CONCEDED: 'conceded';
 
 //CARTAS DEL MAZO MEW EX
-//Pokemons
+//Pokemons junto a sus ataques
 LILLIE_CLEFAIRY: 'Lillie''s Clefairy ex';
+FAIRY_ZONE: 'Fairy Zone';
+FULL_MOON: 'Full Moon Rondo';
+
 MEW: 'Mew ex';
+MEMORY: 'Mmeory Helix';
+TELEPORTATION: 'Teleportation Burst';
+
 DEINO: 'Deino';
+STOMP_OFF: 'Stomp Off';
+BITE: 'Bite';
+
 ZWEILOUS: 'Zweilous';
+DARKNESS_FANG: 'Darkness Fang';
+
 HYDREIGON: 'Hydreigon ex';
+CRASHING_HEADBUTT: 'Crashing Headbutt';
+OBSIDIAN: 'Obsidian';
+
 FEZANDIPITI: 'Fezandipiti ex';
+FLIP_SCRIPT: 'Flip the Script';
+CRUEL_ARROW: 'Cruel Arrow';
+
 GENESECT: 'Genesect ex';
+METALLIC_SIGNAL: 'Metallic Signal';
+PROTECT_CHARGE: 'Protect Charge';
+
 STEVEN_BELDUM: 'Steven''s Beldum';
+RAM: 'Ram';
+
 STEVEN_METANG: 'Steven''s Metang';
+METAL_SLASH: 'Metal Slash';
+
 STEVEN_METAGROSS: 'Steven''s Metagross ex';
+X_BOOT: 'X-Boot';
+METAL_STOMP: 'Metal Stomp';
+
 LATIOS: 'Latios';
+LUSTROUS_ASSIST: 'Lustrous Assist';
+DRAGON_CLAW: 'Dragon Claw';
+
 MEGA_LATIAS: 'Mega Latias ex';
+STRAFE: 'Strafe';
+ILLUSORY_IMPULSE: 'Illusory Impulse';
+
 MEOWTH: 'Meowth ex';
+LAST_DITCH: 'Last-Ditch Catch';
+TUCK_TAIL: 'Tuck Tail';
+
 //Items
 BUDDY_POFFIN: 'Buddy-Buddy Poffin';
 ENERGY_RECYCLER: 'Energy Recycler';
@@ -131,14 +167,34 @@ BASIC_METALLIC: 'Basic Metallic Energy';
 BASIC_PSYCHIC: 'Basic Psychic Energy';
 
 //CARTAS DEL MAZO ZOROARK EX
-//Pokemons
+//Pokemons y sus ataques
 N_DARUMAKA: 'N''s Darumaka';
+ROLLING_TACKLE: 'Rollong Tackle';
+FLARE: 'Flare';
+
 N_DARMANITAN: 'N''s Darmanitan';
+BACK_DRAFT: 'Back Draft';
+FLAMEBODY_CANNON: 'Flamebody Cannon';
+
 N_ZORUA: 'N''s Zorua';
+SCRATCH: 'Scratch';
+
 N_ZOROARK: 'N''s Zoroark ex';
+TRADE: 'Trade';
+NIGHT_JOKER: 'Night Joker';
+
 PECHARUNT: 'Pecharunt ex';
+SUBJUGATING_CHAINS: 'Subjugating Chains';
+IRRITATED_OUTBURST: 'Irritated Outburst';
+
 N_RESHIRAM: 'N''s Reshiram';
+POWERFUL_RAGE: 'Powerful Rage';
+VIRTUOUS_FLAME: 'Virtuous Flame';
+
 N_ZEKROM: 'N''s Zekrom';
+SHRED: 'Shred';
+RAMPAGING_THUNDER: 'Rampaging Thunder';
+
 //Items
 N_PP: 'N''s PP Up';
 TICKET: 'Redeemable Ticket';
