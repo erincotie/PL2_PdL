@@ -130,6 +130,29 @@ BASIC_DARK: 'Basic Dark Energy';
 BASIC_METALLIC: 'Basic Metallic Energy';
 BASIC_PSYCHIC: 'Basic Psychic Energy';
 
+//CARTAS DEL MAZO ZOROARK EX
+//Pokemons
+N_DARUMAKA: 'N''s Darumaka';
+N_DARMANITAN: 'N''s Darmanitan';
+N_ZORUA: 'N''s Zorua';
+N_ZOROARK: 'N''s Zoroark ex';
+PECHARUNT: 'Pecharunt ex';
+N_RESHIRAM: 'N''s Reshiram';
+N_ZEKROM: 'N''s Zekrom';
+//Items
+N_PP: 'N''s PP Up';
+TICKET: 'Redeemable Ticket';
+N_CASTLE: 'N''s Castle';
+//Supporter
+CYRANO: 'Cyrano';
+JANINE: 'Janine''s Secret Art';
+JUDGE: 'Judge';
+AIR_BALLON: 'Air Ballon';
+BINDING_MOCHI: 'Binding Mochi';
+HERO_CAPE: 'Hero''s Cape';
+POWERGLASS: 'Powerglass';
+
+
 
 
 
