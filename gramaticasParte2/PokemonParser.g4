@@ -5,7 +5,7 @@ options{
     language= Java;
 }
 
-program: setup end;
+program: setup end; //program: setup end EOF;  usa EOF cuando quieras asegurarte de que todo el archivo es válido de principio a fin.
 
 setup: SETUP coin_toss turn_decision draw_cards_init draw_cards_init play_cards*;
 

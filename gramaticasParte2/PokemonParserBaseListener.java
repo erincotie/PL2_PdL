@@ -76,13 +76,13 @@ public class PokemonParserBaseListener implements PokemonParserListener {
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterDraw_cards(PokemonParser.Draw_cardsContext ctx) { }
+	@Override public void enterDraw_cards_init(PokemonParser.Draw_cards_initContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitDraw_cards(PokemonParser.Draw_cardsContext ctx) { }
+	@Override public void exitDraw_cards_init(PokemonParser.Draw_cards_initContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
@@ -100,6 +100,30 @@ public class PokemonParserBaseListener implements PokemonParserListener {
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
+	@Override public void enterPlay_cards(PokemonParser.Play_cardsContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitPlay_cards(PokemonParser.Play_cardsContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterCard_name(PokemonParser.Card_nameContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitCard_name(PokemonParser.Card_nameContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
 	@Override public void enterEnd(PokemonParser.EndContext ctx) { }
 	/**
 	 * {@inheritDoc}
@@ -107,6 +131,30 @@ public class PokemonParserBaseListener implements PokemonParserListener {
 	 * <p>The default implementation does nothing.</p>
 	 */
 	@Override public void exitEnd(PokemonParser.EndContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterConcede(PokemonParser.ConcedeContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitConcede(PokemonParser.ConcedeContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterPrize_cards(PokemonParser.Prize_cardsContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitPrize_cards(PokemonParser.Prize_cardsContext ctx) { }
 
 	/**
 	 * {@inheritDoc}

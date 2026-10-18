@@ -1,4 +1,4 @@
-// Generated from c:/antlr/PL1_parte1_PdL/gramaticasParte2/PokemonParser.g4 by ANTLR 4.13.1
+// Generated from c:/UNIVERSIDAD/tercero/semestre1/procLenguaje/lab/pl1Cod/PL1_parte1_PdL/gramaticasParte2/PokemonParser.g4 by ANTLR 4.13.1
 import org.antlr.v4.runtime.atn.*;
 import org.antlr.v4.runtime.dfa.DFA;
 import org.antlr.v4.runtime.*;
@@ -25,8 +25,8 @@ public class PokemonParser extends Parser {
 		DAMAGE_MAYUS=43, BASE=44, ITEM=45, TOTAL=46, WAS=47, K_O=48, TOOK=49, 
 		PRIZE=50, A_MAYUS=51, ADDED=52, SWITCH=53, SWITCHED=54, WITH=55, BECOME=56, 
 		POKEMON=57, RETREATED=58, SHUFFLED=59, THEIR=60, DECK=61, MOVED=62, ENDED=63, 
-		ALL=64, WERE=65, TAKEN=66, WINS=67, NUM=68, ID=69, WS=70, OPPONENT=71, 
-		CONCEDED=72;
+		ALL=64, WERE=65, TAKEN=66, WINS=67, OPPONENT=68, CONCEDED=69, NUM=70, 
+		ID=71, WS=72;
 	public static final int
 		RULE_program = 0, RULE_setup = 1, RULE_coin_toss = 2, RULE_win_coin = 3, 
 		RULE_turn_decision = 4, RULE_draw_cards_init = 5, RULE_descripcion_cartas = 6, 
@@ -51,7 +51,7 @@ public class PokemonParser extends Parser {
 			"'Base'", "'Item'", "'Total'", "'was'", "'Knocked Out !'", "'took'", 
 			"'Prize'", "'A'", "'added'", "'Switch'", "'switched'", "'with'", "'become'", 
 			"'Pokemon'", "'retreated'", "'shuffled'", "'their'", "'deck'", "'moved'", 
-			"'ended'", "'All'", "'were'", "'taken'", "'wins'"
+			"'ended'", "'All'", "'were'", "'taken'", "'wins'", "'opponent'", "'conceded'"
 		};
 	}
 	private static final String[] _LITERAL_NAMES = makeLiteralNames();
@@ -65,8 +65,8 @@ public class PokemonParser extends Parser {
 			"ON", "EVOLVED", "USED", "DAMAGE", "DAMAGE_MAYUS", "BASE", "ITEM", "TOTAL", 
 			"WAS", "K_O", "TOOK", "PRIZE", "A_MAYUS", "ADDED", "SWITCH", "SWITCHED", 
 			"WITH", "BECOME", "POKEMON", "RETREATED", "SHUFFLED", "THEIR", "DECK", 
-			"MOVED", "ENDED", "ALL", "WERE", "TAKEN", "WINS", "NUM", "ID", "WS", 
-			"OPPONENT", "CONCEDED"
+			"MOVED", "ENDED", "ALL", "WERE", "TAKEN", "WINS", "OPPONENT", "CONCEDED", 
+			"NUM", "ID", "WS"
 		};
 	}
 	private static final String[] _SYMBOLIC_NAMES = makeSymbolicNames();
@@ -782,23 +782,23 @@ public class PokemonParser extends Parser {
 		"\u0003\n\u0005\u0000\u001f#\u0003\n\u0005\u0000 \"\u0003\u000e\u0007\u0000"+
 		"! \u0001\u0000\u0000\u0000\"%\u0001\u0000\u0000\u0000#!\u0001\u0000\u0000"+
 		"\u0000#$\u0001\u0000\u0000\u0000$\u0003\u0001\u0000\u0000\u0000%#\u0001"+
-		"\u0000\u0000\u0000&\'\u0005E\u0000\u0000\'(\u0005\f\u0000\u0000()\u0007"+
+		"\u0000\u0000\u0000&\'\u0005G\u0000\u0000\'(\u0005\f\u0000\u0000()\u0007"+
 		"\u0000\u0000\u0000)*\u0005\u001b\u0000\u0000*+\u0005\u001c\u0000\u0000"+
 		"+,\u0005\u001d\u0000\u0000,-\u0005\u000f\u0000\u0000-.\u0005\u0010\u0000"+
 		"\u0000./\u0005\u0001\u0000\u0000/0\u0003\u0006\u0003\u00000\u0005\u0001"+
-		"\u0000\u0000\u000012\u0005E\u0000\u000023\u0005\u0011\u0000\u000034\u0005"+
+		"\u0000\u0000\u000012\u0005G\u0000\u000023\u0005\u0011\u0000\u000034\u0005"+
 		"\u001c\u0000\u000045\u0005\u000f\u0000\u000056\u0005\u0012\u0000\u0000"+
-		"67\u0005\u0001\u0000\u00007\u0007\u0001\u0000\u0000\u000089\u0005E\u0000"+
+		"67\u0005\u0001\u0000\u00007\u0007\u0001\u0000\u0000\u000089\u0005G\u0000"+
 		"\u00009:\u0005\u0013\u0000\u0000:;\u0005\"\u0000\u0000;<\u0005\u0014\u0000"+
 		"\u0000<=\u0005\u0015\u0000\u0000=>\u0005\u0001\u0000\u0000>\t\u0001\u0000"+
-		"\u0000\u0000?@\u0005E\u0000\u0000@A\u0005\u0016\u0000\u0000AB\u0005\u001f"+
+		"\u0000\u0000?@\u0005G\u0000\u0000@A\u0005\u0016\u0000\u0000AB\u0005\u001f"+
 		"\u0000\u0000BC\u0005\u001a\u0000\u0000CD\u0005\u001b\u0000\u0000DE\u0005"+
 		"\u001c\u0000\u0000EF\u0005\u001d\u0000\u0000FG\u0005\u001e\u0000\u0000"+
 		"GH\u0005\u0001\u0000\u0000HI\u0005\u0003\u0000\u0000IJ\u0005\u001f\u0000"+
 		"\u0000JK\u0005\u0017\u0000\u0000KL\u0005\u001a\u0000\u0000LN\u0005\u0001"+
 		"\u0000\u0000MO\u0003\f\u0006\u0000NM\u0001\u0000\u0000\u0000NO\u0001\u0000"+
 		"\u0000\u0000O\u000b\u0001\u0000\u0000\u0000PQ\u0005\u0004\u0000\u0000"+
-		"Q\r\u0001\u0000\u0000\u0000RS\u0005E\u0000\u0000ST\u0005 \u0000\u0000"+
+		"Q\r\u0001\u0000\u0000\u0000RS\u0005G\u0000\u0000ST\u0005 \u0000\u0000"+
 		"T\\\u0003\u0010\b\u0000UV\u0005\"\u0000\u0000VZ\u0005\u001c\u0000\u0000"+
 		"W[\u0005%\u0000\u0000XY\u0005#\u0000\u0000Y[\u0005$\u0000\u0000ZW\u0001"+
 		"\u0000\u0000\u0000ZX\u0001\u0000\u0000\u0000[]\u0001\u0000\u0000\u0000"+
@@ -806,9 +806,9 @@ public class PokemonParser extends Parser {
 		"\u0000^_\u0005\u0001\u0000\u0000_\u000f\u0001\u0000\u0000\u0000`a\u0001"+
 		"\u0000\u0000\u0000a\u0011\u0001\u0000\u0000\u0000be\u0003\u0014\n\u0000"+
 		"ce\u0003\u0016\u000b\u0000db\u0001\u0000\u0000\u0000dc\u0001\u0000\u0000"+
-		"\u0000ef\u0001\u0000\u0000\u0000fg\u0005E\u0000\u0000gh\u0005C\u0000\u0000"+
-		"hi\u0005\u0001\u0000\u0000i\u0013\u0001\u0000\u0000\u0000jk\u0005G\u0000"+
-		"\u0000kl\u0005H\u0000\u0000lm\u0005\u0001\u0000\u0000m\u0015\u0001\u0000"+
+		"\u0000ef\u0001\u0000\u0000\u0000fg\u0005G\u0000\u0000gh\u0005C\u0000\u0000"+
+		"hi\u0005\u0001\u0000\u0000i\u0013\u0001\u0000\u0000\u0000jk\u0005D\u0000"+
+		"\u0000kl\u0005E\u0000\u0000lm\u0005\u0001\u0000\u0000m\u0015\u0001\u0000"+
 		"\u0000\u0000no\u0005@\u0000\u0000op\u00052\u0000\u0000pq\u0005\u001a\u0000"+
 		"\u0000qr\u0005B\u0000\u0000rs\u0005\u0001\u0000\u0000s\u0017\u0001\u0000"+
 		"\u0000\u0000\u0005#NZ\\d";

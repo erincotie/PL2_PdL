@@ -57,15 +57,15 @@ public interface PokemonParserListener extends ParseTreeListener {
 	 */
 	void exitTurn_decision(PokemonParser.Turn_decisionContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link PokemonParser#draw_cards}.
+	 * Enter a parse tree produced by {@link PokemonParser#draw_cards_init}.
 	 * @param ctx the parse tree
 	 */
-	void enterDraw_cards(PokemonParser.Draw_cardsContext ctx);
+	void enterDraw_cards_init(PokemonParser.Draw_cards_initContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link PokemonParser#draw_cards}.
+	 * Exit a parse tree produced by {@link PokemonParser#draw_cards_init}.
 	 * @param ctx the parse tree
 	 */
-	void exitDraw_cards(PokemonParser.Draw_cardsContext ctx);
+	void exitDraw_cards_init(PokemonParser.Draw_cards_initContext ctx);
 	/**
 	 * Enter a parse tree produced by {@link PokemonParser#descripcion_cartas}.
 	 * @param ctx the parse tree
@@ -77,6 +77,26 @@ public interface PokemonParserListener extends ParseTreeListener {
 	 */
 	void exitDescripcion_cartas(PokemonParser.Descripcion_cartasContext ctx);
 	/**
+	 * Enter a parse tree produced by {@link PokemonParser#play_cards}.
+	 * @param ctx the parse tree
+	 */
+	void enterPlay_cards(PokemonParser.Play_cardsContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link PokemonParser#play_cards}.
+	 * @param ctx the parse tree
+	 */
+	void exitPlay_cards(PokemonParser.Play_cardsContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link PokemonParser#card_name}.
+	 * @param ctx the parse tree
+	 */
+	void enterCard_name(PokemonParser.Card_nameContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link PokemonParser#card_name}.
+	 * @param ctx the parse tree
+	 */
+	void exitCard_name(PokemonParser.Card_nameContext ctx);
+	/**
 	 * Enter a parse tree produced by {@link PokemonParser#end}.
 	 * @param ctx the parse tree
 	 */
@@ -86,4 +106,24 @@ public interface PokemonParserListener extends ParseTreeListener {
 	 * @param ctx the parse tree
 	 */
 	void exitEnd(PokemonParser.EndContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link PokemonParser#concede}.
+	 * @param ctx the parse tree
+	 */
+	void enterConcede(PokemonParser.ConcedeContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link PokemonParser#concede}.
+	 * @param ctx the parse tree
+	 */
+	void exitConcede(PokemonParser.ConcedeContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link PokemonParser#prize_cards}.
+	 * @param ctx the parse tree
+	 */
+	void enterPrize_cards(PokemonParser.Prize_cardsContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link PokemonParser#prize_cards}.
+	 * @param ctx the parse tree
+	 */
+	void exitPrize_cards(PokemonParser.Prize_cardsContext ctx);
 }

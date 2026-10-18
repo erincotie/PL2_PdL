@@ -72,7 +72,7 @@ A_MAYUS: 'A';
 ADDED: 'added';
 
 //Cambios de Pokemon activo
-SWITCH: 'Switch';
+SWITCH: 'Switch';//////////problema de compatibilidad con la carta swutch
 SWITCHED: 'switched';
 WITH: 'with';
 BECOME: 'become';
@@ -94,8 +94,82 @@ WINS: 'wins';
 OPPONENT: 'opponent';
 CONCEDED: 'conceded';
 
+// Nombres de cartas validos
+// Cada nombre completo se reconoce como un unico token
+CARTA:
+    'Basic Fighting Energy'
+    | 'Rocky Fighting Energy'
+    | 'Makuhita'
+    | 'Okidogi'
+    | 'Lillie\'s Determination'
+    | 'Mega Lucario ex'
+    | 'Boss\'s Orders'
+    | 'Fighting Gong'
+    | 'Riolu'
+    | 'Solrock'
+    | 'Meowth ex'
+    | 'Last-Ditch Catch'
+    | 'Switch' //<----------------------
+    | 'Aura Jab'
+    | 'Premium Power Pro'
+    | 'Lunatone'
+    | 'Poké Pad'
+    | 'Night Stretcher'
+    | 'Fezandipiti ex'
+    | 'Prime Catcher'
+    | 'Flip the Script'
+    | 'Mega Brave'
+    | 'Hariyama'
+    | 'Ultra Ball'
+    | 'Judge'
+    | 'Lunar Cycle'
+    | 'Heave-Ho Catcher'
+    | 'Wild Press'
+    | 'Team Rocket\'s Petrel'
+    | 'Gravity Mountain'
+    | 'Tarragon'
+    | 'Air Balloon'
+    ;
+//en el parser seria card_name: CARTA;
 
 
+//OPCION 2
+/*
+POKEMON:
+    'Makuhita'
+    | 'Okidogi'
+    | 'Mega Lucario ex'
+    | 'Riolu'
+    | 'Solrock'
+    | 'Meowth ex'
+    | 'Lunatone'
+    | 'Fezandipiti ex'
+    | 'Hariyama'
+    ;
+
+ENERGIA:
+    'Basic Fighting Energy'
+    | 'Rocky Fighting Energy'
+    ;
+
+ENTRENADOR:
+    'Lillie\'s Determination'
+    | 'Boss\'s Orders'
+    | 'Fighting Gong'
+    | 'Poké Pad'
+    | 'Premium Power Pro'
+    | 'Night Stretcher'
+    | 'Prime Catcher'
+    | 'Ultra Ball'
+    | 'Switch'
+    | 'Judge'
+    | 'Tarragon'
+    | 'Gravity Mountain'
+    | 'Team Rocket\'s Petrel'
+    | 'Air Balloon'
+    ;
+    Y EN el parser seria card_name: POKEMON | ENERGIA | ENTRENADOR;
+     */
 //Números y letras
 fragment DIGITO: [0-9];
 fragment LETRA: [a-zA-Z];
