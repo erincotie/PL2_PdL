@@ -1,4 +1,4 @@
-// Generated from c:/antlr/PL1_parte1_PdL/gramaticasParte1/CminusParser.g4 by ANTLR 4.13.1
+// Generated from c:/UNIVERSIDAD/tercero/semestre1/procLenguaje/lab/pl1Cod/PL1_parte1_PdL/gramaticasParte1/CminusParser.g4 by ANTLR 4.13.1
 import org.antlr.v4.runtime.atn.*;
 import org.antlr.v4.runtime.dfa.DFA;
 import org.antlr.v4.runtime.*;
