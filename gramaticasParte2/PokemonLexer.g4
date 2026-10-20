@@ -157,6 +157,33 @@ CARTA:
     // --- Ataques y habilidades mazo ? 
     | 'Teal Dance'
     | 'Fan Call'
+
+    // --- Mazo Mega Venusaur ex ---
+    // Pokémon
+    | 'Bulbasaur'
+    | 'Ivysaur'
+    | 'Mega Venusaur ex'
+    | 'Bayleef'
+    | 'Meganium'
+    // Entrenadores
+    | 'Forest of Vitality'
+    | 'Bug Catching Set'
+    | 'Dawn'
+    | 'Lana\'s Aid'
+    | 'Colress\'s Tenacity'
+    | 'Grand Tree'
+    | 'Wally\'s Compassion'
+    // Ataques y habilidades
+    | 'Bind Down'
+    | 'Razor Leaf'
+    | 'Solar Transfer'
+    | 'Jungle Dump'
+    | 'Push Down'
+    | 'Wild Growth'
+    | 'Solar Beam'
+    | 'Myriad Leaf Shower'
+    | 'Cruel Arrow'
+    | 'Tuck Tail'
     ;
 
 // Números e Identificadores (Nombres de jugadores)
