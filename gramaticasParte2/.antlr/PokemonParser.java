@@ -1,5 +1,8 @@
-// Generated from c:/UNIVERSIDAD/tercero/semestre1/procLenguaje/lab/pl1Cod/PL1_parte1_PdL/gramaticasParte2/PokemonParser.g4 by ANTLR 4.13.1
+<<<<<<<<< Temporary merge branch 1
 // Generated from c:/Users/michu/Documents/GitHub/PL1_parte1_PdL/gramaticasParte2/PokemonParser.g4 by ANTLR 4.13.1
+=========
+// Generated from c:/UNIVERSIDAD/tercero/semestre1/procLenguaje/lab/pl1Cod/PL1_parte1_PdL/gramaticasParte2/PokemonParser.g4 by ANTLR 4.13.1
+>>>>>>>>> Temporary merge branch 2
 import org.antlr.v4.runtime.atn.*;
 import org.antlr.v4.runtime.dfa.DFA;
 import org.antlr.v4.runtime.*;
@@ -155,10 +158,41 @@ public class PokemonParser extends Parser {
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(24);
+<<<<<<<<< Temporary merge branch 1
+			setState(36);
 			setup();
-			setState(25);
+			setState(37);
 			end();
+=========
+			setState(46);
+			setup();
+			setState(50);
+			_errHandler.sync(this);
+			_la = _input.LA(1);
+			while (_la==ID) {
+				{
+				{
+				setState(47);
+				turn_block();
+				}
+				}
+				setState(52);
+				_errHandler.sync(this);
+				_la = _input.LA(1);
+			}
+			setState(54);
+			_errHandler.sync(this);
+			_la = _input.LA(1);
+			if (_la==ALL || _la==OPPONENT) {
+				{
+				setState(53);
+				end();
+				}
+			}
+
+			setState(56);
+			match(EOF);
+>>>>>>>>> Temporary merge branch 2
 			}
 		}
 		catch (RecognitionException re) {
@@ -206,27 +240,53 @@ public class PokemonParser extends Parser {
 			int _alt;
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(58);
+<<<<<<<<< Temporary merge branch 1
+			setState(39);
 			match(SETUP);
-			setState(59);
+			setState(40);
 			coin_toss();
-			setState(29);
+			setState(41);
 			turn_decision();
-			setState(30);
+			setState(42);
 			draw_cards_init();
-			setState(31);
+			setState(43);
 			draw_cards_init();
-			setState(35);
+			setState(47);
 			_errHandler.sync(this);
 			_la = _input.LA(1);
 			while (_la==ID) {
 				{
 				{
-				setState(32);
+				setState(44);
 				play_cards();
 				}
 				}
-				setState(37);
+				setState(49);
+=========
+			setState(58);
+			match(SETUP);
+			setState(59);
+			coin_toss();
+			setState(60);
+			turn_decision();
+			setState(61);
+			draw_cards_init();
+			setState(62);
+			draw_cards_init();
+			setState(66);
+			_errHandler.sync(this);
+			_alt = getInterpreter().adaptivePredict(_input,2,_ctx);
+			while ( _alt!=2 && _alt!=org.antlr.v4.runtime.atn.ATN.INVALID_ALT_NUMBER ) {
+				if ( _alt==1 ) {
+					{
+					{
+					setState(63);
+					setup_actions();
+					}
+					} 
+				}
+				setState(68);
+>>>>>>>>> Temporary merge branch 2
 				_errHandler.sync(this);
 				_alt = getInterpreter().adaptivePredict(_input,2,_ctx);
 			}
@@ -271,11 +331,19 @@ public class PokemonParser extends Parser {
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(38);
+<<<<<<<<< Temporary merge branch 1
+			setState(50);
 			match(ID);
-			setState(39);
+			setState(51);
 			match(CHOSE);
-			setState(40);
+			setState(52);
+=========
+			setState(69);
+			match(ID);
+			setState(70);
+			match(CHOSE);
+			setState(71);
+>>>>>>>>> Temporary merge branch 2
 			_la = _input.LA(1);
 			if ( !(_la==HEADS || _la==TAILS) ) {
 			_errHandler.recoverInline(this);
@@ -285,19 +353,35 @@ public class PokemonParser extends Parser {
 				_errHandler.reportMatch(this);
 				consume();
 			}
-			setState(41);
+<<<<<<<<< Temporary merge branch 1
+			setState(53);
 			match(FOR);
-			setState(42);
+			setState(54);
 			match(THE);
-			setState(43);
+			setState(55);
 			match(OPENING);
-			setState(44);
+			setState(56);
 			match(COIN);
-			setState(45);
+			setState(57);
 			match(FLIP);
-			setState(46);
+			setState(58);
 			match(PUNTO);
-			setState(47);
+			setState(59);
+=========
+			setState(72);
+			match(FOR);
+			setState(73);
+			match(THE);
+			setState(74);
+			match(OPENING);
+			setState(75);
+			match(COIN);
+			setState(76);
+			match(FLIP);
+			setState(77);
+			match(PUNTO);
+			setState(78);
+>>>>>>>>> Temporary merge branch 2
 			win_coin();
 			}
 		}
@@ -332,17 +416,31 @@ public class PokemonParser extends Parser {
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(49);
+<<<<<<<<< Temporary merge branch 1
+			setState(61);
 			match(ID);
-			setState(50);
+			setState(62);
 			match(WON);
-			setState(51);
+			setState(63);
 			match(THE);
-			setState(52);
+			setState(64);
 			match(COIN);
-			setState(53);
+			setState(65);
 			match(TOSS);
-			setState(54);
+			setState(66);
+=========
+			setState(80);
+			match(ID);
+			setState(81);
+			match(WON);
+			setState(82);
+			match(THE);
+			setState(83);
+			match(COIN);
+			setState(84);
+			match(TOSS);
+			setState(85);
+>>>>>>>>> Temporary merge branch 2
 			match(PUNTO);
 			}
 		}
@@ -377,17 +475,31 @@ public class PokemonParser extends Parser {
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(56);
+<<<<<<<<< Temporary merge branch 1
+			setState(68);
 			match(ID);
-			setState(57);
+			setState(69);
 			match(DECIDED);
-			setState(58);
+			setState(70);
 			match(TO);
-			setState(59);
+			setState(71);
 			match(GO);
-			setState(60);
+			setState(72);
 			match(FIRST);
-			setState(61);
+			setState(73);
+=========
+			setState(87);
+			match(ID);
+			setState(88);
+			match(DECIDED);
+			setState(89);
+			match(TO);
+			setState(90);
+			match(GO);
+			setState(91);
+			match(FIRST);
+			setState(92);
+>>>>>>>>> Temporary merge branch 2
 			match(PUNTO);
 			}
 		}
@@ -443,40 +555,77 @@ public class PokemonParser extends Parser {
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(63);
-			match(ID);
-			setState(64);
-			match(DREW);
-			setState(65);
-			match(SEVEN);
-			setState(66);
-			match(CARDS);
-			setState(67);
-			match(FOR);
-			setState(68);
-			match(THE);
-			setState(69);
-			match(OPENING);
-			setState(70);
-			match(HAND);
-			setState(71);
-			match(PUNTO);
-			setState(72);
-			match(RAYA);
-			setState(73);
-			match(SEVEN);
-			setState(74);
-			match(DRAWN);
+<<<<<<<<< Temporary merge branch 1
 			setState(75);
-			match(CARDS);
+			match(ID);
 			setState(76);
-			match(PUNTO);
+			match(DREW);
+			setState(77);
+			match(SEVEN);
 			setState(78);
+			match(CARDS);
+			setState(79);
+			match(FOR);
+			setState(80);
+			match(THE);
+			setState(81);
+			match(OPENING);
+			setState(82);
+			match(HAND);
+			setState(83);
+			match(PUNTO);
+			setState(84);
+			match(RAYA);
+			setState(85);
+			match(SEVEN);
+			setState(86);
+			match(DRAWN);
+			setState(87);
+			match(CARDS);
+			setState(88);
+			match(PUNTO);
+			setState(90);
+=========
+			setState(94);
+			match(ID);
+			setState(95);
+			match(DREW);
+			setState(96);
+			match(SEVEN);
+			setState(97);
+			match(CARDS);
+			setState(98);
+			match(FOR);
+			setState(99);
+			match(THE);
+			setState(100);
+			match(OPENING);
+			setState(101);
+			match(HAND);
+			setState(102);
+			match(PUNTO);
+			setState(103);
+			match(RAYA);
+			setState(104);
+			match(SEVEN);
+			setState(105);
+			match(DRAWN);
+			setState(106);
+			match(CARDS);
+			setState(107);
+			match(PUNTO);
+			setState(111);
+>>>>>>>>> Temporary merge branch 2
 			_errHandler.sync(this);
 			_la = _input.LA(1);
 			while (_la==PUNTO_RELLENO) {
 				{
-				setState(77);
+<<<<<<<<< Temporary merge branch 1
+				setState(89);
+=========
+				{
+				setState(108);
+>>>>>>>>> Temporary merge branch 2
 				descripcion_cartas();
 				}
 				}
@@ -523,7 +672,11 @@ public class PokemonParser extends Parser {
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(80);
+<<<<<<<<< Temporary merge branch 1
+			setState(92);
+=========
+			setState(114);
+>>>>>>>>> Temporary merge branch 2
 			match(PUNTO_RELLENO);
 			setState(115);
 			card_name();
@@ -875,35 +1028,63 @@ public class PokemonParser extends Parser {
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(82);
+<<<<<<<<< Temporary merge branch 1
+			setState(94);
 			match(ID);
-			setState(83);
+			setState(95);
 			match(PLAYED);
-			setState(84);
+			setState(96);
 			card_name();
-			setState(92);
+			setState(104);
+=========
+			setState(157);
+			match(ID);
+			setState(158);
+			match(PLAYED);
+			setState(159);
+			card_name();
+			setState(167);
+>>>>>>>>> Temporary merge branch 2
 			_errHandler.sync(this);
 			_la = _input.LA(1);
 			if (_la==TO) {
 				{
-				setState(85);
+<<<<<<<<< Temporary merge branch 1
+				setState(97);
 				match(TO);
-				setState(86);
+				setState(98);
 				match(THE);
-				setState(90);
+				setState(102);
+=========
+				setState(160);
+				match(TO);
+				setState(161);
+				match(THE);
+				setState(165);
+>>>>>>>>> Temporary merge branch 2
 				_errHandler.sync(this);
 				switch (_input.LA(1)) {
 				case BENCH:
 					{
-					setState(87);
+<<<<<<<<< Temporary merge branch 1
+					setState(99);
+=========
+					setState(162);
+>>>>>>>>> Temporary merge branch 2
 					match(BENCH);
 					}
 					break;
 				case ACTIVE:
 					{
-					setState(88);
+<<<<<<<<< Temporary merge branch 1
+					setState(100);
 					match(ACTIVE);
-					setState(89);
+					setState(101);
+=========
+					setState(163);
+					match(ACTIVE);
+					setState(164);
+>>>>>>>>> Temporary merge branch 2
 					match(SPOT);
 					}
 					break;
@@ -913,7 +1094,442 @@ public class PokemonParser extends Parser {
 				}
 			}
 
-			setState(94);
+<<<<<<<<< Temporary merge branch 1
+			setState(106);
+=========
+			setState(169);
+			match(PUNTO);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class Draw_actionContext extends ParserRuleContext {
+		public TerminalNode ID() { return getToken(PokemonParser.ID, 0); }
+		public TerminalNode DREW() { return getToken(PokemonParser.DREW, 0); }
+		public TerminalNode PUNTO() { return getToken(PokemonParser.PUNTO, 0); }
+		public TerminalNode A() { return getToken(PokemonParser.A, 0); }
+		public TerminalNode CARD() { return getToken(PokemonParser.CARD, 0); }
+		public Card_nameContext card_name() {
+			return getRuleContext(Card_nameContext.class,0);
+		}
+		public Draw_actionContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_draw_action; }
+	}
+
+	public final Draw_actionContext draw_action() throws RecognitionException {
+		Draw_actionContext _localctx = new Draw_actionContext(_ctx, getState());
+		enterRule(_localctx, 26, RULE_draw_action);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(171);
+			match(ID);
+			setState(172);
+			match(DREW);
+			setState(176);
+			_errHandler.sync(this);
+			switch (_input.LA(1)) {
+			case A:
+				{
+				setState(173);
+				match(A);
+				setState(174);
+				match(CARD);
+				}
+				break;
+			case CARTA:
+				{
+				setState(175);
+				card_name();
+				}
+				break;
+			default:
+				throw new NoViableAltException(this);
+			}
+			setState(178);
+			match(PUNTO);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class Attach_energyContext extends ParserRuleContext {
+		public TerminalNode ID() { return getToken(PokemonParser.ID, 0); }
+		public TerminalNode ATTACHED() { return getToken(PokemonParser.ATTACHED, 0); }
+		public List<Card_nameContext> card_name() {
+			return getRuleContexts(Card_nameContext.class);
+		}
+		public Card_nameContext card_name(int i) {
+			return getRuleContext(Card_nameContext.class,i);
+		}
+		public TerminalNode TO() { return getToken(PokemonParser.TO, 0); }
+		public TerminalNode PUNTO() { return getToken(PokemonParser.PUNTO, 0); }
+		public TerminalNode IN() { return getToken(PokemonParser.IN, 0); }
+		public TerminalNode THE() { return getToken(PokemonParser.THE, 0); }
+		public TerminalNode BENCH() { return getToken(PokemonParser.BENCH, 0); }
+		public TerminalNode ACTIVE() { return getToken(PokemonParser.ACTIVE, 0); }
+		public TerminalNode SPOT() { return getToken(PokemonParser.SPOT, 0); }
+		public Attach_energyContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_attach_energy; }
+	}
+
+	public final Attach_energyContext attach_energy() throws RecognitionException {
+		Attach_energyContext _localctx = new Attach_energyContext(_ctx, getState());
+		enterRule(_localctx, 28, RULE_attach_energy);
+		int _la;
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(180);
+			match(ID);
+			setState(181);
+			match(ATTACHED);
+			setState(182);
+			card_name();
+			setState(183);
+			match(TO);
+			setState(184);
+			card_name();
+			setState(192);
+			_errHandler.sync(this);
+			_la = _input.LA(1);
+			if (_la==IN) {
+				{
+				setState(185);
+				match(IN);
+				setState(186);
+				match(THE);
+				setState(190);
+				_errHandler.sync(this);
+				switch (_input.LA(1)) {
+				case BENCH:
+					{
+					setState(187);
+					match(BENCH);
+					}
+					break;
+				case ACTIVE:
+					{
+					setState(188);
+					match(ACTIVE);
+					setState(189);
+					match(SPOT);
+					}
+					break;
+				default:
+					throw new NoViableAltException(this);
+				}
+				}
+			}
+
+			setState(194);
+			match(PUNTO);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class Evolve_pokemonContext extends ParserRuleContext {
+		public TerminalNode ID() { return getToken(PokemonParser.ID, 0); }
+		public TerminalNode EVOLVED() { return getToken(PokemonParser.EVOLVED, 0); }
+		public List<Card_nameContext> card_name() {
+			return getRuleContexts(Card_nameContext.class);
+		}
+		public Card_nameContext card_name(int i) {
+			return getRuleContext(Card_nameContext.class,i);
+		}
+		public TerminalNode TO() { return getToken(PokemonParser.TO, 0); }
+		public TerminalNode PUNTO() { return getToken(PokemonParser.PUNTO, 0); }
+		public TerminalNode IN() { return getToken(PokemonParser.IN, 0); }
+		public TerminalNode THE() { return getToken(PokemonParser.THE, 0); }
+		public TerminalNode BENCH() { return getToken(PokemonParser.BENCH, 0); }
+		public TerminalNode ACTIVE() { return getToken(PokemonParser.ACTIVE, 0); }
+		public TerminalNode SPOT() { return getToken(PokemonParser.SPOT, 0); }
+		public Evolve_pokemonContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_evolve_pokemon; }
+	}
+
+	public final Evolve_pokemonContext evolve_pokemon() throws RecognitionException {
+		Evolve_pokemonContext _localctx = new Evolve_pokemonContext(_ctx, getState());
+		enterRule(_localctx, 30, RULE_evolve_pokemon);
+		int _la;
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(196);
+			match(ID);
+			setState(197);
+			match(EVOLVED);
+			setState(198);
+			card_name();
+			setState(199);
+			match(TO);
+			setState(200);
+			card_name();
+			setState(208);
+			_errHandler.sync(this);
+			_la = _input.LA(1);
+			if (_la==IN) {
+				{
+				setState(201);
+				match(IN);
+				setState(202);
+				match(THE);
+				setState(206);
+				_errHandler.sync(this);
+				switch (_input.LA(1)) {
+				case BENCH:
+					{
+					setState(203);
+					match(BENCH);
+					}
+					break;
+				case ACTIVE:
+					{
+					setState(204);
+					match(ACTIVE);
+					setState(205);
+					match(SPOT);
+					}
+					break;
+				default:
+					throw new NoViableAltException(this);
+				}
+				}
+			}
+
+			setState(210);
+			match(PUNTO);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class Use_ability_or_attackContext extends ParserRuleContext {
+		public List<TerminalNode> ID() { return getTokens(PokemonParser.ID); }
+		public TerminalNode ID(int i) {
+			return getToken(PokemonParser.ID, i);
+		}
+		public TerminalNode USED() { return getToken(PokemonParser.USED, 0); }
+		public List<Card_nameContext> card_name() {
+			return getRuleContexts(Card_nameContext.class);
+		}
+		public Card_nameContext card_name(int i) {
+			return getRuleContext(Card_nameContext.class,i);
+		}
+		public TerminalNode PUNTO() { return getToken(PokemonParser.PUNTO, 0); }
+		public List<TerminalNode> APOS_S() { return getTokens(PokemonParser.APOS_S); }
+		public TerminalNode APOS_S(int i) {
+			return getToken(PokemonParser.APOS_S, i);
+		}
+		public TerminalNode ON() { return getToken(PokemonParser.ON, 0); }
+		public TerminalNode FOR() { return getToken(PokemonParser.FOR, 0); }
+		public TerminalNode NUM() { return getToken(PokemonParser.NUM, 0); }
+		public TerminalNode DAMAGE() { return getToken(PokemonParser.DAMAGE, 0); }
+		public Use_ability_or_attackContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_use_ability_or_attack; }
+	}
+
+	public final Use_ability_or_attackContext use_ability_or_attack() throws RecognitionException {
+		Use_ability_or_attackContext _localctx = new Use_ability_or_attackContext(_ctx, getState());
+		enterRule(_localctx, 32, RULE_use_ability_or_attack);
+		int _la;
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(212);
+			match(ID);
+			setState(215);
+			_errHandler.sync(this);
+			_la = _input.LA(1);
+			if (_la==APOS_S) {
+				{
+				setState(213);
+				match(APOS_S);
+				setState(214);
+				card_name();
+				}
+			}
+
+			setState(217);
+			match(USED);
+			setState(218);
+			card_name();
+			setState(227);
+			_errHandler.sync(this);
+			_la = _input.LA(1);
+			if (_la==ON) {
+				{
+				setState(219);
+				match(ON);
+				setState(220);
+				match(ID);
+				setState(221);
+				match(APOS_S);
+				setState(222);
+				card_name();
+				setState(223);
+				match(FOR);
+				setState(224);
+				match(NUM);
+				setState(225);
+				match(DAMAGE);
+				}
+			}
+
+			setState(229);
+			match(PUNTO);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class Sub_effectContext extends ParserRuleContext {
+		public TerminalNode RAYA() { return getToken(PokemonParser.RAYA, 0); }
+		public TerminalNode PUNTO() { return getToken(PokemonParser.PUNTO, 0); }
+		public TerminalNode ID() { return getToken(PokemonParser.ID, 0); }
+		public TerminalNode NUM() { return getToken(PokemonParser.NUM, 0); }
+		public TerminalNode PUNTO_RELLENO() { return getToken(PokemonParser.PUNTO_RELLENO, 0); }
+		public Sub_effectContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_sub_effect; }
+	}
+
+	public final Sub_effectContext sub_effect() throws RecognitionException {
+		Sub_effectContext _localctx = new Sub_effectContext(_ctx, getState());
+		enterRule(_localctx, 34, RULE_sub_effect);
+		int _la;
+		try {
+			int _alt;
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(231);
+			match(RAYA);
+			setState(232);
+			_la = _input.LA(1);
+			if ( !(_la==PUNTO_RELLENO || _la==NUM || _la==ID) ) {
+			_errHandler.recoverInline(this);
+			}
+			else {
+				if ( _input.LA(1)==Token.EOF ) matchedEOF = true;
+				_errHandler.reportMatch(this);
+				consume();
+			}
+			setState(236);
+			_errHandler.sync(this);
+			_alt = getInterpreter().adaptivePredict(_input,18,_ctx);
+			while ( _alt!=1 && _alt!=org.antlr.v4.runtime.atn.ATN.INVALID_ALT_NUMBER ) {
+				if ( _alt==1+1 ) {
+					{
+					{
+					setState(233);
+					matchWildcard();
+					}
+					} 
+				}
+				setState(238);
+				_errHandler.sync(this);
+				_alt = getInterpreter().adaptivePredict(_input,18,_ctx);
+			}
+			setState(239);
+			match(PUNTO);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class End_turnContext extends ParserRuleContext {
+		public TerminalNode ID() { return getToken(PokemonParser.ID, 0); }
+		public TerminalNode ENDED() { return getToken(PokemonParser.ENDED, 0); }
+		public TerminalNode THEIR() { return getToken(PokemonParser.THEIR, 0); }
+		public TerminalNode TURN() { return getToken(PokemonParser.TURN, 0); }
+		public TerminalNode PUNTO() { return getToken(PokemonParser.PUNTO, 0); }
+		public End_turnContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_end_turn; }
+	}
+
+	public final End_turnContext end_turn() throws RecognitionException {
+		End_turnContext _localctx = new End_turnContext(_ctx, getState());
+		enterRule(_localctx, 36, RULE_end_turn);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(241);
+			match(ID);
+			setState(242);
+			match(ENDED);
+			setState(243);
+			match(THEIR);
+			setState(244);
+			match(TURN);
+			setState(245);
+>>>>>>>>> Temporary merge branch 2
 			match(PUNTO);
 			}
 		}
@@ -930,6 +1546,7 @@ public class PokemonParser extends Parser {
 
 	@SuppressWarnings("CheckReturnValue")
 	public static class Card_nameContext extends ParserRuleContext {
+<<<<<<<<< Temporary merge branch 1
 		public Pokemon_cardContext pokemon_card() {
 			return getRuleContext(Pokemon_cardContext.class,0);
 		}
@@ -942,6 +1559,7 @@ public class PokemonParser extends Parser {
 		public Energy_cardContext energy_card() {
 			return getRuleContext(Energy_cardContext.class,0);
 		}
+=========
 		public TerminalNode CARTA() { return getToken(PokemonParser.CARTA, 0); }
 		public Card_nameContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
@@ -953,8 +1571,374 @@ public class PokemonParser extends Parser {
 		Card_nameContext _localctx = new Card_nameContext(_ctx, getState());
 		enterRule(_localctx, 38, RULE_card_name);
 		try {
+			setState(112);
+			_errHandler.sync(this);
+			switch (_input.LA(1)) {
+			case LILLIE_CLEFAIRY:
+			case MEW:
+			case DEINO:
+			case ZWEILOUS:
+			case HYDREIGON:
+			case FEZANDIPITI:
+			case GENESECT:
+			case STEVEN_BELDUM:
+			case STEVEN_METANG:
+			case STEVEN_METAGROSS:
+			case LATIOS:
+			case MEGA_LATIAS:
+			case MEOWTH:
+			case N_DARUMAKA:
+			case N_DARMANITAN:
+			case N_ZORUA:
+			case N_ZOROARK:
+			case PECHARUNT:
+			case N_RESHIRAM:
+			case N_ZEKROM:
+				enterOuterAlt(_localctx, 1);
+				{
+				setState(108);
+				pokemon_card();
+				}
+				break;
+			case BUDDY_POFFIN:
+			case ENERGY_RECYCLER:
+			case NIGHT_STRETCHER:
+			case POKE_PAD:
+			case RARE_CANDY:
+			case SCRAMBLE_SWITCH:
+			case ULTRA_BALL:
+			case N_PP:
+			case TICKET:
+			case N_CASTLE:
+				enterOuterAlt(_localctx, 2);
+				{
+				setState(109);
+				item_card();
+				}
+				break;
+			case BLACK_BELT:
+			case BOSS:
+			case DAWN:
+			case HILDA:
+			case LILLIE:
+			case TEAM_ROCKET:
+			case CYRANO:
+			case JANINE:
+			case JUDGE:
+			case AIR_BALLON:
+			case BINDING_MOCHI:
+			case HERO_CAPE:
+			case POWERGLASS:
+				enterOuterAlt(_localctx, 3);
+				{
+				setState(110);
+				supporter_card();
+				}
+				break;
+			case PRISM_ENERGY:
+			case BASIC_DARK:
+			case BASIC_METALLIC:
+			case BASIC_PSYCHIC:
+				enterOuterAlt(_localctx, 4);
+				{
+				setState(111);
+				energy_card();
+				}
+				break;
+			default:
+				throw new NoViableAltException(this);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class Pokemon_cardContext extends ParserRuleContext {
+		public Mew_deckContext mew_deck() {
+			return getRuleContext(Mew_deckContext.class,0);
+		}
+		public Zoroark_deckContext zoroark_deck() {
+			return getRuleContext(Zoroark_deckContext.class,0);
+		}
+		public Pokemon_cardContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_pokemon_card; }
+	}
+
+	public final Pokemon_cardContext pokemon_card() throws RecognitionException {
+		Pokemon_cardContext _localctx = new Pokemon_cardContext(_ctx, getState());
+		enterRule(_localctx, 18, RULE_pokemon_card);
+		try {
+			setState(116);
+			_errHandler.sync(this);
+			switch ( getInterpreter().adaptivePredict(_input,5,_ctx) ) {
+			case 1:
+				enterOuterAlt(_localctx, 1);
+				{
+				setState(114);
+				mew_deck();
+				}
+				break;
+			case 2:
+				enterOuterAlt(_localctx, 2);
+				{
+				setState(115);
+				zoroark_deck();
+				}
+				break;
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class Item_cardContext extends ParserRuleContext {
+		public TerminalNode BUDDY_POFFIN() { return getToken(PokemonParser.BUDDY_POFFIN, 0); }
+		public TerminalNode ENERGY_RECYCLER() { return getToken(PokemonParser.ENERGY_RECYCLER, 0); }
+		public TerminalNode NIGHT_STRETCHER() { return getToken(PokemonParser.NIGHT_STRETCHER, 0); }
+		public TerminalNode POKE_PAD() { return getToken(PokemonParser.POKE_PAD, 0); }
+		public TerminalNode RARE_CANDY() { return getToken(PokemonParser.RARE_CANDY, 0); }
+		public TerminalNode SCRAMBLE_SWITCH() { return getToken(PokemonParser.SCRAMBLE_SWITCH, 0); }
+		public TerminalNode ULTRA_BALL() { return getToken(PokemonParser.ULTRA_BALL, 0); }
+		public TerminalNode N_PP() { return getToken(PokemonParser.N_PP, 0); }
+		public TerminalNode TICKET() { return getToken(PokemonParser.TICKET, 0); }
+		public TerminalNode N_CASTLE() { return getToken(PokemonParser.N_CASTLE, 0); }
+		public Item_cardContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_item_card; }
+	}
+
+	public final Item_cardContext item_card() throws RecognitionException {
+		Item_cardContext _localctx = new Item_cardContext(_ctx, getState());
+		enterRule(_localctx, 20, RULE_item_card);
+		int _la;
+		try {
 			enterOuterAlt(_localctx, 1);
 			{
+<<<<<<<<< Temporary merge branch 1
+			setState(118);
+			_la = _input.LA(1);
+			if ( !(((((_la - 71)) & ~0x3f) == 0 && ((1L << (_la - 71)) & 1023L) != 0)) ) {
+			_errHandler.recoverInline(this);
+			}
+			else {
+				if ( _input.LA(1)==Token.EOF ) matchedEOF = true;
+				_errHandler.reportMatch(this);
+				consume();
+			}
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class Supporter_cardContext extends ParserRuleContext {
+		public TerminalNode BLACK_BELT() { return getToken(PokemonParser.BLACK_BELT, 0); }
+		public TerminalNode BOSS() { return getToken(PokemonParser.BOSS, 0); }
+		public TerminalNode DAWN() { return getToken(PokemonParser.DAWN, 0); }
+		public TerminalNode HILDA() { return getToken(PokemonParser.HILDA, 0); }
+		public TerminalNode LILLIE() { return getToken(PokemonParser.LILLIE, 0); }
+		public TerminalNode TEAM_ROCKET() { return getToken(PokemonParser.TEAM_ROCKET, 0); }
+		public TerminalNode CYRANO() { return getToken(PokemonParser.CYRANO, 0); }
+		public TerminalNode JANINE() { return getToken(PokemonParser.JANINE, 0); }
+		public TerminalNode JUDGE() { return getToken(PokemonParser.JUDGE, 0); }
+		public TerminalNode AIR_BALLON() { return getToken(PokemonParser.AIR_BALLON, 0); }
+		public TerminalNode BINDING_MOCHI() { return getToken(PokemonParser.BINDING_MOCHI, 0); }
+		public TerminalNode HERO_CAPE() { return getToken(PokemonParser.HERO_CAPE, 0); }
+		public TerminalNode POWERGLASS() { return getToken(PokemonParser.POWERGLASS, 0); }
+		public Supporter_cardContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_supporter_card; }
+	}
+
+	public final Supporter_cardContext supporter_card() throws RecognitionException {
+		Supporter_cardContext _localctx = new Supporter_cardContext(_ctx, getState());
+		enterRule(_localctx, 22, RULE_supporter_card);
+		int _la;
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(120);
+			_la = _input.LA(1);
+			if ( !(((((_la - 81)) & ~0x3f) == 0 && ((1L << (_la - 81)) & 8191L) != 0)) ) {
+			_errHandler.recoverInline(this);
+			}
+			else {
+				if ( _input.LA(1)==Token.EOF ) matchedEOF = true;
+				_errHandler.reportMatch(this);
+				consume();
+			}
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class Energy_cardContext extends ParserRuleContext {
+		public TerminalNode PRISM_ENERGY() { return getToken(PokemonParser.PRISM_ENERGY, 0); }
+		public TerminalNode BASIC_DARK() { return getToken(PokemonParser.BASIC_DARK, 0); }
+		public TerminalNode BASIC_METALLIC() { return getToken(PokemonParser.BASIC_METALLIC, 0); }
+		public TerminalNode BASIC_PSYCHIC() { return getToken(PokemonParser.BASIC_PSYCHIC, 0); }
+		public Energy_cardContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_energy_card; }
+	}
+
+	public final Energy_cardContext energy_card() throws RecognitionException {
+		Energy_cardContext _localctx = new Energy_cardContext(_ctx, getState());
+		enterRule(_localctx, 24, RULE_energy_card);
+		int _la;
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(122);
+			_la = _input.LA(1);
+			if ( !(((((_la - 94)) & ~0x3f) == 0 && ((1L << (_la - 94)) & 15L) != 0)) ) {
+			_errHandler.recoverInline(this);
+			}
+			else {
+				if ( _input.LA(1)==Token.EOF ) matchedEOF = true;
+				_errHandler.reportMatch(this);
+				consume();
+			}
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class Mew_deckContext extends ParserRuleContext {
+		public TerminalNode LILLIE_CLEFAIRY() { return getToken(PokemonParser.LILLIE_CLEFAIRY, 0); }
+		public TerminalNode MEW() { return getToken(PokemonParser.MEW, 0); }
+		public TerminalNode DEINO() { return getToken(PokemonParser.DEINO, 0); }
+		public TerminalNode ZWEILOUS() { return getToken(PokemonParser.ZWEILOUS, 0); }
+		public TerminalNode HYDREIGON() { return getToken(PokemonParser.HYDREIGON, 0); }
+		public TerminalNode FEZANDIPITI() { return getToken(PokemonParser.FEZANDIPITI, 0); }
+		public TerminalNode GENESECT() { return getToken(PokemonParser.GENESECT, 0); }
+		public TerminalNode STEVEN_BELDUM() { return getToken(PokemonParser.STEVEN_BELDUM, 0); }
+		public TerminalNode STEVEN_METANG() { return getToken(PokemonParser.STEVEN_METANG, 0); }
+		public TerminalNode STEVEN_METAGROSS() { return getToken(PokemonParser.STEVEN_METAGROSS, 0); }
+		public TerminalNode LATIOS() { return getToken(PokemonParser.LATIOS, 0); }
+		public TerminalNode MEGA_LATIAS() { return getToken(PokemonParser.MEGA_LATIAS, 0); }
+		public TerminalNode MEOWTH() { return getToken(PokemonParser.MEOWTH, 0); }
+		public Mew_deckContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_mew_deck; }
+	}
+
+	public final Mew_deckContext mew_deck() throws RecognitionException {
+		Mew_deckContext _localctx = new Mew_deckContext(_ctx, getState());
+		enterRule(_localctx, 26, RULE_mew_deck);
+		int _la;
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(124);
+			_la = _input.LA(1);
+			if ( !(((((_la - 98)) & ~0x3f) == 0 && ((1L << (_la - 98)) & 8191L) != 0)) ) {
+			_errHandler.recoverInline(this);
+			}
+			else {
+				if ( _input.LA(1)==Token.EOF ) matchedEOF = true;
+				_errHandler.reportMatch(this);
+				consume();
+			}
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class Zoroark_deckContext extends ParserRuleContext {
+		public TerminalNode N_DARUMAKA() { return getToken(PokemonParser.N_DARUMAKA, 0); }
+		public TerminalNode N_DARMANITAN() { return getToken(PokemonParser.N_DARMANITAN, 0); }
+		public TerminalNode N_ZORUA() { return getToken(PokemonParser.N_ZORUA, 0); }
+		public TerminalNode N_ZOROARK() { return getToken(PokemonParser.N_ZOROARK, 0); }
+		public TerminalNode PECHARUNT() { return getToken(PokemonParser.PECHARUNT, 0); }
+		public TerminalNode N_RESHIRAM() { return getToken(PokemonParser.N_RESHIRAM, 0); }
+		public TerminalNode N_ZEKROM() { return getToken(PokemonParser.N_ZEKROM, 0); }
+		public TerminalNode FEZANDIPITI() { return getToken(PokemonParser.FEZANDIPITI, 0); }
+		public TerminalNode MEOWTH() { return getToken(PokemonParser.MEOWTH, 0); }
+		public Zoroark_deckContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_zoroark_deck; }
+	}
+
+	public final Zoroark_deckContext zoroark_deck() throws RecognitionException {
+		Zoroark_deckContext _localctx = new Zoroark_deckContext(_ctx, getState());
+		enterRule(_localctx, 28, RULE_zoroark_deck);
+		int _la;
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(126);
+			_la = _input.LA(1);
+			if ( !(((((_la - 103)) & ~0x3f) == 0 && ((1L << (_la - 103)) & 32641L) != 0)) ) {
+			_errHandler.recoverInline(this);
+			}
+			else {
+				if ( _input.LA(1)==Token.EOF ) matchedEOF = true;
+				_errHandler.reportMatch(this);
+				consume();
+			}
+=========
+			setState(247);
+			match(CARTA);
+>>>>>>>>> Temporary merge branch 2
 			}
 		}
 		catch (RecognitionException re) {
@@ -990,33 +1974,69 @@ public class PokemonParser extends Parser {
 
 	public final EndContext end() throws RecognitionException {
 		EndContext _localctx = new EndContext(_ctx, getState());
-		enterRule(_localctx, 18, RULE_end);
+<<<<<<<<< Temporary merge branch 1
+		enterRule(_localctx, 30, RULE_end);
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(100);
+			setState(130);
+=========
+		enterRule(_localctx, 40, RULE_end);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(255);
+>>>>>>>>> Temporary merge branch 2
 			_errHandler.sync(this);
 			switch (_input.LA(1)) {
 			case OPPONENT:
 				{
-				setState(98);
+<<<<<<<<< Temporary merge branch 1
+				setState(128);
 				concede();
+=========
+				setState(249);
+				match(OPPONENT);
+				setState(250);
+				match(CONCEDED);
+>>>>>>>>> Temporary merge branch 2
 				}
 				break;
 			case ALL:
 				{
-				setState(99);
+<<<<<<<<< Temporary merge branch 1
+				setState(129);
 				prize_cards();
+=========
+				setState(251);
+				match(ALL);
+				setState(252);
+				match(PRIZE);
+				setState(253);
+				match(CARDS);
+				setState(254);
+				match(TAKEN);
+>>>>>>>>> Temporary merge branch 2
 				}
 				break;
 			default:
 				throw new NoViableAltException(this);
 			}
-			setState(102);
+<<<<<<<<< Temporary merge branch 1
+			setState(132);
 			match(ID);
-			setState(103);
+			setState(133);
 			match(WINS);
-			setState(104);
+			setState(134);
+=========
+			setState(257);
+			match(PUNTO);
+			setState(258);
+			match(ID);
+			setState(259);
+			match(WINS);
+			setState(260);
+>>>>>>>>> Temporary merge branch 2
 			match(PUNTO);
 			}
 		}
@@ -1044,15 +2064,27 @@ public class PokemonParser extends Parser {
 
 	public final ConcedeContext concede() throws RecognitionException {
 		ConcedeContext _localctx = new ConcedeContext(_ctx, getState());
-		enterRule(_localctx, 20, RULE_concede);
+<<<<<<<<< Temporary merge branch 1
+		enterRule(_localctx, 32, RULE_concede);
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(106);
+			setState(136);
 			match(OPPONENT);
-			setState(107);
+			setState(137);
 			match(CONCEDED);
-			setState(108);
+			setState(138);
+=========
+		enterRule(_localctx, 42, RULE_concede);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(262);
+			match(OPPONENT);
+			setState(263);
+			match(CONCEDED);
+			setState(264);
+>>>>>>>>> Temporary merge branch 2
 			match(PUNTO);
 			}
 		}
@@ -1082,19 +2114,35 @@ public class PokemonParser extends Parser {
 
 	public final Prize_cardsContext prize_cards() throws RecognitionException {
 		Prize_cardsContext _localctx = new Prize_cardsContext(_ctx, getState());
-		enterRule(_localctx, 22, RULE_prize_cards);
+<<<<<<<<< Temporary merge branch 1
+		enterRule(_localctx, 34, RULE_prize_cards);
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(110);
+			setState(140);
 			match(ALL);
-			setState(111);
+			setState(141);
 			match(PRIZE);
-			setState(112);
+			setState(142);
 			match(CARDS);
-			setState(113);
+			setState(143);
 			match(TAKEN);
-			setState(114);
+			setState(144);
+=========
+		enterRule(_localctx, 44, RULE_prize_cards);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(266);
+			match(ALL);
+			setState(267);
+			match(PRIZE);
+			setState(268);
+			match(CARDS);
+			setState(269);
+			match(TAKEN);
+			setState(270);
+>>>>>>>>> Temporary merge branch 2
 			match(PUNTO);
 			}
 		}
@@ -1110,18 +2158,34 @@ public class PokemonParser extends Parser {
 	}
 
 	public static final String _serializedATN =
-		"\u0004\u0001Hu\u0002\u0000\u0007\u0000\u0002\u0001\u0007\u0001\u0002\u0002"+
-		"\u0007\u0002\u0002\u0003\u0007\u0003\u0002\u0004\u0007\u0004\u0002\u0005"+
-		"\u0007\u0005\u0002\u0006\u0007\u0006\u0002\u0007\u0007\u0007\u0002\b\u0007"+
-		"\b\u0002\t\u0007\t\u0002\n\u0007\n\u0002\u000b\u0007\u000b\u0001\u0000"+
-		"\u0001\u0000\u0001\u0000\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001"+
-		"\u0001\u0001\u0001\u0001\u0005\u0001\"\b\u0001\n\u0001\f\u0001%\t\u0001"+
+<<<<<<<<< Temporary merge branch 1
+		"\u0004\u0001w\u0093\u0002\u0000\u0007\u0000\u0002\u0001\u0007\u0001\u0002"+
+=========
+		"\u0004\u0001J\u0111\u0002\u0000\u0007\u0000\u0002\u0001\u0007\u0001\u0002"+
+>>>>>>>>> Temporary merge branch 2
+		"\u0002\u0007\u0002\u0002\u0003\u0007\u0003\u0002\u0004\u0007\u0004\u0002"+
+		"\u0005\u0007\u0005\u0002\u0006\u0007\u0006\u0002\u0007\u0007\u0007\u0002"+
+		"\b\u0007\b\u0002\t\u0007\t\u0002\n\u0007\n\u0002\u000b\u0007\u000b\u0002"+
+		"\f\u0007\f\u0002\r\u0007\r\u0002\u000e\u0007\u000e\u0002\u000f\u0007\u000f"+
+<<<<<<<<< Temporary merge branch 1
+		"\u0002\u0010\u0007\u0010\u0002\u0011\u0007\u0011\u0001\u0000\u0001\u0000"+
+		"\u0001\u0000\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001"+
+		"\u0001\u0001\u0005\u0001.\b\u0001\n\u0001\f\u00011\t\u0001\u0001\u0002"+
+=========
+		"\u0002\u0010\u0007\u0010\u0002\u0011\u0007\u0011\u0002\u0012\u0007\u0012"+
+		"\u0002\u0013\u0007\u0013\u0002\u0014\u0007\u0014\u0002\u0015\u0007\u0015"+
+		"\u0002\u0016\u0007\u0016\u0001\u0000\u0001\u0000\u0005\u00001\b\u0000"+
+		"\n\u0000\f\u00004\t\u0000\u0001\u0000\u0003\u00007\b\u0000\u0001\u0000"+
+		"\u0001\u0000\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001"+
+		"\u0001\u0001\u0005\u0001A\b\u0001\n\u0001\f\u0001D\t\u0001\u0001\u0002"+
+>>>>>>>>> Temporary merge branch 2
 		"\u0001\u0002\u0001\u0002\u0001\u0002\u0001\u0002\u0001\u0002\u0001\u0002"+
 		"\u0001\u0002\u0001\u0002\u0001\u0002\u0001\u0002\u0001\u0003\u0001\u0003"+
 		"\u0001\u0003\u0001\u0003\u0001\u0003\u0001\u0003\u0001\u0003\u0001\u0004"+
 		"\u0001\u0004\u0001\u0004\u0001\u0004\u0001\u0004\u0001\u0004\u0001\u0004"+
 		"\u0001\u0005\u0001\u0005\u0001\u0005\u0001\u0005\u0001\u0005\u0001\u0005"+
 		"\u0001\u0005\u0001\u0005\u0001\u0005\u0001\u0005\u0001\u0005\u0001\u0005"+
+<<<<<<<<< Temporary merge branch 1
 		"\u0001\u0005\u0001\u0005\u0001\u0005\u0003\u0005[\b\u0005\u0001\u0006"+
 		"\u0001\u0006\u0001\u0007\u0001\u0007\u0001\u0007\u0001\u0007\u0001\u0007"+
 		"\u0001\u0007\u0001\u0007\u0001\u0007\u0003\u0007g\b\u0007\u0003\u0007"+
@@ -1187,6 +2251,156 @@ public class PokemonParser extends Parser {
 		"\u0005@\u0000\u0000\u008d\u008e\u00052\u0000\u0000\u008e\u008f\u0005\u001a"+
 		"\u0000\u0000\u008f\u0090\u0005B\u0000\u0000\u0090\u0091\u0005\u0001\u0000"+
 		"\u0000\u0091#\u0001\u0000\u0000\u0000\u0007/Zfhpt\u0082";
+=========
+		"\u0001\u0005\u0001\u0005\u0001\u0005\u0005\u0005n\b\u0005\n\u0005\f\u0005"+
+		"q\t\u0005\u0001\u0006\u0001\u0006\u0001\u0006\u0001\u0006\u0005\u0006"+
+		"w\b\u0006\n\u0006\f\u0006z\t\u0006\u0001\u0007\u0001\u0007\u0001\b\u0001"+
+		"\b\u0005\b\u0080\b\b\n\b\f\b\u0083\t\b\u0001\b\u0003\b\u0086\b\b\u0001"+
+		"\t\u0001\t\u0001\t\u0001\t\u0001\n\u0001\n\u0001\n\u0001\n\u0001\n\u0001"+
+		"\n\u0001\n\u0003\n\u0093\b\n\u0001\u000b\u0001\u000b\u0001\u000b\u0001"+
+		"\u000b\u0005\u000b\u0099\b\u000b\n\u000b\f\u000b\u009c\t\u000b\u0001\f"+
+		"\u0001\f\u0001\f\u0001\f\u0001\f\u0001\f\u0001\f\u0001\f\u0003\f\u00a6"+
+		"\b\f\u0003\f\u00a8\b\f\u0001\f\u0001\f\u0001\r\u0001\r\u0001\r\u0001\r"+
+		"\u0001\r\u0003\r\u00b1\b\r\u0001\r\u0001\r\u0001\u000e\u0001\u000e\u0001"+
+		"\u000e\u0001\u000e\u0001\u000e\u0001\u000e\u0001\u000e\u0001\u000e\u0001"+
+		"\u000e\u0001\u000e\u0003\u000e\u00bf\b\u000e\u0003\u000e\u00c1\b\u000e"+
+		"\u0001\u000e\u0001\u000e\u0001\u000f\u0001\u000f\u0001\u000f\u0001\u000f"+
+		"\u0001\u000f\u0001\u000f\u0001\u000f\u0001\u000f\u0001\u000f\u0001\u000f"+
+		"\u0003\u000f\u00cf\b\u000f\u0003\u000f\u00d1\b\u000f\u0001\u000f\u0001"+
+		"\u000f\u0001\u0010\u0001\u0010\u0001\u0010\u0003\u0010\u00d8\b\u0010\u0001"+
+		"\u0010\u0001\u0010\u0001\u0010\u0001\u0010\u0001\u0010\u0001\u0010\u0001"+
+		"\u0010\u0001\u0010\u0001\u0010\u0001\u0010\u0003\u0010\u00e4\b\u0010\u0001"+
+		"\u0010\u0001\u0010\u0001\u0011\u0001\u0011\u0001\u0011\u0005\u0011\u00eb"+
+		"\b\u0011\n\u0011\f\u0011\u00ee\t\u0011\u0001\u0011\u0001\u0011\u0001\u0012"+
+		"\u0001\u0012\u0001\u0012\u0001\u0012\u0001\u0012\u0001\u0012\u0001\u0013"+
+		"\u0001\u0013\u0001\u0014\u0001\u0014\u0001\u0014\u0001\u0014\u0001\u0014"+
+		"\u0001\u0014\u0003\u0014\u0100\b\u0014\u0001\u0014\u0001\u0014\u0001\u0014"+
+		"\u0001\u0014\u0001\u0014\u0001\u0015\u0001\u0015\u0001\u0015\u0001\u0015"+
+		"\u0001\u0016\u0001\u0016\u0001\u0016\u0001\u0016\u0001\u0016\u0001\u0016"+
+		"\u0001\u0016\u0001\u00ec\u0000\u0017\u0000\u0002\u0004\u0006\b\n\f\u000e"+
+		"\u0010\u0012\u0014\u0016\u0018\u001a\u001c\u001e \"$&(*,\u0000\u0002\u0001"+
+		"\u0000\u000e\u000f\u0002\u0000\u0004\u0004HI\u0112\u0000.\u0001\u0000"+
+		"\u0000\u0000\u0002:\u0001\u0000\u0000\u0000\u0004E\u0001\u0000\u0000\u0000"+
+		"\u0006P\u0001\u0000\u0000\u0000\bW\u0001\u0000\u0000\u0000\n^\u0001\u0000"+
+		"\u0000\u0000\fr\u0001\u0000\u0000\u0000\u000e{\u0001\u0000\u0000\u0000"+
+		"\u0010}\u0001\u0000\u0000\u0000\u0012\u0087\u0001\u0000\u0000\u0000\u0014"+
+		"\u0092\u0001\u0000\u0000\u0000\u0016\u0094\u0001\u0000\u0000\u0000\u0018"+
+		"\u009d\u0001\u0000\u0000\u0000\u001a\u00ab\u0001\u0000\u0000\u0000\u001c"+
+		"\u00b4\u0001\u0000\u0000\u0000\u001e\u00c4\u0001\u0000\u0000\u0000 \u00d4"+
+		"\u0001\u0000\u0000\u0000\"\u00e7\u0001\u0000\u0000\u0000$\u00f1\u0001"+
+		"\u0000\u0000\u0000&\u00f7\u0001\u0000\u0000\u0000(\u00ff\u0001\u0000\u0000"+
+		"\u0000*\u0106\u0001\u0000\u0000\u0000,\u010a\u0001\u0000\u0000\u0000."+
+		"2\u0003\u0002\u0001\u0000/1\u0003\u0010\b\u00000/\u0001\u0000\u0000\u0000"+
+		"14\u0001\u0000\u0000\u000020\u0001\u0000\u0000\u000023\u0001\u0000\u0000"+
+		"\u000036\u0001\u0000\u0000\u000042\u0001\u0000\u0000\u000057\u0003(\u0014"+
+		"\u000065\u0001\u0000\u0000\u000067\u0001\u0000\u0000\u000078\u0001\u0000"+
+		"\u0000\u000089\u0005\u0000\u0000\u00019\u0001\u0001\u0000\u0000\u0000"+
+		":;\u0005\n\u0000\u0000;<\u0003\u0004\u0002\u0000<=\u0003\b\u0004\u0000"+
+		"=>\u0003\n\u0005\u0000>B\u0003\n\u0005\u0000?A\u0003\u000e\u0007\u0000"+
+		"@?\u0001\u0000\u0000\u0000AD\u0001\u0000\u0000\u0000B@\u0001\u0000\u0000"+
+		"\u0000BC\u0001\u0000\u0000\u0000C\u0003\u0001\u0000\u0000\u0000DB\u0001"+
+		"\u0000\u0000\u0000EF\u0005I\u0000\u0000FG\u0005\r\u0000\u0000GH\u0007"+
+		"\u0000\u0000\u0000HI\u0005\u001c\u0000\u0000IJ\u0005\u001d\u0000\u0000"+
+		"JK\u0005\u001e\u0000\u0000KL\u0005\u0010\u0000\u0000LM\u0005\u0011\u0000"+
+		"\u0000MN\u0005\u0001\u0000\u0000NO\u0003\u0006\u0003\u0000O\u0005\u0001"+
+		"\u0000\u0000\u0000PQ\u0005I\u0000\u0000QR\u0005\u0012\u0000\u0000RS\u0005"+
+		"\u001d\u0000\u0000ST\u0005\u0010\u0000\u0000TU\u0005\u0013\u0000\u0000"+
+		"UV\u0005\u0001\u0000\u0000V\u0007\u0001\u0000\u0000\u0000WX\u0005I\u0000"+
+		"\u0000XY\u0005\u0014\u0000\u0000YZ\u0005#\u0000\u0000Z[\u0005\u0015\u0000"+
+		"\u0000[\\\u0005\u0016\u0000\u0000\\]\u0005\u0001\u0000\u0000]\t\u0001"+
+		"\u0000\u0000\u0000^_\u0005I\u0000\u0000_`\u0005\u0017\u0000\u0000`a\u0005"+
+		" \u0000\u0000ab\u0005\u001b\u0000\u0000bc\u0005\u001c\u0000\u0000cd\u0005"+
+		"\u001d\u0000\u0000de\u0005\u001e\u0000\u0000ef\u0005\u001f\u0000\u0000"+
+		"fg\u0005\u0001\u0000\u0000gh\u0005\u0003\u0000\u0000hi\u0005 \u0000\u0000"+
+		"ij\u0005\u0018\u0000\u0000jk\u0005\u001b\u0000\u0000ko\u0005\u0001\u0000"+
+		"\u0000ln\u0003\f\u0006\u0000ml\u0001\u0000\u0000\u0000nq\u0001\u0000\u0000"+
+		"\u0000om\u0001\u0000\u0000\u0000op\u0001\u0000\u0000\u0000p\u000b\u0001"+
+		"\u0000\u0000\u0000qo\u0001\u0000\u0000\u0000rs\u0005\u0004\u0000\u0000"+
+		"sx\u0003&\u0013\u0000tu\u0005\u0002\u0000\u0000uw\u0003&\u0013\u0000v"+
+		"t\u0001\u0000\u0000\u0000wz\u0001\u0000\u0000\u0000xv\u0001\u0000\u0000"+
+		"\u0000xy\u0001\u0000\u0000\u0000y\r\u0001\u0000\u0000\u0000zx\u0001\u0000"+
+		"\u0000\u0000{|\u0003\u0018\f\u0000|\u000f\u0001\u0000\u0000\u0000}\u0081"+
+		"\u0003\u0012\t\u0000~\u0080\u0003\u0014\n\u0000\u007f~\u0001\u0000\u0000"+
+		"\u0000\u0080\u0083\u0001\u0000\u0000\u0000\u0081\u007f\u0001\u0000\u0000"+
+		"\u0000\u0081\u0082\u0001\u0000\u0000\u0000\u0082\u0085\u0001\u0000\u0000"+
+		"\u0000\u0083\u0081\u0001\u0000\u0000\u0000\u0084\u0086\u0003$\u0012\u0000"+
+		"\u0085\u0084\u0001\u0000\u0000\u0000\u0085\u0086\u0001\u0000\u0000\u0000"+
+		"\u0086\u0011\u0001\u0000\u0000\u0000\u0087\u0088\u0005I\u0000\u0000\u0088"+
+		"\u0089\u0005\t\u0000\u0000\u0089\u008a\u0005\f\u0000\u0000\u008a\u0013"+
+		"\u0001\u0000\u0000\u0000\u008b\u0093\u0003\u0018\f\u0000\u008c\u0093\u0003"+
+		"\u001a\r\u0000\u008d\u0093\u0003\u001c\u000e\u0000\u008e\u0093\u0003\u001e"+
+		"\u000f\u0000\u008f\u0093\u0003 \u0010\u0000\u0090\u0093\u0003\u0016\u000b"+
+		"\u0000\u0091\u0093\u0003\"\u0011\u0000\u0092\u008b\u0001\u0000\u0000\u0000"+
+		"\u0092\u008c\u0001\u0000\u0000\u0000\u0092\u008d\u0001\u0000\u0000\u0000"+
+		"\u0092\u008e\u0001\u0000\u0000\u0000\u0092\u008f\u0001\u0000\u0000\u0000"+
+		"\u0092\u0090\u0001\u0000\u0000\u0000\u0092\u0091\u0001\u0000\u0000\u0000"+
+		"\u0093\u0015\u0001\u0000\u0000\u0000\u0094\u0095\u0005\u0004\u0000\u0000"+
+		"\u0095\u009a\u0003&\u0013\u0000\u0096\u0097\u0005\u0002\u0000\u0000\u0097"+
+		"\u0099\u0003&\u0013\u0000\u0098\u0096\u0001\u0000\u0000\u0000\u0099\u009c"+
+		"\u0001\u0000\u0000\u0000\u009a\u0098\u0001\u0000\u0000\u0000\u009a\u009b"+
+		"\u0001\u0000\u0000\u0000\u009b\u0017\u0001\u0000\u0000\u0000\u009c\u009a"+
+		"\u0001\u0000\u0000\u0000\u009d\u009e\u0005I\u0000\u0000\u009e\u009f\u0005"+
+		"!\u0000\u0000\u009f\u00a7\u0003&\u0013\u0000\u00a0\u00a1\u0005#\u0000"+
+		"\u0000\u00a1\u00a5\u0005\u001d\u0000\u0000\u00a2\u00a6\u0005&\u0000\u0000"+
+		"\u00a3\u00a4\u0005$\u0000\u0000\u00a4\u00a6\u0005%\u0000\u0000\u00a5\u00a2"+
+		"\u0001\u0000\u0000\u0000\u00a5\u00a3\u0001\u0000\u0000\u0000\u00a6\u00a8"+
+		"\u0001\u0000\u0000\u0000\u00a7\u00a0\u0001\u0000\u0000\u0000\u00a7\u00a8"+
+		"\u0001\u0000\u0000\u0000\u00a8\u00a9\u0001\u0000\u0000\u0000\u00a9\u00aa"+
+		"\u0005\u0001\u0000\u0000\u00aa\u0019\u0001\u0000\u0000\u0000\u00ab\u00ac"+
+		"\u0005I\u0000\u0000\u00ac\u00b0\u0005\u0017\u0000\u0000\u00ad\u00ae\u0005"+
+		"\u0019\u0000\u0000\u00ae\u00b1\u0005\u001a\u0000\u0000\u00af\u00b1\u0003"+
+		"&\u0013\u0000\u00b0\u00ad\u0001\u0000\u0000\u0000\u00b0\u00af\u0001\u0000"+
+		"\u0000\u0000\u00b1\u00b2\u0001\u0000\u0000\u0000\u00b2\u00b3\u0005\u0001"+
+		"\u0000\u0000\u00b3\u001b\u0001\u0000\u0000\u0000\u00b4\u00b5\u0005I\u0000"+
+		"\u0000\u00b5\u00b6\u0005(\u0000\u0000\u00b6\u00b7\u0003&\u0013\u0000\u00b7"+
+		"\u00b8\u0005#\u0000\u0000\u00b8\u00c0\u0003&\u0013\u0000\u00b9\u00ba\u0005"+
+		"\'\u0000\u0000\u00ba\u00be\u0005\u001d\u0000\u0000\u00bb\u00bf\u0005&"+
+		"\u0000\u0000\u00bc\u00bd\u0005$\u0000\u0000\u00bd\u00bf\u0005%\u0000\u0000"+
+		"\u00be\u00bb\u0001\u0000\u0000\u0000\u00be\u00bc\u0001\u0000\u0000\u0000"+
+		"\u00bf\u00c1\u0001\u0000\u0000\u0000\u00c0\u00b9\u0001\u0000\u0000\u0000"+
+		"\u00c0\u00c1\u0001\u0000\u0000\u0000\u00c1\u00c2\u0001\u0000\u0000\u0000"+
+		"\u00c2\u00c3\u0005\u0001\u0000\u0000\u00c3\u001d\u0001\u0000\u0000\u0000"+
+		"\u00c4\u00c5\u0005I\u0000\u0000\u00c5\u00c6\u0005*\u0000\u0000\u00c6\u00c7"+
+		"\u0003&\u0013\u0000\u00c7\u00c8\u0005#\u0000\u0000\u00c8\u00d0\u0003&"+
+		"\u0013\u0000\u00c9\u00ca\u0005\'\u0000\u0000\u00ca\u00ce\u0005\u001d\u0000"+
+		"\u0000\u00cb\u00cf\u0005&\u0000\u0000\u00cc\u00cd\u0005$\u0000\u0000\u00cd"+
+		"\u00cf\u0005%\u0000\u0000\u00ce\u00cb\u0001\u0000\u0000\u0000\u00ce\u00cc"+
+		"\u0001\u0000\u0000\u0000\u00cf\u00d1\u0001\u0000\u0000\u0000\u00d0\u00c9"+
+		"\u0001\u0000\u0000\u0000\u00d0\u00d1\u0001\u0000\u0000\u0000\u00d1\u00d2"+
+		"\u0001\u0000\u0000\u0000\u00d2\u00d3\u0005\u0001\u0000\u0000\u00d3\u001f"+
+		"\u0001\u0000\u0000\u0000\u00d4\u00d7\u0005I\u0000\u0000\u00d5\u00d6\u0005"+
+		"\t\u0000\u0000\u00d6\u00d8\u0003&\u0013\u0000\u00d7\u00d5\u0001\u0000"+
+		"\u0000\u0000\u00d7\u00d8\u0001\u0000\u0000\u0000\u00d8\u00d9\u0001\u0000"+
+		"\u0000\u0000\u00d9\u00da\u0005+\u0000\u0000\u00da\u00e3\u0003&\u0013\u0000"+
+		"\u00db\u00dc\u0005)\u0000\u0000\u00dc\u00dd\u0005I\u0000\u0000\u00dd\u00de"+
+		"\u0005\t\u0000\u0000\u00de\u00df\u0003&\u0013\u0000\u00df\u00e0\u0005"+
+		"\u001c\u0000\u0000\u00e0\u00e1\u0005H\u0000\u0000\u00e1\u00e2\u0005,\u0000"+
+		"\u0000\u00e2\u00e4\u0001\u0000\u0000\u0000\u00e3\u00db\u0001\u0000\u0000"+
+		"\u0000\u00e3\u00e4\u0001\u0000\u0000\u0000\u00e4\u00e5\u0001\u0000\u0000"+
+		"\u0000\u00e5\u00e6\u0005\u0001\u0000\u0000\u00e6!\u0001\u0000\u0000\u0000"+
+		"\u00e7\u00e8\u0005\u0003\u0000\u0000\u00e8\u00ec\u0007\u0001\u0000\u0000"+
+		"\u00e9\u00eb\t\u0000\u0000\u0000\u00ea\u00e9\u0001\u0000\u0000\u0000\u00eb"+
+		"\u00ee\u0001\u0000\u0000\u0000\u00ec\u00ed\u0001\u0000\u0000\u0000\u00ec"+
+		"\u00ea\u0001\u0000\u0000\u0000\u00ed\u00ef\u0001\u0000\u0000\u0000\u00ee"+
+		"\u00ec\u0001\u0000\u0000\u0000\u00ef\u00f0\u0005\u0001\u0000\u0000\u00f0"+
+		"#\u0001\u0000\u0000\u0000\u00f1\u00f2\u0005I\u0000\u0000\u00f2\u00f3\u0005"+
+		"@\u0000\u0000\u00f3\u00f4\u0005=\u0000\u0000\u00f4\u00f5\u0005\u000b\u0000"+
+		"\u0000\u00f5\u00f6\u0005\u0001\u0000\u0000\u00f6%\u0001\u0000\u0000\u0000"+
+		"\u00f7\u00f8\u0005G\u0000\u0000\u00f8\'\u0001\u0000\u0000\u0000\u00f9"+
+		"\u00fa\u0005E\u0000\u0000\u00fa\u0100\u0005F\u0000\u0000\u00fb\u00fc\u0005"+
+		"A\u0000\u0000\u00fc\u00fd\u00054\u0000\u0000\u00fd\u00fe\u0005\u001b\u0000"+
+		"\u0000\u00fe\u0100\u0005C\u0000\u0000\u00ff\u00f9\u0001\u0000\u0000\u0000"+
+		"\u00ff\u00fb\u0001\u0000\u0000\u0000\u0100\u0101\u0001\u0000\u0000\u0000"+
+		"\u0101\u0102\u0005\u0001\u0000\u0000\u0102\u0103\u0005I\u0000\u0000\u0103"+
+		"\u0104\u0005D\u0000\u0000\u0104\u0105\u0005\u0001\u0000\u0000\u0105)\u0001"+
+		"\u0000\u0000\u0000\u0106\u0107\u0005E\u0000\u0000\u0107\u0108\u0005F\u0000"+
+		"\u0000\u0108\u0109\u0005\u0001\u0000\u0000\u0109+\u0001\u0000\u0000\u0000"+
+		"\u010a\u010b\u0005A\u0000\u0000\u010b\u010c\u00054\u0000\u0000\u010c\u010d"+
+		"\u0005\u001b\u0000\u0000\u010d\u010e\u0005C\u0000\u0000\u010e\u010f\u0005"+
+		"\u0001\u0000\u0000\u010f-\u0001\u0000\u0000\u0000\u001426Box\u0081\u0085"+
+		"\u0092\u009a\u00a5\u00a7\u00b0\u00be\u00c0\u00ce\u00d0\u00d7\u00e3\u00ec"+
+		"\u00ff";
+>>>>>>>>> Temporary merge branch 2
 	public static final ATN _ATN =
 		new ATNDeserializer().deserialize(_serializedATN.toCharArray());
 	static {
