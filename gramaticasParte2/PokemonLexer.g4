@@ -89,123 +89,6 @@ WINS: 'wins';
 OPPONENT: 'opponent';
 CONCEDED: 'conceded';
 
-//CARTAS DEL MAZO MEW EX
-//Pokemons junto a sus ataques
-LILLIE_CLEFAIRY: 'Lillie''s Clefairy ex';
-FAIRY_ZONE: 'Fairy Zone';
-FULL_MOON: 'Full Moon Rondo';
-
-MEW: 'Mew ex';
-MEMORY: 'Mmeory Helix';
-TELEPORTATION: 'Teleportation Burst';
-
-DEINO: 'Deino';
-STOMP_OFF: 'Stomp Off';
-BITE: 'Bite';
-
-ZWEILOUS: 'Zweilous';
-DARKNESS_FANG: 'Darkness Fang';
-
-HYDREIGON: 'Hydreigon ex';
-CRASHING_HEADBUTT: 'Crashing Headbutt';
-OBSIDIAN: 'Obsidian';
-
-FEZANDIPITI: 'Fezandipiti ex';
-FLIP_SCRIPT: 'Flip the Script';
-CRUEL_ARROW: 'Cruel Arrow';
-
-GENESECT: 'Genesect ex';
-METALLIC_SIGNAL: 'Metallic Signal';
-PROTECT_CHARGE: 'Protect Charge';
-
-STEVEN_BELDUM: 'Steven''s Beldum';
-RAM: 'Ram';
-
-STEVEN_METANG: 'Steven''s Metang';
-METAL_SLASH: 'Metal Slash';
-
-STEVEN_METAGROSS: 'Steven''s Metagross ex';
-X_BOOT: 'X-Boot';
-METAL_STOMP: 'Metal Stomp';
-
-LATIOS: 'Latios';
-LUSTROUS_ASSIST: 'Lustrous Assist';
-DRAGON_CLAW: 'Dragon Claw';
-
-MEGA_LATIAS: 'Mega Latias ex';
-STRAFE: 'Strafe';
-ILLUSORY_IMPULSE: 'Illusory Impulse';
-
-MEOWTH: 'Meowth ex';
-LAST_DITCH: 'Last-Ditch Catch';
-TUCK_TAIL: 'Tuck Tail';
-
-//Items
-BUDDY_POFFIN: 'Buddy-Buddy Poffin';
-ENERGY_RECYCLER: 'Energy Recycler';
-NIGHT_STRETCHER: 'Night Stretcher';
-POKE_PAD: 'Poké Pad'; 
-RARE_CANDY: 'Rare Candy';
-SCRAMBLE_SWITCH: 'Scramble Switch';
-ULTRA_BALL: 'Ultra Ball';
-//Supporter
-BLACK_BELT: 'Black Belt''s Training';
-BOSS: 'Boss''s Orders';
-DAWN: 'Dawn';
-HILDA: 'Hilda';
-LILLIE: 'Lillie''s Determination';
-TEAM_ROCKET: 'Team Rocket''s Petrel';
-//Energy
-PRISM_ENERGY: 'Prism Energy';
-BASIC_DARK: 'Basic Dark Energy';
-BASIC_METALLIC: 'Basic Metallic Energy';
-BASIC_PSYCHIC: 'Basic Psychic Energy';
-
-//CARTAS DEL MAZO ZOROARK EX
-//Pokemons y sus ataques
-N_DARUMAKA: 'N''s Darumaka';
-ROLLING_TACKLE: 'Rollong Tackle';
-FLARE: 'Flare';
-
-N_DARMANITAN: 'N''s Darmanitan';
-BACK_DRAFT: 'Back Draft';
-FLAMEBODY_CANNON: 'Flamebody Cannon';
-
-N_ZORUA: 'N''s Zorua';
-SCRATCH: 'Scratch';
-
-N_ZOROARK: 'N''s Zoroark ex';
-TRADE: 'Trade';
-NIGHT_JOKER: 'Night Joker';
-
-PECHARUNT: 'Pecharunt ex';
-SUBJUGATING_CHAINS: 'Subjugating Chains';
-IRRITATED_OUTBURST: 'Irritated Outburst';
-
-N_RESHIRAM: 'N''s Reshiram';
-POWERFUL_RAGE: 'Powerful Rage';
-VIRTUOUS_FLAME: 'Virtuous Flame';
-
-N_ZEKROM: 'N''s Zekrom';
-SHRED: 'Shred';
-RAMPAGING_THUNDER: 'Rampaging Thunder';
-
-//Items
-N_PP: 'N''s PP Up';
-TICKET: 'Redeemable Ticket';
-N_CASTLE: 'N''s Castle';
-//Supporter
-CYRANO: 'Cyrano';
-JANINE: 'Janine''s Secret Art';
-JUDGE: 'Judge';
-AIR_BALLON: 'Air Ballon';
-BINDING_MOCHI: 'Binding Mochi';
-HERO_CAPE: 'Hero''s Cape';
-POWERGLASS: 'Powerglass';
-
-
-
-
 
 CARTA:
     // --Pokémon de mazo Lucario ---
@@ -274,7 +157,145 @@ CARTA:
     // --- Ataques y habilidades mazo ? 
     | 'Teal Dance'
     | 'Fan Call'
+
+    // --- Mazo Mega Venusaur ex ---
+    // Pokémon
+    | 'Bulbasaur'
+    | 'Ivysaur'
+    | 'Mega Venusaur ex'
+    | 'Bayleef'
+    | 'Meganium'
+    // Entrenadores
+    | 'Forest of Vitality'
+    | 'Bug Catching Set'
+    | 'Dawn'
+    | 'Lana\'s Aid'
+    | 'Colress\'s Tenacity'
+    | 'Grand Tree'
+    | 'Wally\'s Compassion'
+    // Ataques y habilidades
+    | 'Bind Down'
+    | 'Razor Leaf'
+    | 'Solar Transfer'
+    | 'Jungle Dump'
+    | 'Push Down'
+    | 'Wild Growth'
+    | 'Solar Beam'
+    | 'Myriad Leaf Shower'
+    | 'Cruel Arrow'
+    | 'Tuck Tail'
+
+        // --- Mazo Steven's Metagross ex ---
+    // Pokémon
+    | 'Steven\'s Beldum'
+    | 'Steven\'s Metang'
+    | 'Steven\'s Metagross ex'
+    | 'Mega Mawile ex'
+    | 'Mega Skarmory ex'
+    | 'Genesect ex'
+    | 'Frillish'
+    | 'Jellicent ex'
+    // Entrenadores
+    | 'Full Metal Lab'
+    | 'Energy Recycler'
+    | 'Unfair Stamp'
+    // Energía 
+    | 'Basic Metal Energy'
+    // Ataques y habilidades
+    | 'Ram'
+    | 'Metal Slash'
+    | 'X-Boot'
+    | 'Metal Stomp'
+    | 'Gobble Down'
+    | 'Huge Bite'
+    | 'Sonic Ripper'
+    | 'Metallic Signal'
+    | 'Protect Charge'
+    | 'Oceanic Gloom'
+    | 'Oceanic Curse'
+    | 'Power Press'
+    //---------
+    //Mazo Mew
+    //Pokemon
+    | 'Lillie\'s Clefairy ex'
+    | ' Mew ex'
+    | 'Deino'
+    | 'Zweilous'
+    | 'Hydreigon ex'
+    | 'Genesect'
+    | 'Steven\'s Beldium'
+    | 'Steven\'s Metagross'
+    | 'Latios'
+    | 'Mega Latias ex'
+    //Items
+    |'Scramble Switch'
+    //Supporter
+    |'Black Belt\'s Training'
+    //Energy
+    |'Prism Energy'
+    |'Basic Dark Energy'
+    | 'Basic Metallic Energy'
+    //Ataques y habilidades
+    |'Fairy Zone'
+    |'Full Moon Rondo'
+    |'Memory Helix'
+    |'Teleportation Burst'
+    |'Stomp Off'
+    |'Bite'
+    | 'Darkness Fang'
+    |'Crashing Headbutt'
+    |'Obsidian'
+    |'Metallic Signal'
+    |'Protect Charge'
+    |'Ram'
+    |'Metal Slash'
+    |'X-Boot'
+    |'Metal Stomp'
+    |'Lustrous Assist'
+    |'Dragon Claw'
+    |'Strafe'
+    |'Illusory Impulse';
+    //---------
+    //Mazo Zoroark ex
+    //Pokemons
+    |'N\'s Darumaka'
+    |'N\'s Darmanitan'
+    |'N\'s Zorua'
+    |'N\'s Zoroark ex'
+    |'Pecharunt ex'
+    |'N\'s Reshiram'
+    |'N\'s Zekrom'
+    //Items
+    |'N\'s PP Up'
+    |'Redeemable Ticket'
+    |'N\'s Castle'
+    //Supporter
+    |'Cyrano'
+    |'Janine\'s Secret Art'
+    |'Air Ballon'
+    |'Binding Mochi'
+    |'Hero\'s Cape'
+    |'Powerglass'
+    //Ataques y habilidades
+    |'Rollong Tackle'
+    |'Flare'
+    |'Back Draft'
+    |'Flamebody Cannon'
+    |'Scratch'
+    |'Trade'
+    |'Night Joker'
+    |'Subjugating Chains'
+    |'Irritated Outburst'
+    |'Powerful Rage'
+    |'Virtuous Flame'
+    | 'Shred'
+    |'Rampaging Thunder'
+
+
+
     ;
+
+    
 
 // Números e Identificadores (Nombres de jugadores)
 fragment DIGITO: [0-9];
