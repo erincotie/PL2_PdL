@@ -8,6 +8,7 @@ null
 '('
 ')'
 '!'
+null
 'Setup'
 'turn'
 'Turn'
@@ -37,6 +38,7 @@ null
 'Active'
 'Spot'
 'Bench'
+'in'
 'attached'
 'on'
 'evolved'
@@ -52,7 +54,6 @@ null
 'Prize'
 'A'
 'added'
-'Switch'
 'switched'
 'with'
 'become'
@@ -67,7 +68,8 @@ null
 'were'
 'taken'
 'wins'
-null
+'opponent'
+'conceded'
 null
 null
 null
@@ -130,6 +132,7 @@ DOS_PUNTOS
 PARENTESIS_ABRIR
 PARENTESIS_CERRAR
 EXCLAMACION
+APOS_S
 SETUP
 TURN
 TURN_MAYUS
@@ -159,6 +162,7 @@ TO
 ACTIVE
 SPOT
 BENCH
+IN
 ATTACHED
 ON
 EVOLVED
@@ -174,7 +178,6 @@ TOOK
 PRIZE
 A_MAYUS
 ADDED
-SWITCH
 SWITCHED
 WITH
 BECOME
@@ -189,6 +192,9 @@ ALL
 WERE
 TAKEN
 WINS
+OPPONENT
+CONCEDED
+CARTA
 NUM
 ID
 WS
@@ -250,7 +256,18 @@ win_coin
 turn_decision
 draw_cards_init
 descripcion_cartas
+setup_actions
+turn_block
+turn_header
+turn_action
+bullet_line
 play_cards
+draw_action
+attach_energy
+evolve_pokemon
+use_ability_or_attack
+sub_effect
+end_turn
 card_name
 pokemon_card
 item_card
