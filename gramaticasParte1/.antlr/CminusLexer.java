@@ -1,4 +1,4 @@
-// Generated from c:/Users/michu/Documents/GitHub/PL1_parte1_PdL/gramaticasParte1/CminusLexer.g4 by ANTLR 4.13.1
+
 import org.antlr.v4.runtime.Lexer;
 import org.antlr.v4.runtime.CharStream;
 import org.antlr.v4.runtime.Token;
