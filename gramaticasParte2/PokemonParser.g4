@@ -22,44 +22,6 @@ descripcion_cartas: PUNTO_RELLENO card_name (COMA card_name)*; //bullet_line y d
 
 setup_actions: play_cards;
 
-//TODO: regla para reconocer lo que es una carta
-card_name: pokemon_card | item_card | supporter_card | energy_card | stadium_card;
-
-pokemon_card: CARTA_POKEMON;
-
-item_card: CARTA_ITEMS;
-
-supporter_card: CARTA_SUPPORTERS;
-
-energy_card: CARTA_ENERGIA;
-
-stadium_card: CARTA_STADIUMS;
-
-// --- ESTRUCTURA DE TURNOS ---
-//  end_turn? es opparser grammar PokemonParser;
-
-options {
-    tokenVocab = PokemonLexer;
-    language = Java;
-}
-
-program: setup turn_block* end? EOF;//el EOF es para que antlr sepa que tras el end no puede quedar mas texto 
-// --- SETUP INICIAL ---
-setup: SETUP coin_toss turn_decision draw_cards_init draw_cards_init setup_actions*;
-
-coin_toss: ID CHOSE (HEADS|TAILS) FOR THE OPENING COIN FLIP PUNTO win_coin;
-
-win_coin: ID WON THE COIN TOSS PUNTO;
-
-turn_decision: ID DECIDED TO GO FIRST PUNTO;
-
-draw_cards_init: ID DREW SEVEN CARDS FOR THE OPENING HAND PUNTO RAYA SEVEN DRAWN CARDS PUNTO (descripcion_cartas)*;
-
-// permite reconocer listas de cartas separadas por coma en la mano inicial (ej. "• Basic Fighting Energy, Makuhita, ...")
-descripcion_cartas: PUNTO_RELLENO card_name (COMA card_name)*; //bullet_line y descripcion_cartas acepten cualquier secuencia de card_name separados por comas
-
-setup_actions: play_cards;
-
 // --- ESTRUCTURA DE TURNOS ---
 //  end_turn? es opcional porque el último turno no tiene "ended their turn"
 turn_block: turn_header turn_action* end_turn?;//estructurar un turno completo de un jugador
