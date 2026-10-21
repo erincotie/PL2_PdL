@@ -89,45 +89,82 @@ WINS: 'wins';
 OPPONENT: 'opponent';
 CONCEDED: 'conceded';
 
-
-CARTA:
-    // --Pokémon de mazo Lucario ---
-      'Basic Fighting Energy'
-    | 'Rocky Fighting Energy'
-    | 'Hariyama'
-
-    // --- Pokémon añadidos: mazo desconocido (necesarios para el log 2) 
-    | 'Teal Mask Ogerpon ex'
-    | 'Fan Rotom'
-    | 'Hoothoot'
-    | 'Noctowl'
-    | 'Chikorita'   
-    // --- Entrenadores y Objetos ---
-    | 'Lillie\'s Determination'
-    | 'Boss\'s Orders'
+CARTA_ITEMS:
+    'Scramble Switch'
+    | 'Buddy-Buddy Poffin'
+    | 'Rare Candy'  
+    |'N\'s PP Up'
+    |'Redeemable Ticket'
+    |'N\'s Castle'
+    |'Premium Power Pro'
+    |'Energy Search'
+    |'Secret Box'
+    |'Energy Retrieval'
+    |'Mega Signal'
+    |'Precious Trolley'
+    |'Battle Cage'
+    |'Firebreather'
     | 'Fighting Gong'
     | 'Poké Pad'
     | 'Night Stretcher'
     | 'Prime Catcher'
     | 'Ultra Ball'
     | 'Switch'
+    | 'Air Balloon'  
+    | 'Bug Catching Set'
+    ;
+
+CARTA_SUPPORTERS:
+    'Lillie\'s Determination'
+    | 'Boss\'s Orders'
     | 'Judge'
-    | 'Gravity Mountain'
-    | 'Air Balloon'
     | 'Salvatore'
-    | 'Hilda'
-
-    // --- entrenadores y Objetos añadidos: mazo ?  ---
-    | 'Buddy-Buddy Poffin'
-    | 'Rare Candy'
-
-    // --- energia de tu mazo original ---
+    | 'Hilda' 
+    | 'Dawn'
+    | 'Lana\'s Aid'
+    | 'Colress\'s Tenacity'
+    | 'Wally\'s Compassion'
+    |'Black Belt\'s Training'  
+    |'Cyrano'
+    |'Janine\'s Secret Art'
+    |'Binding Mochi'
+    |'Hero\'s Cape'
+    |'Powerglass'
+    |'Tarragon'
+    |'Team Rocket\'s Petrel'  
+    |'Grimsley\'s Move'
+    |'Crispin'
+    |'Canari'
+    |'Carmine'
+    |'Iris\'s Fighting Spirit'
+    ;
+CARTA_STADIUMS:
+    'Academy at Night'
+    | 'Gravity Mountain'
+    |'Jamming Tower'
+    ;
+CARTA_ENERGIA:
+      'Basic Fighting Energy'
+    | 'Rocky Fighting Energy'
     | 'Basic Psychic Energy'
     | 'Basic Fire Energy'
     | 'Neo Upper Energy'
-
-    // - energia añadidas: mazo desconocido ---
     | 'Basic Grass Energy'
+    | 'Basic Metal Energy'
+    |'Prism Energy'
+    |'Basic Dark Energy'
+    |'Basic Electric Energy'
+    |'Legacy Energy'
+    ;
+
+CARTA_POKEMON:
+    // --Pokémon de mazo Lucario ---
+    'Hariyama'
+    | 'Teal Mask Ogerpon ex'
+    | 'Fan Rotom'
+    | 'Hoothoot'
+    | 'Noctowl'
+    | 'Chikorita'          
 
     // --- ataques y aabilidades de mazo Lucario
     | 'Last-Ditch Catch'
@@ -151,12 +188,7 @@ CARTA:
     | 'Meganium'
     // Entrenadores
     | 'Forest of Vitality'
-    | 'Bug Catching Set'
-    | 'Dawn'
-    | 'Lana\'s Aid'
-    | 'Colress\'s Tenacity'
     | 'Grand Tree'
-    | 'Wally\'s Compassion'
     // Ataques y habilidades
     | 'Bind Down'
     | 'Razor Leaf'
@@ -169,7 +201,7 @@ CARTA:
     | 'Cruel Arrow'
     | 'Tuck Tail'
 
-        // --- Mazo Steven's Metagross ex ---
+    // --- Mazo Steven's Metagross ex ---
     // Pokémon
     | 'Steven\'s Beldum'
     | 'Steven\'s Metang'
@@ -178,8 +210,6 @@ CARTA:
     | 'Full Metal Lab'
     | 'Energy Recycler'
     | 'Unfair Stamp'
-    // Energía 
-    | 'Basic Metal Energy'
     // Ataques y habilidades
     | 'Ram'
     | 'X-Boot'
@@ -201,14 +231,7 @@ CARTA:
     | 'Genesect'
     | 'Steven\'s Metagross'
     | 'Latios'
-    | 'Mega Latias ex'
-    //Items
-    |'Scramble Switch'
-    //Supporter
-    |'Black Belt\'s Training'
-    //Energy
-    |'Prism Energy'
-    |'Basic Dark Energy'
+    | 'Mega Latias ex'    
     //Ataques y habilidades
     |'Fairy Zone'
     |'Full Moon Rondo'
@@ -236,17 +259,7 @@ CARTA:
     |'N\'s Zoroark ex'
     |'Pecharunt ex'
     |'N\'s Reshiram'
-    |'N\'s Zekrom'
-    //Items
-    |'N\'s PP Up'
-    |'Redeemable Ticket'
-    |'N\'s Castle'
-    //Supporter
-    |'Cyrano'
-    |'Janine\'s Secret Art'
-    |'Binding Mochi'
-    |'Hero\'s Cape'
-    |'Powerglass'
+    |'N\'s Zekrom'    
     //Ataques y habilidades
     |'Rolling Tackle'
     |'Flare'
@@ -272,11 +285,6 @@ CARTA:
     |'Solrock'
     |'Fezandipiti ex'
     |'Meowth ex'
-    //Items
-    |'Premium Power Pro'
-    //Supporters
-    |'Tarragon'
-    |'Team Rocket\'s Petrel'
     //Tool
     |'Maximum Belt'
 
@@ -288,12 +296,7 @@ CARTA:
     |'Dreepy'
     |'Drakloak'
     |'Dragapult ex'
-    //Items
-    |'Energy Search'
-    //Stadiums
-    |'Jamming Tower'
-    //Supporters
-    |'Crispin'
+    
 
     //-----------
     //Pokemon del mazo Metagross
@@ -311,12 +314,6 @@ CARTA:
     |'Mega Charizard Y ex'
     |'Oricorio ex'
     |'Reshiram'
-    //Items
-    |'Energy Retrieval'
-    |'Mega Signal'
-    |'Precious Trolley'
-    |'Battle Cage'
-    |'Firebreather'
 
     //-------------
     //Pokemons mazo Manectric
@@ -326,15 +323,7 @@ CARTA:
     |'Eelektrik'
     |'Mega Eelektross ex'
     |'Zekrom ex'
-    |'Zeraora'
-    //Items
-    |'Secret Box'
-    //Supporter 
-    |'Canari'
-    |'Carmine'
-    |'Iris\'s Fighting Spirit'
-    //Energia
-    |'Basic Electric Energy'
+    |'Zeraora'    
 
     //---------
     //Pokemon mazo sharpedo
@@ -344,12 +333,6 @@ CARTA:
     |'Seviper'
     |'Toxel'
     |'Toxtricity'
-    //Stadium
-    |'Academy at Night'
-    //Supporter
-    |'Grimsley\'s Move'
-    //Energia
-    |'Legacy Energy'
 
     ;
 

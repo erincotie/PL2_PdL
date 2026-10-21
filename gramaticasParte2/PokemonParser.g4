@@ -23,19 +23,17 @@ descripcion_cartas: PUNTO_RELLENO card_name (COMA card_name)*; //bullet_line y d
 setup_actions: play_cards;
 
 //TODO: regla para reconocer lo que es una carta
-card_name: pokemon_card | item_card | supporter_card | energy_card;
+card_name: pokemon_card | item_card | supporter_card | energy_card | stadium_card;
 
-pokemon_card: mew_deck | zoroark_deck;
+pokemon_card: CARTA_POKEMON;
 
-item_card: BUDDY_POFFIN | ENERGY_RECYCLER | NIGHT_STRETCHER | POKE_PAD | RARE_CANDY | SCRAMBLE_SWITCH | ULTRA_BALL | N_PP | TICKET | N_CASTLE;
+item_card: CARTA_ITEMS;
 
-supporter_card: BLACK_BELT | BOSS | DAWN | HILDA | LILLIE | TEAM_ROCKET | CYRANO | JANINE | JUDGE | AIR_BALLON | BINDING_MOCHI | HERO_CAPE | POWERGLASS;
+supporter_card: CARTA_SUPPORTERS;
 
-energy_card: PRISM_ENERGY | BASIC_DARK | BASIC_METALLIC | BASIC_PSYCHIC;
+energy_card: CARTA_ENERGIA;
 
-mew_deck: LILLIE_CLEFAIRY | MEW | DEINO | ZWEILOUS | HYDREIGON | FEZANDIPITI | GENESECT | STEVEN_BELDUM | STEVEN_METANG | STEVEN_METAGROSS | LATIOS | MEGA_LATIAS | MEOWTH;
-
-zoroark_deck: N_DARUMAKA | N_DARMANITAN | N_ZORUA | N_ZOROARK | PECHARUNT | N_RESHIRAM | N_ZEKROM | FEZANDIPITI | MEOWTH;
+stadium_card: CARTA_STADIUMS;
 
 // --- ESTRUCTURA DE TURNOS ---
 //  end_turn? es opcional porque el último turno no tiene "ended their turn"
@@ -76,8 +74,6 @@ sub_effect: RAYA (ID | NUM | PUNTO_RELLENO) .*? PUNTO;
 end_turn: ID ENDED THEIR TURN PUNTO;
 
 // --- REGLAS AUXILIARES Y FIN DE PARTIDA ---
-
-card_name: CARTA;
 
 end: (OPPONENT CONCEDED | ALL PRIZE CARDS TAKEN) PUNTO ID WINS PUNTO;
 
