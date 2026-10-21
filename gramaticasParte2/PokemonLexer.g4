@@ -95,7 +95,6 @@ CARTA_ITEMS:
     | 'Rare Candy'  
     |'N\'s PP Up'
     |'Redeemable Ticket'
-    |'N\'s Castle'
     |'Premium Power Pro'
     |'Energy Search'
     |'Secret Box'
@@ -112,6 +111,7 @@ CARTA_ITEMS:
     | 'Switch'
     | 'Air Balloon'  
     | 'Bug Catching Set'
+    | 'Energy Recycler'
     ;
 
 CARTA_SUPPORTERS:
@@ -142,6 +142,7 @@ CARTA_STADIUMS:
     'Academy at Night'
     | 'Gravity Mountain'
     |'Jamming Tower'
+    |'N\'s Castle'
     ;
 CARTA_ENERGIA:
       'Basic Fighting Energy'
@@ -208,7 +209,6 @@ CARTA_POKEMON:
     | 'Steven\'s Metagross ex'
     // Entrenadores
     | 'Full Metal Lab'
-    | 'Energy Recycler'
     | 'Unfair Stamp'
     // Ataques y habilidades
     | 'Ram'
