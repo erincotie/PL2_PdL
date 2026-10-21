@@ -94,14 +94,6 @@ CARTA:
     // --Pokémon de mazo Lucario ---
       'Basic Fighting Energy'
     | 'Rocky Fighting Energy'
-    | 'Makuhita'
-    | 'Okidogi'
-    | 'Mega Lucario ex'
-    | 'Riolu'
-    | 'Solrock'
-    | 'Meowth ex'
-    | 'Lunatone'
-    | 'Fezandipiti ex'
     | 'Hariyama'
 
     // --- Pokémon añadidos: mazo desconocido (necesarios para el log 2) 
@@ -110,34 +102,26 @@ CARTA:
     | 'Hoothoot'
     | 'Noctowl'
     | 'Chikorita'   
-    | 'Dragapult ex'
-    | 'Dreepy'
-    | 'Drakloak'
-    // --- Entrenadores y Objetos de tu mazo original ---
+    // --- Entrenadores y Objetos ---
     | 'Lillie\'s Determination'
     | 'Boss\'s Orders'
     | 'Fighting Gong'
     | 'Poké Pad'
-    | 'Poke Pad'
-    | 'Premium Power Pro'
     | 'Night Stretcher'
     | 'Prime Catcher'
     | 'Ultra Ball'
     | 'Switch'
     | 'Judge'
-    | 'Tarragon'
     | 'Gravity Mountain'
-    | 'Team Rocket\'s Petrel'
     | 'Air Balloon'
     | 'Salvatore'
     | 'Hilda'
-    | 'Maximum Belt'
 
     // --- entrenadores y Objetos añadidos: mazo ?  ---
     | 'Buddy-Buddy Poffin'
     | 'Rare Candy'
 
-    // --- enrgia de tu mazo original ---
+    // --- energia de tu mazo original ---
     | 'Basic Psychic Energy'
     | 'Basic Fire Energy'
     | 'Neo Upper Energy'
@@ -190,11 +174,6 @@ CARTA:
     | 'Steven\'s Beldum'
     | 'Steven\'s Metang'
     | 'Steven\'s Metagross ex'
-    | 'Mega Mawile ex'
-    | 'Mega Skarmory ex'
-    | 'Genesect ex'
-    | 'Frillish'
-    | 'Jellicent ex'
     // Entrenadores
     | 'Full Metal Lab'
     | 'Energy Recycler'
@@ -203,13 +182,10 @@ CARTA:
     | 'Basic Metal Energy'
     // Ataques y habilidades
     | 'Ram'
-    | 'Metal Slash'
     | 'X-Boot'
-    | 'Metal Stomp'
     | 'Gobble Down'
     | 'Huge Bite'
     | 'Sonic Ripper'
-    | 'Metallic Signal'
     | 'Protect Charge'
     | 'Oceanic Gloom'
     | 'Oceanic Curse'
@@ -218,12 +194,11 @@ CARTA:
     //Mazo Mew
     //Pokemon
     | 'Lillie\'s Clefairy ex'
-    | ' Mew ex'
+    | 'Mew ex'
     | 'Deino'
     | 'Zweilous'
     | 'Hydreigon ex'
     | 'Genesect'
-    | 'Steven\'s Beldium'
     | 'Steven\'s Metagross'
     | 'Latios'
     | 'Mega Latias ex'
@@ -234,7 +209,6 @@ CARTA:
     //Energy
     |'Prism Energy'
     |'Basic Dark Energy'
-    | 'Basic Metallic Energy'
     //Ataques y habilidades
     |'Fairy Zone'
     |'Full Moon Rondo'
@@ -246,8 +220,6 @@ CARTA:
     |'Crashing Headbutt'
     |'Obsidian'
     |'Metallic Signal'
-    |'Protect Charge'
-    |'Ram'
     |'Metal Slash'
     |'X-Boot'
     |'Metal Stomp'
@@ -272,12 +244,11 @@ CARTA:
     //Supporter
     |'Cyrano'
     |'Janine\'s Secret Art'
-    |'Air Ballon'
     |'Binding Mochi'
     |'Hero\'s Cape'
     |'Powerglass'
     //Ataques y habilidades
-    |'Rollong Tackle'
+    |'Rolling Tackle'
     |'Flare'
     |'Back Draft'
     |'Flamebody Cannon'
@@ -291,7 +262,94 @@ CARTA:
     | 'Shred'
     |'Rampaging Thunder'
 
+    //-------------------
+    //Pokemon mazo Lucario ex
+    |'Lunatone'
+    |'Makuhita'
+    |'Okidogi'
+    |'Riolu'
+    |'Mega Lucario ex'
+    |'Solrock'
+    |'Fezandipiti ex'
+    |'Meowth ex'
+    //Items
+    |'Premium Power Pro'
+    //Supporters
+    |'Tarragon'
+    |'Team Rocket\'s Petrel'
+    //Tool
+    |'Maximum Belt'
 
+    //-------------
+    //Pokemon mazo Dragapult
+    |'Duskull'
+    |'Dusclops'
+    |'Dusknoir'
+    |'Dreepy'
+    |'Drakloak'
+    |'Dragapult ex'
+    //Items
+    |'Energy Search'
+    //Stadiums
+    |'Jamming Tower'
+    //Supporters
+    |'Crispin'
+
+    //-----------
+    //Pokemon del mazo Metagross
+    |'Frillish'
+    |'Jellicent ex'
+    |'Genesect ex'
+    |'Mega Mawile ex'
+    |'Mega Skarmory ex'
+    
+    //------------
+    //Pokemon mazo Charizard
+    |'Charmander'
+    |'Charmaleon'
+    |'Mega Charizard ex'
+    |'Mega Charizard Y ex'
+    |'Oricorio ex'
+    |'Reshiram'
+    //Items
+    |'Energy Retrieval'
+    |'Mega Signal'
+    |'Precious Trolley'
+    |'Battle Cage'
+    |'Firebreather'
+
+    //-------------
+    //Pokemons mazo Manectric
+    |'Electrike'
+    |'Mega Manectric ex'
+    |'Tynamo'
+    |'Eelektrik'
+    |'Mega Eelektross ex'
+    |'Zekrom ex'
+    |'Zeraora'
+    //Items
+    |'Secret Box'
+    //Supporter 
+    |'Canari'
+    |'Carmine'
+    |'Iris\'s Fighting Spirit'
+    //Energia
+    |'Basic Electric Energy'
+
+    //---------
+    //Pokemon mazo sharpedo
+    |'Munkidori'
+    |'Carvanha'
+    |'Mega Sharpedo ex'
+    |'Seviper'
+    |'Toxel'
+    |'Toxtricity'
+    //Stadium
+    |'Academy at Night'
+    //Supporter
+    |'Grimsley\'s Move'
+    //Energia
+    |'Legacy Energy'
 
     ;
 
