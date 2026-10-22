@@ -9,7 +9,7 @@ DOS_PUNTOS: ':';
 PARENTESIS_ABRIR: '(';
 PARENTESIS_CERRAR: ')';
 EXCLAMACION: '!';
-APOS_S: ('\''|'’') 's';// para permitir apóstrofes rectos (') y curvos (’)
+APOS_S: ('\''|'’') 's'; // para permitir apóstrofes rectos (') y curvos (’)
 // Palabras reservadas
 SETUP: 'Setup';
 TURN: 'turn';
@@ -44,7 +44,7 @@ TO: 'to';
 ACTIVE: 'Active';
 SPOT: 'Spot';
 BENCH: 'Bench';
-IN: 'in'; //  añadido para frases como "in the Active Spot"
+IN: 'in'; //  
 
 // Adjuntar energía y evolucionar Pokémon
 ATTACHED: 'attached';
@@ -89,108 +89,183 @@ WINS: 'wins';
 OPPONENT: 'opponent';
 CONCEDED: 'conceded';
 
-CARTA_ITEMS:
-    'Scramble Switch'
-    | 'Buddy-Buddy Poffin'
-    | 'Rare Candy'  
-    |'N\'s PP Up'
-    |'Redeemable Ticket'
-    |'Premium Power Pro'
-    |'Energy Search'
-    |'Secret Box'
-    |'Energy Retrieval'
-    |'Mega Signal'
-    |'Precious Trolley'
-    |'Battle Cage'
-    |'Firebreather'
-    | 'Fighting Gong'
-    | 'Poké Pad'
-    | 'Night Stretcher'
-    | 'Prime Catcher'
-    | 'Ultra Ball'
-    | 'Switch'
-    | 'Air Balloon'  
-    | 'Bug Catching Set'
-    | 'Energy Recycler'
-    ;
 
-CARTA_SUPPORTERS:
-    'Lillie\'s Determination'
-    | 'Boss\'s Orders'
-    | 'Judge'
-    | 'Salvatore'
-    | 'Hilda' 
-    | 'Dawn'
-    | 'Lana\'s Aid'
-    | 'Colress\'s Tenacity'
-    | 'Wally\'s Compassion'
-    |'Black Belt\'s Training'  
-    |'Cyrano'
-    |'Janine\'s Secret Art'
-    |'Binding Mochi'
-    |'Hero\'s Cape'
-    |'Powerglass'
-    |'Tarragon'
-    |'Team Rocket\'s Petrel'  
-    |'Grimsley\'s Move'
-    |'Crispin'
-    |'Canari'
-    |'Carmine'
-    |'Iris\'s Fighting Spirit'
-    ;
-CARTA_STADIUMS:
-    'Academy at Night'
-    | 'Gravity Mountain'
-    |'Jamming Tower'
-    |'N\'s Castle'
-    ;
-CARTA_ENERGIA:
-      'Basic Fighting Energy'
-    | 'Rocky Fighting Energy'
-    | 'Basic Psychic Energy'
-    | 'Basic Fire Energy'
-    | 'Neo Upper Energy'
-    | 'Basic Grass Energy'
-    | 'Basic Metal Energy'
-    |'Prism Energy'
-    |'Basic Dark Energy'
-    |'Basic Electric Energy'
-    |'Legacy Energy'
-    ;
+
+
+// CARTAS: un token por tipo de carta (pokemon, energia, item, supporter,
+// stadium) y otro para ataques y habilidades.
+
 
 CARTA_POKEMON:
-    // --Pokémon de mazo Lucario ---
-    'Hariyama'
+    // Mazo Mega Lucario ex
+      'Riolu'
+    | 'Mega Lucario ex'
+    | 'Makuhita'
+    | 'Hariyama'
+    | 'Okidogi'
+    | 'Solrock'
+    | 'Lunatone'
+    // Mazo Mega Venusaur ex
+    | 'Bulbasaur'
+    | 'Ivysaur'
+    | 'Mega Venusaur ex'
+    | 'Chikorita'
+    | 'Bayleef'
+    | 'Meganium'
     | 'Teal Mask Ogerpon ex'
+    // Mazo Steven's Metagross ex
+    | 'Steven\'s Beldum'
+    | 'Steven\'s Metang'
+    | 'Steven\'s Metagross ex'
+    | 'Genesect ex'
+    | 'Mega Mawile ex'
+    | 'Mega Skarmory ex'
+    | 'Frillish'
+    | 'Jellicent ex'
+    // Mazo Mew ex
+    | 'Mew ex'
+    | 'Lillie\'s Clefairy ex'
+    | 'Deino'
+    | 'Zweilous'
+    | 'Hydreigon ex'
+    | 'Latios'
+    | 'Mega Latias ex'
+    | 'Genesect'                
+    | 'Steven\'s Metagross'     
+    // Mazo N's Zoroark ex
+    | 'N\'s Zorua'
+    | 'N\'s Zoroark ex'
+    | 'N\'s Darumaka'
+    | 'N\'s Darmanitan'
+    | 'N\'s Reshiram'
+    | 'N\'s Zekrom'
+    | 'Pecharunt ex'
+    // Mazo Dragapult ex
+    | 'Dreepy'
+    | 'Drakloak'
+    | 'Dragapult ex'
+    | 'Duskull'
+    | 'Dusclops'
+    | 'Dusknoir'
+    // Mazo Mega Charizard X ex
+    | 'Charmander'
+    | 'Charmeleon'
+    | 'Mega Charizard ex'
+    | 'Mega Charizard Y ex'
+    | 'Oricorio ex'
+    | 'Reshiram'
+    // Mazo Mega Manectric ex
+    | 'Electrike'
+    | 'Mega Manectric ex'
+    | 'Tynamo'
+    | 'Eelektrik'
+    | 'Mega Eelektross ex'
+    | 'Zekrom ex'
+    | 'Zeraora'
+    // Mazo Mega Sharpedo ex
+    | 'Carvanha'
+    | 'Mega Sharpedo ex'
+    | 'Munkidori'
+    | 'Seviper'
+    | 'Toxel'
+    | 'Toxtricity'
+    // Comunes a varios mazos
+    | 'Meowth ex'
+    | 'Fezandipiti ex'
+    // Del rival del log 2 del profesor
     | 'Fan Rotom'
     | 'Hoothoot'
     | 'Noctowl'
-    | 'Chikorita'          
+    ;
 
-    // --- ataques y aabilidades de mazo Lucario
-    | 'Last-Ditch Catch'
-    | 'Aura Jab'
-    | 'Flip the Script'
+CARTA_ENERGIA:
+      'Basic Grass Energy'
+    | 'Basic Fire Energy'
+    | 'Basic Psychic Energy'
+    | 'Basic Fighting Energy'
+    | 'Basic Metal Energy'        
+    | 'Basic Darkness Energy'     
+    | 'Basic Electric Energy'     
+    // Energias especiales
+    | 'Rocky Fighting Energy'
+    | 'Neo Upper Energy'
+    | 'Prism Energy'
+    | 'Legacy Energy'
+    ;
+
+// Las herramientas (Pokemon Tool) se incluyen aqui porque son un tipo de Item
+CARTA_ITEM:
+      'Ultra Ball'
+    | 'Poké Pad'
+    | 'Night Stretcher'
+    | 'Switch'
+    | 'Rare Candy'
+    | 'Buddy-Buddy Poffin'
+    | 'Energy Recycler'
+    | 'Energy Retrieval'
+    | 'Energy Search'
+    | 'Fighting Gong'
+    | 'Premium Power Pro'
+    | 'Prime Catcher'
+    | 'Bug Catching Set'
+    | 'Unfair Stamp'
+    | 'Scramble Switch'
+    | 'N\'s PP Up'
+    | 'Redeemable Ticket'
+    | 'Mega Signal'
+    | 'Precious Trolley'
+    | 'Secret Box'
+    // Herramientas
+    | 'Air Balloon'
+    | 'Maximum Belt'
+    | 'Binding Mochi'
+    | 'Hero\'s Cape'
+    | 'Powerglass'
+    ;
+
+CARTA_SUPPORTER:
+      'Lillie\'s Determination'
+    | 'Boss\'s Orders'
+    | 'Judge'
+    | 'Dawn'
+    | 'Hilda'
+    | 'Team Rocket\'s Petrel'
+    | 'Tarragon'
+    | 'Salvatore'
+    | 'Lana\'s Aid'
+    | 'Colress\'s Tenacity'
+    | 'Wally\'s Compassion'
+    | 'Black Belt\'s Training'
+    | 'Cyrano'
+    | 'Janine\'s Secret Art'
+    | 'Crispin'
+    | 'Canari'
+    | 'Carmine'
+    | 'Iris\'s Fighting Spirit'
+    | 'Grimsley\'s Move'
+    | 'Firebreather'              // DUDA: comprobar que es Supporter
+    ;
+
+CARTA_STADIUM:
+      'Forest of Vitality'
+    | 'Grand Tree'
+    | 'Full Metal Lab'
+    | 'Gravity Mountain'
+    | 'N\'s Castle'
+    | 'Jamming Tower'
+    | 'Academy at Night'
+    | 'Battle Cage'
+    ;
+
+// Ataques y habilidades de los Pokemon
+ATAQUE:
+    // Mazo Mega Lucario ex
+      'Aura Jab'
     | 'Mega Brave'
     | 'Lunar Cycle'
     | 'Heave-Ho Catcher'
     | 'Wild Press'
-
-    // --- Ataques y habilidades mazo ? 
-    | 'Teal Dance'
-    | 'Fan Call'
-
-    // --- Mazo Mega Venusaur ex ---
-    // Pokémon
-    | 'Bulbasaur'
-    | 'Ivysaur'
-    | 'Mega Venusaur ex'
-    | 'Bayleef'
-    | 'Meganium'
-    // Entrenadores
-    | 'Forest of Vitality'
-    | 'Grand Tree'
-    // Ataques y habilidades
+    // Mazo Mega Venusaur ex
     | 'Bind Down'
     | 'Razor Leaf'
     | 'Solar Transfer'
@@ -198,152 +273,65 @@ CARTA_POKEMON:
     | 'Push Down'
     | 'Wild Growth'
     | 'Solar Beam'
+    | 'Teal Dance'
     | 'Myriad Leaf Shower'
-    | 'Cruel Arrow'
-    | 'Tuck Tail'
-
-    // --- Mazo Steven's Metagross ex ---
-    // Pokémon
-    | 'Steven\'s Beldum'
-    | 'Steven\'s Metang'
-    | 'Steven\'s Metagross ex'
-    // Entrenadores
-    | 'Full Metal Lab'
-    | 'Unfair Stamp'
-    // Ataques y habilidades
+    // Mazo Steven's Metagross ex
     | 'Ram'
+    | 'Metal Slash'
     | 'X-Boot'
+    | 'Metal Stomp'
+    | 'Metallic Signal'
+    | 'Protect Charge'
     | 'Gobble Down'
     | 'Huge Bite'
     | 'Sonic Ripper'
-    | 'Protect Charge'
     | 'Oceanic Gloom'
     | 'Oceanic Curse'
     | 'Power Press'
-    //---------
-    //Mazo Mew
-    //Pokemon
-    | 'Lillie\'s Clefairy ex'
-    | 'Mew ex'
-    | 'Deino'
-    | 'Zweilous'
-    | 'Hydreigon ex'
-    | 'Genesect'
-    | 'Steven\'s Metagross'
-    | 'Latios'
-    | 'Mega Latias ex'    
-    //Ataques y habilidades
-    |'Fairy Zone'
-    |'Full Moon Rondo'
-    |'Memory Helix'
-    |'Teleportation Burst'
-    |'Stomp Off'
-    |'Bite'
+    // Mazo Mew ex
+    | 'Fairy Zone'
+    | 'Full Moon Rondo'
+    | 'Memory Helix'
+    | 'Teleportation Burst'
+    | 'Stomp Off'
+    | 'Bite'
     | 'Darkness Fang'
-    |'Crashing Headbutt'
-    |'Obsidian'
-    |'Metallic Signal'
-    |'Metal Slash'
-    |'X-Boot'
-    |'Metal Stomp'
-    |'Lustrous Assist'
-    |'Dragon Claw'
-    |'Strafe'
-    |'Illusory Impulse';
-    //---------
-    //Mazo Zoroark ex
-    //Pokemons
-    |'N\'s Darumaka'
-    |'N\'s Darmanitan'
-    |'N\'s Zorua'
-    |'N\'s Zoroark ex'
-    |'Pecharunt ex'
-    |'N\'s Reshiram'
-    |'N\'s Zekrom'    
-    //Ataques y habilidades
-    |'Rolling Tackle'
-    |'Flare'
-    |'Back Draft'
-    |'Flamebody Cannon'
-    |'Scratch'
-    |'Trade'
-    |'Night Joker'
-    |'Subjugating Chains'
-    |'Irritated Outburst'
-    |'Powerful Rage'
-    |'Virtuous Flame'
+    | 'Crashing Headbutt'
+    | 'Obsidian'
+    | 'Lustrous Assist'
+    | 'Dragon Claw'
+    | 'Strafe'
+    | 'Illusory Impulse'
+    // Mazo N's Zoroark ex
+    | 'Rolling Tackle'
+    | 'Flare'
+    | 'Back Draft'
+    | 'Flamebody Cannon'
+    | 'Scratch'
+    | 'Trade'
+    | 'Night Joker'
+    | 'Subjugating Chains'
+    | 'Irritated Outburst'
+    | 'Powerful Rage'
+    | 'Virtuous Flame'
     | 'Shred'
-    |'Rampaging Thunder'
-
-    //-------------------
-    //Pokemon mazo Lucario ex
-    |'Lunatone'
-    |'Makuhita'
-    |'Okidogi'
-    |'Riolu'
-    |'Mega Lucario ex'
-    |'Solrock'
-    |'Fezandipiti ex'
-    |'Meowth ex'
-    //Tool
-    |'Maximum Belt'
-
-    //-------------
-    //Pokemon mazo Dragapult
-    |'Duskull'
-    |'Dusclops'
-    |'Dusknoir'
-    |'Dreepy'
-    |'Drakloak'
-    |'Dragapult ex'
-    
-
-    //-----------
-    //Pokemon del mazo Metagross
-    |'Frillish'
-    |'Jellicent ex'
-    |'Genesect ex'
-    |'Mega Mawile ex'
-    |'Mega Skarmory ex'
-    
-    //------------
-    //Pokemon mazo Charizard
-    |'Charmander'
-    |'Charmaleon'
-    |'Mega Charizard ex'
-    |'Mega Charizard Y ex'
-    |'Oricorio ex'
-    |'Reshiram'
-
-    //-------------
-    //Pokemons mazo Manectric
-    |'Electrike'
-    |'Mega Manectric ex'
-    |'Tynamo'
-    |'Eelektrik'
-    |'Mega Eelektross ex'
-    |'Zekrom ex'
-    |'Zeraora'    
-
-    //---------
-    //Pokemon mazo sharpedo
-    |'Munkidori'
-    |'Carvanha'
-    |'Mega Sharpedo ex'
-    |'Seviper'
-    |'Toxel'
-    |'Toxtricity'
-
+    | 'Rampaging Thunder'
+    // Comunes a varios mazos
+    | 'Last-Ditch Catch'
+    | 'Tuck Tail'
+    | 'Flip the Script'
+    | 'Cruel Arrow'
+    // Del rival del log 2 del profesor
+    | 'Fan Call'
+    // PENDIENTE: ataques de Dragapult ex, Mega Charizard X ex,
+    // Mega Manectric ex y Mega Sharpedo ex
     ;
 
-    
-
-// Números e Identificadores (Nombres de jugadores)
+// Números e Identificadores (nombres de jugadores)
 fragment DIGITO: [0-9];
-
-fragment LETRA: [a-zA-ZáéíóúÁÉÍÓÚñÑ]; // <-  permite la 'é' y caracteres UTF-8 si no da error, igual deberia permitir numeros tambien??
-NUM: DIGITO(DIGITO)*;
-ID: LETRA(LETRA)*;
+fragment LETRA: [a-zA-ZáéíóúÁÉÍÓÚñÑ];
+NUM: DIGITO+;
+ID: (LETRA | DIGITO | '_')+;
 
 // Para ignorar espacios en blanco y saltos de línea
 WS: [ \t\r\n]+ -> skip;
