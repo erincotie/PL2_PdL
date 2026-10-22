@@ -157,6 +157,63 @@ CARTA:
     // --- Ataques y habilidades mazo ? 
     | 'Teal Dance'
     | 'Fan Call'
+
+    // --- Mazo Mega Venusaur ex ---
+    // Pokémon
+    | 'Bulbasaur'
+    | 'Ivysaur'
+    | 'Mega Venusaur ex'
+    | 'Bayleef'
+    | 'Meganium'
+    // Entrenadores
+    | 'Forest of Vitality'
+    | 'Bug Catching Set'
+    | 'Dawn'
+    | 'Lana\'s Aid'
+    | 'Colress\'s Tenacity'
+    | 'Grand Tree'
+    | 'Wally\'s Compassion'
+    // Ataques y habilidades
+    | 'Bind Down'
+    | 'Razor Leaf'
+    | 'Solar Transfer'
+    | 'Jungle Dump'
+    | 'Push Down'
+    | 'Wild Growth'
+    | 'Solar Beam'
+    | 'Myriad Leaf Shower'
+    | 'Cruel Arrow'
+    | 'Tuck Tail'
+
+        // --- Mazo Steven's Metagross ex ---
+    // Pokémon
+    | 'Steven\'s Beldum'
+    | 'Steven\'s Metang'
+    | 'Steven\'s Metagross ex'
+    | 'Mega Mawile ex'
+    | 'Mega Skarmory ex'
+    | 'Genesect ex'
+    | 'Frillish'
+    | 'Jellicent ex'
+    // Entrenadores
+    | 'Full Metal Lab'
+    | 'Energy Recycler'
+    | 'Unfair Stamp'
+    // Energía 
+    | 'Basic Metal Energy'
+    // Ataques y habilidades
+    | 'Ram'
+    | 'Metal Slash'
+    | 'X-Boot'
+    | 'Metal Stomp'
+    | 'Gobble Down'
+    | 'Huge Bite'
+    | 'Sonic Ripper'
+    | 'Metallic Signal'
+    | 'Protect Charge'
+    | 'Oceanic Gloom'
+    | 'Oceanic Curse'
+    | 'Power Press'
     ;
 
 // Números e Identificadores (Nombres de jugadores)
