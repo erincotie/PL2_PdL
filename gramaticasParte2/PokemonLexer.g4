@@ -106,11 +106,7 @@ LEAST: 'least';
 WEAKNESS: 'Weakness';
 OF: 'of';
 
-// ------------------------------------------------------------
-// Cartas Pokemon
-// Poner los nombres completos en un unico token facilita que
-// los nombres con espacios o apostrofos se reconozcan correctamente.
-// ------------------------------------------------------------
+
 CARTA_POKEMON:
       'Riolu'
     | 'Mega Lucario ex'
@@ -376,9 +372,7 @@ CARTA_POKEMON:
     | 'Swampert'
     ;
 
-// ------------------------------------------------------------
-// Cartas de Energia
-// ------------------------------------------------------------
+
 CARTA_ENERGIA:
       'Basic Grass Energy'
     | 'Basic Fire Energy'
@@ -409,9 +403,7 @@ CARTA_ENERGIA:
     | 'Basic Fairy Energy'
     ;
 
-// ------------------------------------------------------------
-// Cartas de Objeto
-// ------------------------------------------------------------
+
 CARTA_ITEM:
       'Ultra Ball'
     | 'Poké Pad'
@@ -471,9 +463,7 @@ CARTA_ITEM:
     | 'Switch Cart'
     ;
 
-// ------------------------------------------------------------
-// Cartas de Partidario
-// ------------------------------------------------------------
+
 CARTA_SUPPORTER:
       'Lillie\'s Determination'
     | 'Boss\'s Orders'
@@ -517,9 +507,7 @@ CARTA_SUPPORTER:
     | 'Rika'
     ;
 
-// ------------------------------------------------------------
-// Cartas de Estadio
-// ------------------------------------------------------------
+
 CARTA_STADIUM:
       'Forest of Vitality'
     | 'Grand Tree'
@@ -541,9 +529,6 @@ CARTA_STADIUM:
     | 'Pokémon League Headquarters'
     ;
 
-// ------------------------------------------------------------
-// Ataques y habilidades que aparecen en los logs aportados
-// ------------------------------------------------------------
 ATAQUE:
       'Aura Jab'
     | 'Mega Brave'

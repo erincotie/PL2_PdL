@@ -317,6 +317,16 @@ public interface PokemonParserListener extends ParseTreeListener {
 	 */
 	void exitDraw_number_effect(PokemonParser.Draw_number_effectContext ctx);
 	/**
+	 * Enter a parse tree produced by {@link PokemonParser#draw_single_card_effect}.
+	 * @param ctx the parse tree
+	 */
+	void enterDraw_single_card_effect(PokemonParser.Draw_single_card_effectContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link PokemonParser#draw_single_card_effect}.
+	 * @param ctx the parse tree
+	 */
+	void exitDraw_single_card_effect(PokemonParser.Draw_single_card_effectContext ctx);
+	/**
 	 * Enter a parse tree produced by {@link PokemonParser#draw_named_card_effect}.
 	 * @param ctx the parse tree
 	 */
@@ -337,6 +347,16 @@ public interface PokemonParserListener extends ParseTreeListener {
 	 */
 	void exitDraw_and_play_effect(PokemonParser.Draw_and_play_effectContext ctx);
 	/**
+	 * Enter a parse tree produced by {@link PokemonParser#draw_and_play_named_effect}.
+	 * @param ctx the parse tree
+	 */
+	void enterDraw_and_play_named_effect(PokemonParser.Draw_and_play_named_effectContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link PokemonParser#draw_and_play_named_effect}.
+	 * @param ctx the parse tree
+	 */
+	void exitDraw_and_play_named_effect(PokemonParser.Draw_and_play_named_effectContext ctx);
+	/**
 	 * Enter a parse tree produced by {@link PokemonParser#shuffle_deck_effect}.
 	 * @param ctx the parse tree
 	 */
@@ -356,6 +376,26 @@ public interface PokemonParserListener extends ParseTreeListener {
 	 * @param ctx the parse tree
 	 */
 	void exitShuffle_cards_into_deck_effect(PokemonParser.Shuffle_cards_into_deck_effectContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link PokemonParser#shuffle_named_card_into_deck_effect}.
+	 * @param ctx the parse tree
+	 */
+	void enterShuffle_named_card_into_deck_effect(PokemonParser.Shuffle_named_card_into_deck_effectContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link PokemonParser#shuffle_named_card_into_deck_effect}.
+	 * @param ctx the parse tree
+	 */
+	void exitShuffle_named_card_into_deck_effect(PokemonParser.Shuffle_named_card_into_deck_effectContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link PokemonParser#evolve_pokemon_effect}.
+	 * @param ctx the parse tree
+	 */
+	void enterEvolve_pokemon_effect(PokemonParser.Evolve_pokemon_effectContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link PokemonParser#evolve_pokemon_effect}.
+	 * @param ctx the parse tree
+	 */
+	void exitEvolve_pokemon_effect(PokemonParser.Evolve_pokemon_effectContext ctx);
 	/**
 	 * Enter a parse tree produced by {@link PokemonParser#discard_number_effect}.
 	 * @param ctx the parse tree
@@ -457,16 +497,6 @@ public interface PokemonParserListener extends ParseTreeListener {
 	 */
 	void exitMulligan_reveal_effect(PokemonParser.Mulligan_reveal_effectContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link PokemonParser#generic_sub_effect}.
-	 * @param ctx the parse tree
-	 */
-	void enterGeneric_sub_effect(PokemonParser.Generic_sub_effectContext ctx);
-	/**
-	 * Exit a parse tree produced by {@link PokemonParser#generic_sub_effect}.
-	 * @param ctx the parse tree
-	 */
-	void exitGeneric_sub_effect(PokemonParser.Generic_sub_effectContext ctx);
-	/**
 	 * Enter a parse tree produced by {@link PokemonParser#damage_breakdown}.
 	 * @param ctx the parse tree
 	 */
@@ -486,16 +516,6 @@ public interface PokemonParserListener extends ParseTreeListener {
 	 * @param ctx the parse tree
 	 */
 	void exitDamage_breakdown_entry(PokemonParser.Damage_breakdown_entryContext ctx);
-	/**
-	 * Enter a parse tree produced by {@link PokemonParser#generic_damage_entry}.
-	 * @param ctx the parse tree
-	 */
-	void enterGeneric_damage_entry(PokemonParser.Generic_damage_entryContext ctx);
-	/**
-	 * Exit a parse tree produced by {@link PokemonParser#generic_damage_entry}.
-	 * @param ctx the parse tree
-	 */
-	void exitGeneric_damage_entry(PokemonParser.Generic_damage_entryContext ctx);
 	/**
 	 * Enter a parse tree produced by {@link PokemonParser#bullet_line}.
 	 * @param ctx the parse tree

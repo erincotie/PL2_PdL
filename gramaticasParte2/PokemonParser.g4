@@ -7,7 +7,7 @@ options {
 
 // Un programa consta de la configuracion inicial, los turnos y el final.
 program
-: NEWLINE* setup turn_block* end NEWLINE* EOF
+    : NEWLINE* setup turn_block* end NEWLINE* EOF
     ;
 
 // ------------------------------------------------------------
@@ -163,17 +163,19 @@ end_turn
 
 // ------------------------------------------------------------
 // Subefectos: todos empiezan por el guion "-".
-// Se deja una alternativa de respaldo limitada a la linea actual
-// para que un mensaje nuevo no absorba las lineas posteriores.
 // ------------------------------------------------------------
-sub_effect
+sub_effect//  Faltan subefectos fijo
     : RAYA (
           drawn_cards_effect
         | draw_and_play_effect
+        | draw_and_play_named_effect
         | draw_number_effect
+        | draw_single_card_effect
         | draw_named_card_effect
         | shuffle_deck_effect
         | shuffle_cards_into_deck_effect
+        | shuffle_named_card_into_deck_effect
+        | evolve_pokemon_effect
         | discard_number_effect
         | discard_named_card_effect
         | discard_from_pokemon_effect
@@ -184,7 +186,6 @@ sub_effect
         | move_card_to_hand_effect
         | damage_taken_effect
         | mulligan_reveal_effect
-        | generic_sub_effect
       ) PUNTO
     ;
 
@@ -196,6 +197,11 @@ draw_number_effect
     : ID DREW number (CARD | CARDS)
     ;
 
+// Ejemplo: "- PJPJPJPJPJPJ drew a card."
+draw_single_card_effect
+    : ID DREW A CARD
+    ;
+
 draw_named_card_effect
     : ID DREW card_name
     ;
@@ -203,13 +209,25 @@ draw_named_card_effect
 draw_and_play_effect
     : ID DREW number (CARD | CARDS) AND PLAYED THEM TO THE (BENCH | ACTIVE SPOT)
     ;
-
+draw_and_play_named_effect
+    : ID DREW card_name AND PLAYED IT TO THE (BENCH | ACTIVE SPOT)
+    ;
 shuffle_deck_effect
     : ID SHUFFLED THEIR DECK
     ;
 
 shuffle_cards_into_deck_effect
     : ID SHUFFLED (number CARDS | A CARD) INTO THEIR DECK
+    ;
+
+// Ejemplo: "- DrCompiler shuffled Drakloak into their deck."
+shuffle_named_card_into_deck_effect
+    : ID SHUFFLED card_name INTO THEIR DECK
+    ;
+
+// Evolución registrada como subefecto de una carta de Objeto.
+evolve_pokemon_effect
+    : ID EVOLVED pokemon_card TO pokemon_card ((IN | ON) THE (BENCH | ACTIVE SPOT))?
     ;
 
 discard_number_effect
@@ -253,9 +271,6 @@ mulligan_reveal_effect
     : ID REVEALED FROM MULLIGAN number
     ;
 
-generic_sub_effect
-    : (~(PUNTO | NEWLINE))+
-    ;
 
 // ------------------------------------------------------------
 // Desglose del daño. Las entradas internas usan viñeta (•), no guion.
@@ -270,15 +285,10 @@ damage_breakdown_entry
     | PUNTO_RELLENO PARENTESIS_ABRIR ITEM PARENTESIS_CERRAR card_name DOS_PUNTOS? number DAMAGE line_end
     | PUNTO_RELLENO WEAKNESS TO (ID | FIGHTING) number DAMAGE line_end
     | PUNTO_RELLENO TOTAL_DAMAGE DOS_PUNTOS? number DAMAGE line_end
-    | PUNTO_RELLENO generic_damage_entry line_end
-    ;
-
-generic_damage_entry
-    : (~NEWLINE)+
     ;
 
 // ------------------------------------------------------------
-// Listas de cartas con viñeta
+// Listas de cartas con viñeta, lista de cartas separadas por coma
 // ------------------------------------------------------------
 bullet_line
     : PUNTO_RELLENO card_name (COMA card_name)*
@@ -287,7 +297,7 @@ bullet_line
 // ------------------------------------------------------------
 // Clasificacion de cartas
 // ------------------------------------------------------------
-card_name
+card_name// yo diria que faltan tipos Pokémon Tool, Special Energy... sobretodo PokemonTool me suena haberla visto 
     : pokemon_card
     | energy_card
     | item_card

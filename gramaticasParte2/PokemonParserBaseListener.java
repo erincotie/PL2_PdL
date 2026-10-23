@@ -388,6 +388,18 @@ public class PokemonParserBaseListener implements PokemonParserListener {
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
+	@Override public void enterDraw_single_card_effect(PokemonParser.Draw_single_card_effectContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitDraw_single_card_effect(PokemonParser.Draw_single_card_effectContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
 	@Override public void enterDraw_named_card_effect(PokemonParser.Draw_named_card_effectContext ctx) { }
 	/**
 	 * {@inheritDoc}
@@ -412,6 +424,18 @@ public class PokemonParserBaseListener implements PokemonParserListener {
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
+	@Override public void enterDraw_and_play_named_effect(PokemonParser.Draw_and_play_named_effectContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitDraw_and_play_named_effect(PokemonParser.Draw_and_play_named_effectContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
 	@Override public void enterShuffle_deck_effect(PokemonParser.Shuffle_deck_effectContext ctx) { }
 	/**
 	 * {@inheritDoc}
@@ -431,6 +455,30 @@ public class PokemonParserBaseListener implements PokemonParserListener {
 	 * <p>The default implementation does nothing.</p>
 	 */
 	@Override public void exitShuffle_cards_into_deck_effect(PokemonParser.Shuffle_cards_into_deck_effectContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterShuffle_named_card_into_deck_effect(PokemonParser.Shuffle_named_card_into_deck_effectContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitShuffle_named_card_into_deck_effect(PokemonParser.Shuffle_named_card_into_deck_effectContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterEvolve_pokemon_effect(PokemonParser.Evolve_pokemon_effectContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitEvolve_pokemon_effect(PokemonParser.Evolve_pokemon_effectContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
@@ -556,18 +604,6 @@ public class PokemonParserBaseListener implements PokemonParserListener {
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterGeneric_sub_effect(PokemonParser.Generic_sub_effectContext ctx) { }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
-	@Override public void exitGeneric_sub_effect(PokemonParser.Generic_sub_effectContext ctx) { }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
 	@Override public void enterDamage_breakdown(PokemonParser.Damage_breakdownContext ctx) { }
 	/**
 	 * {@inheritDoc}
@@ -587,18 +623,6 @@ public class PokemonParserBaseListener implements PokemonParserListener {
 	 * <p>The default implementation does nothing.</p>
 	 */
 	@Override public void exitDamage_breakdown_entry(PokemonParser.Damage_breakdown_entryContext ctx) { }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
-	@Override public void enterGeneric_damage_entry(PokemonParser.Generic_damage_entryContext ctx) { }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
-	@Override public void exitGeneric_damage_entry(PokemonParser.Generic_damage_entryContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
