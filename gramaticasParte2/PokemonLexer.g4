@@ -15,7 +15,6 @@ APOS_S: ('\'' | '’') 's';
 
 // Se conserva el salto de linea para poder distinguir cada mensaje.
 NEWLINE: '\r'? '\n';
-WS: [ \t]+ -> skip;
 
 // ------------------------------------------------------------
 // Palabras reservadas del log
@@ -105,6 +104,8 @@ AT: 'at';
 LEAST: 'least';
 WEAKNESS: 'Weakness';
 OF: 'of';
+LESS: 'less';
+RESISTANCE: 'Resistance';
 
 
 CARTA_POKEMON:
@@ -372,6 +373,16 @@ CARTA_POKEMON:
     | 'Swampert'
     ;
 
+TIPOS_WEAK_RES:
+    'Grass'
+    |'Fire'
+    |'Psychic'
+    |'Fighting'
+    |'Metal'
+    |'Darkness'
+    |'Colorless'
+    |'Lightning'
+    |'Dragon';
 
 CARTA_ENERGIA:
       'Basic Grass Energy'
@@ -636,9 +647,10 @@ ATAQUE:
 // ------------------------------------------------------------
 // Palabras auxiliares que no son nombres de carta
 // ------------------------------------------------------------
-FIGHTING: 'Fighting';
 
 fragment DIGITO: [0-9];
 fragment LETRA: [a-zA-ZáéíóúÁÉÍÓÚñÑüÜ];
 NUM: DIGITO+;
 ID: (LETRA | DIGITO | '_')+;
+
+WS: [ \t]+ -> skip;

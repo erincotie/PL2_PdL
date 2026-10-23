@@ -117,12 +117,17 @@ evolve_pokemon
 use_ability_or_attack
     : ID APOS_S pokemon_card USED attack_name
       (ON ID APOS_S pokemon_card FOR number DAMAGE)? PUNTO
-      damage_weakness_clause?
+      (damage_weakness_clause?
+      | damage_resistance_clause?)
     ;
 
 // Aparece en la misma linea que algunos ataques.
 damage_weakness_clause
-    : ID APOS_S pokemon_card TOOK number MORE_WORD DAMAGE BECAUSE OF (ID | FIGHTING) WEAKNESS PUNTO
+    : ID APOS_S pokemon_card TOOK number MORE_WORD DAMAGE BECAUSE OF TIPOS_WEAK_RES WEAKNESS PUNTO
+    ;
+
+damage_resistance_clause
+    : ID APOS_S pokemon_card TOOK RAYA number LESS DAMAGE BECAUSE OF TIPOS_WEAK_RES RESISTANCE PUNTO
     ;
 
 retreat_action
@@ -154,7 +159,7 @@ discarded_card_from_pokemon
 
 damage_taken_action
     : (ID APOS_S)? pokemon_card TOOK number DAMAGE PUNTO
-    | (ID APOS_S)? pokemon_card TOOK number MORE_WORD DAMAGE BECAUSE OF (ID | FIGHTING) WEAKNESS PUNTO
+    | (ID APOS_S)? pokemon_card TOOK number MORE_WORD DAMAGE BECAUSE OF TIPOS_WEAK_RES WEAKNESS PUNTO
     ;
 
 end_turn
@@ -264,7 +269,8 @@ move_card_to_hand_effect
 
 damage_taken_effect
     : ID APOS_S pokemon_card TOOK number DAMAGE
-    | ID APOS_S pokemon_card TOOK number MORE_WORD DAMAGE BECAUSE OF (ID | FIGHTING) WEAKNESS
+    | ID APOS_S pokemon_card TOOK number MORE_WORD DAMAGE BECAUSE OF TIPOS_WEAK_RES WEAKNESS
+    | ID APOS_S pokemon_card TOOK RAYA number LESS DAMAGE BECAUSE OF TIPOS_WEAK_RES RESISTANCE
     ;
 
 mulligan_reveal_effect
@@ -283,7 +289,8 @@ damage_breakdown
 damage_breakdown_entry
     : PUNTO_RELLENO BASE_DAMAGE DOS_PUNTOS? number DAMAGE line_end
     | PUNTO_RELLENO PARENTESIS_ABRIR ITEM PARENTESIS_CERRAR card_name DOS_PUNTOS? number DAMAGE line_end
-    | PUNTO_RELLENO WEAKNESS TO (ID | FIGHTING) number DAMAGE line_end
+    | PUNTO_RELLENO WEAKNESS TO TIPOS_WEAK_RES number DAMAGE line_end
+    | PUNTO_RELLENO RESISTANCE TO TIPOS_WEAK_RES number DAMAGE line_end
     | PUNTO_RELLENO TOTAL_DAMAGE DOS_PUNTOS? number DAMAGE line_end
     ;
 
