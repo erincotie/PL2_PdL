@@ -1,0 +1,259 @@
+Setup
+raseccaos chose tails for the opening coin flip.
+GBlime won the coin toss.
+GBlime decided to go second.
+raseccaos drew 7 cards for the opening hand.
+- 7 drawn cards.
+   • Hariyama, Judge, Lunatone, Lunatone, Tarragon, Basic Fighting Energy, Meowth ex
+GBlime drew 7 cards for the opening hand.
+- 7 drawn cards.
+raseccaos played Lunatone to the Active Spot.
+GBlime played Deino to the Active Spot.
+
+raseccaos's Turn
+raseccaos drew Basic Fighting Energy.
+raseccaos played Meowth ex to the Bench.
+raseccaos's Meowth ex used Last-Ditch Catch.
+- raseccaos drew Salvatore.
+- raseccaos shuffled their deck.
+raseccaos attached Basic Fighting Energy to Lunatone in the Active Spot.
+raseccaos ended their turn.
+
+GBlime's Turn
+GBlime drew a card.
+GBlime played Ultra Ball.
+- GBlime discarded 2 cards.
+   • Prism Energy, Basic Metal Energy
+- GBlime drew Zweilous.
+- GBlime shuffled their deck.
+GBlime ended their turn.
+
+raseccaos's Turn
+raseccaos drew Basic Fighting Energy.
+raseccaos played Judge.
+- raseccaos shuffled 6 cards into their deck.
+   • Hariyama, Lunatone, Tarragon, Basic Fighting Energy, Salvatore, Basic Fighting Energy
+- GBlime shuffled 5 cards into their deck.
+- raseccaos drew 4 cards.
+   • Premium Power Pro, Judge, Basic Fighting Energy, Riolu
+- GBlime drew 4 cards.
+raseccaos played Riolu to the Bench.
+raseccaos attached Basic Fighting Energy to Riolu on the Bench.
+raseccaos ended their turn.
+
+GBlime's Turn
+GBlime drew a card.
+GBlime played Meowth ex to the Bench.
+GBlime's Meowth ex used Last-Ditch Catch.
+- GBlime drew Boss's Orders.
+- GBlime shuffled their deck.
+GBlime played Dawn.
+- GBlime drew 3 cards.
+   • Steven's Beldum, Steven's Metang, Steven's Metagross ex
+- GBlime shuffled their deck.
+GBlime ended their turn.
+
+raseccaos's Turn
+raseccaos drew Boss's Orders.
+raseccaos played Judge.
+- raseccaos shuffled 2 cards into their deck.
+   • Premium Power Pro, Boss's Orders
+- GBlime shuffled 7 cards into their deck.
+- raseccaos drew 4 cards.
+   • Premium Power Pro, Basic Fighting Energy, Fezandipiti ex, Basic Fighting Energy
+- GBlime drew 4 cards.
+raseccaos attached Basic Fighting Energy to Riolu on the Bench.
+raseccaos played Fezandipiti ex to the Bench.
+raseccaos ended their turn.
+
+GBlime's Turn
+GBlime drew a card.
+GBlime played Genesect ex to the Bench.
+GBlime played Steven's Beldum to the Bench.
+GBlime attached Prism Energy to Genesect ex on the Bench.
+GBlime played Lillie's Determination.
+- GBlime shuffled a card into their deck.
+- GBlime drew 8 cards.
+GBlime played Mew ex to the Bench.
+GBlime ended their turn.
+
+raseccaos's Turn
+raseccaos drew Mega Lucario ex.
+raseccaos evolved Riolu to Mega Lucario ex on the Bench.
+raseccaos attached Basic Fighting Energy to Lunatone in the Active Spot.
+raseccaos played Premium Power Pro.
+raseccaos's Lunatone used Power Gem on GBlime’s Deino for 80 damage.
+- Damage breakdown:
+   • Base damage: 50 damage
+   • (Item) Premium Power Pro: 30 damage
+   • Total damage: 80 damage
+
+GBlime's Deino was Knocked Out!
+raseccaos took a Prize card.
+Mega Lucario ex was added to raseccaos's hand.
+GBlime's Meowth ex is now in the Active Spot.
+
+GBlime's Turn
+GBlime drew a card.
+GBlime evolved Steven's Beldum to Steven's Metang on the Bench.
+GBlime attached Basic Metal Energy to Genesect ex on the Bench.
+GBlime's Genesect ex used Metallic Signal.
+- GBlime drew 2 cards.
+   • Steven's Metagross ex, Steven's Metang
+- GBlime shuffled their deck.
+GBlime ended their turn.
+
+raseccaos's Turn
+raseccaos drew Boss's Orders.
+raseccaos's Lunatone used Power Gem on GBlime’s Meowth ex for 100 damage. GBlime's Meowth ex took 50 more damage because of Fighting Weakness.
+- Damage breakdown:
+   • Base damage: 50 damage
+   • Weakness to Fighting: 50 damage
+   • Total damage: 100 damage
+
+
+GBlime's Turn
+GBlime drew a card.
+GBlime played Mew ex to the Bench.
+GBlime played Team Rocket's Petrel.
+- GBlime drew Hilda.
+- GBlime shuffled their deck.
+GBlime played Deino to the Bench.
+GBlime evolved Steven's Metang to Steven's Metagross ex on the Bench.
+GBlime attached Basic Darkness Energy to Deino on the Bench.
+GBlime's Steven's Metagross ex used X-Boot.
+- GBlime attached Basic Psychic Energy to Mew ex on the Bench.
+- GBlime attached Basic Metal Energy to Genesect ex on the Bench.
+- GBlime shuffled their deck.
+GBlime's Genesect ex used Metallic Signal.
+- GBlime drew Steven's Metagross ex.
+- GBlime shuffled their deck.
+GBlime ended their turn.
+
+raseccaos's Turn
+raseccaos drew Fighting Gong.
+raseccaos played Fighting Gong.
+- raseccaos drew Solrock.
+- raseccaos shuffled their deck.
+raseccaos played Solrock to the Bench.
+raseccaos's Lunatone used Power Gem on GBlime’s Meowth ex for 100 damage. GBlime's Meowth ex took 50 more damage because of Fighting Weakness.
+- Damage breakdown:
+   • Base damage: 50 damage
+   • Weakness to Fighting: 50 damage
+   • Total damage: 100 damage
+
+GBlime's Meowth ex was Knocked Out!
+raseccaos took 2 Prize cards.
+Solrock was added to raseccaos's hand.
+Makuhita was added to raseccaos's hand.
+GBlime's Genesect ex is now in the Active Spot.
+
+GBlime's Turn
+GBlime drew a card.
+GBlime's Genesect ex used Protect Charge on raseccaos’s Lunatone for 150 damage.
+raseccaos's Lunatone was Knocked Out!
+- 2 cards were discarded from raseccaos's Lunatone.
+   • Basic Fighting Energy, Basic Fighting Energy
+GBlime took a Prize card.
+A card was added to GBlime's hand.
+raseccaos's Mega Lucario ex is now in the Active Spot.
+
+raseccaos's Turn
+raseccaos drew Ultra Ball.
+raseccaos's Fezandipiti ex used Flip the Script.
+- raseccaos drew 3 cards.
+   • Basic Fighting Energy, Boss's Orders, Basic Fighting Energy
+raseccaos played Makuhita to the Bench.
+raseccaos attached Basic Fighting Energy to Makuhita on the Bench.
+raseccaos played Ultra Ball.
+- raseccaos discarded 2 cards.
+   • Boss's Orders, Boss's Orders
+- raseccaos drew Hariyama.
+- raseccaos shuffled their deck.
+raseccaos's Mega Lucario ex used Aura Jab on GBlime’s Genesect ex for 100 damage.
+- Damage breakdown:
+   • Base damage: 130 damage
+   • (Attack) Protect Charge: -30 damage
+   • Total damage: 100 damage
+
+- raseccaos attached Basic Fighting Energy to Makuhita on the Bench.
+- raseccaos attached Basic Fighting Energy to Makuhita on the Bench.
+
+GBlime's Turn
+GBlime drew a card.
+GBlime played Rare Candy.
+- GBlime evolved Deino to Hydreigon ex on the Bench.
+GBlime's Genesect ex used Metallic Signal.
+- GBlime shuffled their deck.
+GBlime played Poké Pad.
+- GBlime drew Zweilous.
+- GBlime shuffled their deck.
+GBlime's Steven's Metagross ex used X-Boot.
+- GBlime attached Basic Psychic Energy to Mew ex on the Bench.
+- GBlime attached Basic Metal Energy to Steven's Metagross ex on the Bench.
+- GBlime shuffled their deck.
+GBlime's Genesect ex used Protect Charge on raseccaos’s Mega Lucario ex for 150 damage.
+
+raseccaos's Turn
+raseccaos drew Switch.
+raseccaos evolved Makuhita to Hariyama on the Bench.
+raseccaos's Hariyama used Heave-Ho Catcher.
+- GBlime's Hydreigon ex was switched with GBlime's Genesect ex to become the Active Pokémon.
+GBlime's Hydreigon ex is now in the Active Spot.
+raseccaos's Mega Lucario ex used Mega Brave on GBlime’s Hydreigon ex for 270 damage.
+
+GBlime's Turn
+GBlime drew a card.
+GBlime played Hilda.
+- GBlime drew 2 cards.
+   • Hydreigon ex, Basic Psychic Energy
+- GBlime shuffled their deck.
+GBlime's Steven's Metagross ex used X-Boot.
+- GBlime shuffled their deck.
+GBlime played Ultra Ball.
+- GBlime discarded 2 cards.
+   • Steven's Metang, Zweilous
+- GBlime drew Steven's Beldum.
+- GBlime shuffled their deck.
+GBlime played Steven's Beldum to the Bench.
+GBlime's Genesect ex used Metallic Signal.
+- GBlime shuffled their deck.
+GBlime attached Basic Psychic Energy to Mew ex on the Bench.
+GBlime ended their turn.
+
+raseccaos's Turn
+raseccaos drew Premium Power Pro.
+raseccaos's Mega Lucario ex used Aura Jab on GBlime’s Hydreigon ex for 130 damage.
+GBlime's Hydreigon ex was Knocked Out!
+- 2 cards were discarded from GBlime's Hydreigon ex.
+   • Basic Darkness Energy, Deino
+raseccaos took 2 Prize cards.
+Night Stretcher was added to raseccaos's hand.
+Basic Fighting Energy was added to raseccaos's hand.
+GBlime's Mew ex is now in the Active Spot.
+
+GBlime's Turn
+GBlime drew a card.
+GBlime's Mew ex used Teleportation Burst on raseccaos’s Mega Lucario ex for 60 damage. raseccaos's Mega Lucario ex took 30 more damage because of Psychic Weakness.
+- Damage breakdown:
+   • Base damage: 30 damage
+   • Weakness to Psychic: 30 damage
+   • Total damage: 60 damage
+
+- GBlime's Mew ex was switched with GBlime's Mew ex to become the Active Pokémon.
+GBlime's Mew ex is now in the Active Spot.
+
+raseccaos's Turn
+raseccaos drew Premium Power Pro.
+raseccaos's Mega Lucario ex used Mega Brave on GBlime’s Mew ex for 240 damage. GBlime's Mew ex took -30 less damage because of Fighting Resistance.
+- Damage breakdown:
+   • Base damage: 270 damage
+   • Resistance to Fighting: -30 damage
+   • Total damage: 240 damage
+
+GBlime's Mew ex was Knocked Out!
+Basic Psychic Energy was discarded from GBlime's Mew ex.
+raseccaos took a Prize card.
+Gravity Mountain was added to raseccaos's hand.
+All Prize cards taken. raseccaos wins.
+

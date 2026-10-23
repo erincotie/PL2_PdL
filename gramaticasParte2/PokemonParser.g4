@@ -42,7 +42,7 @@ win_coin
     ;
 
 turn_decision
-    : ID DECIDED TO GO FIRST PUNTO
+    : ID DECIDED TO GO (FIRST | SECOND) PUNTO
     ;
 
 draw_cards_init
@@ -54,7 +54,7 @@ mulligan_reveal
     ;
 
 mulligan_bonus
-    : ID DREW number MORE_WORD CARD BECAUSE ID TOOK AT LEAST number MULLIGAN PUNTO
+    : ID DREW number MORE_WORD (CARDS|CARD) BECAUSE ID TOOK AT LEAST number MULLIGAN PUNTO
     ;
 
 take_mulligan_action
@@ -284,7 +284,7 @@ attach_card_effect
     ;
 
 move_card_to_hand_effect
-    : ID MOVED ID APOS_S card_name TO THEIR HAND
+    : ID MOVED ID APOS_S (NUM CARDS | card_name) TO THEIR HAND
     ;
 
 damage_taken_effect
@@ -319,12 +319,14 @@ damage_breakdown_entry
       attack_name DOS_PUNTOS? RAYA? number DAMAGE line_end
 
     | PUNTO_RELLENO WEAKNESS TO TIPOS_WEAK_RES
-      DOS_PUNTOS? RAYA? number DAMAGE line_end
+      DOS_PUNTOS? number DAMAGE line_end
 
     | PUNTO_RELLENO RESISTANCE TO TIPOS_WEAK_RES
       DOS_PUNTOS? RAYA? number DAMAGE line_end
 
     | PUNTO_RELLENO TOTAL_DAMAGE DOS_PUNTOS? number DAMAGE line_end
+
+    | PUNTO_RELLENO NUM SELECTED ENERGY DOS_PUNTOS? NUM DAMAGE line_end
     ;
 
 // ------------------------------------------------------------

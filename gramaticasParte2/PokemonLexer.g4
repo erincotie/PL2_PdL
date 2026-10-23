@@ -33,6 +33,7 @@ TOSS: 'toss';
 DECIDED: 'decided';
 GO: 'go';
 FIRST: 'first';
+SECOND: 'second';
 DREW: 'drew';
 DRAWN: 'drawn';
 A: 'a';
@@ -74,14 +75,14 @@ ADDED: 'added';
 SWITCHED: 'switched';
 WITH: 'with';
 BECOME: 'become';
-POKEMON: 'Pokemon' | 'Pokémon';
+POKEMON: 'Pok'[eé]'mon';
 RETREATED: 'retreated';
 SHUFFLED: 'shuffled';
 THEIR: 'their';
 DECK: 'deck';
 MOVED: 'moved';
 ENDED: 'ended';
-ALL: 'All';
+ALL: [aA]'ll';
 TAKEN: 'taken';
 WINS: 'wins';
 OPPONENT: 'Opponent' | 'opponent';
@@ -117,6 +118,9 @@ TIME: 'time';
 TOO: 'too';
 LONG: 'long';
 INACTIVE: 'inactive';
+SELECTED: 'selected';
+ENERGY: [Ee]'nergy';
+
 // ------------------------------------------------------------
 // Nombres de Pokémon
 // ------------------------------------------------------------
@@ -169,6 +173,7 @@ CARTA_POKEMON:
     | 'Charmander'
     | 'Charmeleon'
     | 'Mega Charizard ex'
+    | 'Mega Charizard X ex'
     | 'Mega Charizard Y ex'
     | 'Oricorio ex'
     | 'Reshiram'
@@ -578,6 +583,7 @@ ATAQUE:
     | 'Razor Leaf'
     | 'Solar Transfer'
     | 'Jungle Dump'
+    | 'Excited Turbo'
     | 'Push Down'
     | 'Wild Growth'
     | 'Solar Beam'
@@ -618,6 +624,7 @@ ATAQUE:
     | 'Subjugating Chains'
     | 'Irritated Outburst'
     | 'Powerful Rage'
+    | 'Power Gem'
     | 'Virtuous Flame'
     | 'Shred'
     | 'Rampaging Thunder'
@@ -670,6 +677,7 @@ ATAQUE:
     | 'Lost Mine'
     | 'Moonlight Shuriken'
     | 'Star Requiem'
+    | 'Inferno X'
     ;
 
 // ------------------------------------------------------------

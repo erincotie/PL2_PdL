@@ -13,10 +13,13 @@ public class Analizador{
         String inputFile = null;
         if(args.length>0) inputFile = args[0];
 
-        InputStream is = System.in;
-        if(inputFile != null) is = new FileInputStream(inputFile);
-
-        ANTLRInputStream input = new ANTLRInputStream(is);
+        // Uso de CharStreams ANTLRInputStream, que sale en los videos esta deprecado
+        CharStream input;
+        if (inputFile != null) {
+            input = CharStreams.fromFileName(inputFile);
+        } else {
+            input = CharStreams.fromStream(System.in);
+        }
 
         //Conectar con el lexer
         PokemonLexer lexer = new PokemonLexer(input);
@@ -26,15 +29,15 @@ public class Analizador{
         PokemonParser parser = new PokemonParser(tokens);
 
         //Se genera el arbol sintactico a partir del lexer, parser y el fichero de input
-        ParserTree tree = parser.fichero();
+        ParseTree tree = parser.program();
 
         //Para recorrer un arbol utilizaremos un listener, con lo que primero necesitamos inicializar un recorredor (walker)
         // luego inicializar un escuchador (listener) y decirle que recorra el arbol
-        ParserTreeWalker walker = new ParserTreeWalker();
+        ParseTreeWalker walker = new ParseTreeWalker();
 
-        PokemonParserListener listener = new PokemonParserListener();
+        //PokemonParserListener listener = new PokemonParserListener();
 
-        walker.walk(listener, tree);
+        //walker.walk(listener, tree);
 
     }
 }
