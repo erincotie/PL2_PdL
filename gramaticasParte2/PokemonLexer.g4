@@ -1,3 +1,4 @@
+
 lexer grammar PokemonLexer;
 
 // ------------------------------------------------------------
@@ -13,7 +14,7 @@ PARENTESIS_CERRAR: ')';
 EXCLAMACION: '!';
 APOS_S: ('\'' | '’') 's';
 
-// Se conserva el salto de linea para poder distinguir cada mensaje.
+// Se conserva el salto de linea para distinguir cada mensaje.
 NEWLINE: '\r'? '\n';
 
 // ------------------------------------------------------------
@@ -62,6 +63,7 @@ DAMAGE_MAYUS: 'Damage';
 BASE: 'Base';
 TOTAL: 'Total';
 ITEM: 'Item';
+ATTACK: 'Attack';
 WAS: 'was';
 WERE: 'were';
 K_O: 'Knocked Out!';
@@ -106,8 +108,18 @@ WEAKNESS: 'Weakness';
 OF: 'of';
 LESS: 'less';
 RESISTANCE: 'Resistance';
-
-
+HEALED: 'healed';
+DIDNT: 'didn\'t';
+TAKE: 'take';
+AN: 'an';
+ACTION: 'action';
+TIME: 'time';
+TOO: 'too';
+LONG: 'long';
+INACTIVE: 'inactive';
+// ------------------------------------------------------------
+// Nombres de Pokémon
+// ------------------------------------------------------------
 CARTA_POKEMON:
       'Riolu'
     | 'Mega Lucario ex'
@@ -373,17 +385,24 @@ CARTA_POKEMON:
     | 'Swampert'
     ;
 
+// ------------------------------------------------------------
+// Tipos de debilidad y resistencia
+// ------------------------------------------------------------
 TIPOS_WEAK_RES:
-    'Grass'
-    |'Fire'
-    |'Psychic'
-    |'Fighting'
-    |'Metal'
-    |'Darkness'
-    |'Colorless'
-    |'Lightning'
-    |'Dragon';
+      'Grass'
+    | 'Fire'
+    | 'Psychic'
+    | 'Fighting'
+    | 'Metal'
+    | 'Darkness'
+    | 'Colorless'
+    | 'Lightning'
+    | 'Dragon'
+    ;
 
+// ------------------------------------------------------------
+// Energias
+// ------------------------------------------------------------
 CARTA_ENERGIA:
       'Basic Grass Energy'
     | 'Basic Fire Energy'
@@ -414,7 +433,9 @@ CARTA_ENERGIA:
     | 'Basic Fairy Energy'
     ;
 
-
+// ------------------------------------------------------------
+// Cartas de Objeto
+// ------------------------------------------------------------
 CARTA_ITEM:
       'Ultra Ball'
     | 'Poké Pad'
@@ -474,7 +495,9 @@ CARTA_ITEM:
     | 'Switch Cart'
     ;
 
-
+// ------------------------------------------------------------
+// Cartas de Partidario
+// ------------------------------------------------------------
 CARTA_SUPPORTER:
       'Lillie\'s Determination'
     | 'Boss\'s Orders'
@@ -518,7 +541,9 @@ CARTA_SUPPORTER:
     | 'Rika'
     ;
 
-
+// ------------------------------------------------------------
+// Estadios
+// ------------------------------------------------------------
 CARTA_STADIUM:
       'Forest of Vitality'
     | 'Grand Tree'
@@ -540,6 +565,9 @@ CARTA_STADIUM:
     | 'Pokémon League Headquarters'
     ;
 
+// ------------------------------------------------------------
+// Ataques
+// ------------------------------------------------------------
 ATAQUE:
       'Aura Jab'
     | 'Mega Brave'
@@ -594,6 +622,7 @@ ATAQUE:
     | 'Shred'
     | 'Rampaging Thunder'
     | 'Last-Ditch Catch'
+    | 'Last Ditch Catch'
     | 'Tuck Tail'
     | 'Flip the Script'
     | 'Cruel Arrow'
@@ -609,7 +638,6 @@ ATAQUE:
     | 'Flash Ray'
     | 'Riotous Blasting'
     | 'Dynamotor'
-    | 'Last Ditch Catch'
     | 'Panic Mask'
     | 'Jet Headbutt'
     | 'Lightning Ball'
@@ -645,11 +673,11 @@ ATAQUE:
     ;
 
 // ------------------------------------------------------------
-// Palabras auxiliares que no son nombres de carta
+// Fragmentos y tokens generales
 // ------------------------------------------------------------
-
 fragment DIGITO: [0-9];
 fragment LETRA: [a-zA-ZáéíóúÁÉÍÓÚñÑüÜ];
+
 NUM: DIGITO+;
 ID: (LETRA | DIGITO | '_')+;
 
