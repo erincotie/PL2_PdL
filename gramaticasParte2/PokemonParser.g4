@@ -1,3 +1,4 @@
+
 parser grammar PokemonParser;
 
 options {
@@ -5,7 +6,9 @@ options {
     language = Java;
 }
 
-// Un programa consta de la configuracion inicial, los turnos y el final.
+// ------------------------------------------------------------
+// Programa principal
+// ------------------------------------------------------------
 program
     : NEWLINE* setup turn_block* end NEWLINE* EOF
     ;
@@ -46,12 +49,10 @@ draw_cards_init
     : ID DREW SEVEN CARDS FOR THE OPENING HAND PUNTO
     ;
 
-// Ejemplo: - Cards revealed from Mulligan 1
 mulligan_reveal
     : RAYA ID REVEALED FROM MULLIGAN number
     ;
 
-// Ejemplo: Riverflow2018 drew 1 more card because Solrak06_ took at least 1 mulligan.
 mulligan_bonus
     : ID DREW number MORE_WORD CARD BECAUSE ID TOOK AT LEAST number MULLIGAN PUNTO
     ;
@@ -93,35 +94,40 @@ turn_action
     | card_added_to_hand
     | discarded_card_from_pokemon
     | damage_taken_action
+    | heal_pokemon
     | end_turn
+    | inactive_action
     ;
 
 play_cards
-    : ID PLAYED card_name (TO THE (BENCH | ACTIVE SPOT | STADIUM SPOT))? PUNTO
+    : ID PLAYED card_name
+      (TO THE (BENCH | ACTIVE SPOT | STADIUM SPOT))?
+      PUNTO
     ;
 
 draw_action
     : ID DREW (A CARD | card_name) PUNTO
     ;
 
-// Se permiten tanto "in the Active Spot" como "on the Bench".
-// Aunque el nombre de la regla es attach_energy, tambien admite objetos como Air Balloon.
 attach_energy
-    : ID ATTACHED card_name TO pokemon_card ((IN | ON) THE (BENCH | ACTIVE SPOT))? PUNTO
+    : ID ATTACHED card_name TO pokemon_card
+      ((IN | ON) THE (BENCH | ACTIVE SPOT))?
+      PUNTO
     ;
 
 evolve_pokemon
-    : ID EVOLVED pokemon_card TO pokemon_card ((IN | ON) THE (BENCH | ACTIVE SPOT))? PUNTO
+    : ID EVOLVED pokemon_card TO pokemon_card
+      ((IN | ON) THE (BENCH | ACTIVE SPOT))?
+      PUNTO
     ;
 
 use_ability_or_attack
     : ID APOS_S pokemon_card USED attack_name
-      (ON ID APOS_S pokemon_card FOR number DAMAGE)? PUNTO
-      (damage_weakness_clause?
-      | damage_resistance_clause?)
+      (ON ID APOS_S pokemon_card FOR number DAMAGE)?
+      PUNTO
+      (damage_weakness_clause | damage_resistance_clause)?
     ;
 
-// Aparece en la misma linea que algunos ataques.
 damage_weakness_clause
     : ID APOS_S pokemon_card TOOK number MORE_WORD DAMAGE BECAUSE OF TIPOS_WEAK_RES WEAKNESS PUNTO
     ;
@@ -134,8 +140,6 @@ retreat_action
     : ID RETREATED pokemon_card TO THE BENCH PUNTO
     ;
 
-// Ejemplos: "DrCompiler's Mega Lucario ex is now in the Active Spot."
-// y tambien "Mega Lucario ex is now in the Active Spot."
 active_pokemon_update
     : (ID APOS_S)? pokemon_card IS NOW IN THE ACTIVE SPOT PUNTO
     ;
@@ -162,14 +166,25 @@ damage_taken_action
     | (ID APOS_S)? pokemon_card TOOK number MORE_WORD DAMAGE BECAUSE OF TIPOS_WEAK_RES WEAKNESS PUNTO
     ;
 
+heal_pokemon
+    : (ID APOS_S)? pokemon_card HEALED number DAMAGE PUNTO
+    ;
+
+inactive_action
+    : ID DIDNT TAKE AN ACTION IN TIME PUNTO
+    ;
+
+// ------------------------------------------------------------
+// Final del turno
+// ------------------------------------------------------------
 end_turn
     : ID ENDED THEIR TURN PUNTO
     ;
 
 // ------------------------------------------------------------
-// Subefectos: todos empiezan por el guion "-".
+// Subefectos
 // ------------------------------------------------------------
-sub_effect//  Faltan subefectos fijo
+sub_effect
     : RAYA (
           drawn_cards_effect
         | draw_and_play_effect
@@ -191,7 +206,9 @@ sub_effect//  Faltan subefectos fijo
         | move_card_to_hand_effect
         | damage_taken_effect
         | mulligan_reveal_effect
-      ) PUNTO
+        | heal_pokemon_effect
+      )
+      PUNTO
     ;
 
 drawn_cards_effect
@@ -202,7 +219,6 @@ draw_number_effect
     : ID DREW number (CARD | CARDS)
     ;
 
-// Ejemplo: "- PJPJPJPJPJPJ drew a card."
 draw_single_card_effect
     : ID DREW A CARD
     ;
@@ -214,9 +230,11 @@ draw_named_card_effect
 draw_and_play_effect
     : ID DREW number (CARD | CARDS) AND PLAYED THEM TO THE (BENCH | ACTIVE SPOT)
     ;
+
 draw_and_play_named_effect
     : ID DREW card_name AND PLAYED IT TO THE (BENCH | ACTIVE SPOT)
     ;
+
 shuffle_deck_effect
     : ID SHUFFLED THEIR DECK
     ;
@@ -225,14 +243,13 @@ shuffle_cards_into_deck_effect
     : ID SHUFFLED (number CARDS | A CARD) INTO THEIR DECK
     ;
 
-// Ejemplo: "- DrCompiler shuffled Drakloak into their deck."
 shuffle_named_card_into_deck_effect
     : ID SHUFFLED card_name INTO THEIR DECK
     ;
 
-// Evolución registrada como subefecto de una carta de Objeto.
 evolve_pokemon_effect
-    : ID EVOLVED pokemon_card TO pokemon_card ((IN | ON) THE (BENCH | ACTIVE SPOT))?
+    : ID EVOLVED pokemon_card TO pokemon_card
+      ((IN | ON) THE (BENCH | ACTIVE SPOT))?
     ;
 
 discard_number_effect
@@ -244,7 +261,8 @@ discard_named_card_effect
     ;
 
 discard_from_pokemon_effect
-    : number (CARD | CARDS) (WAS | WERE) DISCARDED FROM ID APOS_S pokemon_card
+    : number (CARD | CARDS) (WAS | WERE) DISCARDED
+      FROM ID APOS_S pokemon_card
     ;
 
 discard_named_from_pokemon_effect
@@ -256,11 +274,13 @@ put_damage_counters_effect
     ;
 
 switch_active_pokemon_effect
-    : ID APOS_S pokemon_card WAS SWITCHED WITH ID APOS_S pokemon_card TO BECOME THE ACTIVE POKEMON
+    : ID APOS_S pokemon_card WAS SWITCHED WITH
+      ID APOS_S pokemon_card TO BECOME THE ACTIVE POKEMON
     ;
 
 attach_card_effect
-    : ID ATTACHED card_name TO pokemon_card ((ON | IN) THE (BENCH | ACTIVE SPOT))
+    : ID ATTACHED card_name TO pokemon_card
+      ((ON | IN) THE (BENCH | ACTIVE SPOT))
     ;
 
 move_card_to_hand_effect
@@ -277,25 +297,38 @@ mulligan_reveal_effect
     : ID REVEALED FROM MULLIGAN number
     ;
 
+heal_pokemon_effect
+    : (ID APOS_S)? pokemon_card HEALED number DAMAGE
+    ;
 
 // ------------------------------------------------------------
-// Desglose del daño. Las entradas internas usan viñeta (•), no guion.
-// Se admiten los formatos con y sin dos puntos observados en los logs.
+// Desglose del daño
 // ------------------------------------------------------------
 damage_breakdown
-    : RAYA DAMAGE_BREAKDOWN DOS_PUNTOS? line_end damage_breakdown_entry+
+    : RAYA DAMAGE_BREAKDOWN DOS_PUNTOS? line_end
+      damage_breakdown_entry+
     ;
 
 damage_breakdown_entry
     : PUNTO_RELLENO BASE_DAMAGE DOS_PUNTOS? number DAMAGE line_end
-    | PUNTO_RELLENO PARENTESIS_ABRIR ITEM PARENTESIS_CERRAR card_name DOS_PUNTOS? number DAMAGE line_end
-    | PUNTO_RELLENO WEAKNESS TO TIPOS_WEAK_RES number DAMAGE line_end
-    | PUNTO_RELLENO RESISTANCE TO TIPOS_WEAK_RES number DAMAGE line_end
+
+    | PUNTO_RELLENO PARENTESIS_ABRIR ITEM PARENTESIS_CERRAR
+      card_name DOS_PUNTOS? RAYA? number DAMAGE line_end
+
+    | PUNTO_RELLENO PARENTESIS_ABRIR ATTACK PARENTESIS_CERRAR
+      attack_name DOS_PUNTOS? RAYA? number DAMAGE line_end
+
+    | PUNTO_RELLENO WEAKNESS TO TIPOS_WEAK_RES
+      DOS_PUNTOS? RAYA? number DAMAGE line_end
+
+    | PUNTO_RELLENO RESISTANCE TO TIPOS_WEAK_RES
+      DOS_PUNTOS? RAYA? number DAMAGE line_end
+
     | PUNTO_RELLENO TOTAL_DAMAGE DOS_PUNTOS? number DAMAGE line_end
     ;
 
 // ------------------------------------------------------------
-// Listas de cartas con viñeta, lista de cartas separadas por coma
+// Listas de cartas
 // ------------------------------------------------------------
 bullet_line
     : PUNTO_RELLENO card_name (COMA card_name)*
@@ -304,7 +337,7 @@ bullet_line
 // ------------------------------------------------------------
 // Clasificacion de cartas
 // ------------------------------------------------------------
-card_name// yo diria que faltan tipos Pokémon Tool, Special Energy... sobretodo PokemonTool me suena haberla visto 
+card_name
     : pokemon_card
     | energy_card
     | item_card
@@ -352,6 +385,8 @@ end_reason
     : OPPONENT CONCEDED PUNTO
     | ALL PRIZE CARDS TAKEN PUNTO
     | NO BENCHED POKEMON FOR BACKUP PUNTO
+    | OPPONENT WAS INACTIVE FOR TOO LONG PUNTO
+    | OPPONENT TOOK ALL OF THEIR PRIZE CARDS PUNTO
     ;
 
 line_end

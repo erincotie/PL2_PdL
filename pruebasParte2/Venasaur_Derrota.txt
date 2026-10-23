@@ -1,0 +1,269 @@
+Setup
+andresg85 chose heads for the opening coin flip.
+andresg85 won the coin toss.
+andresg85 decided to go first.
+andresg85 drew 7 cards for the opening hand.
+- 7 drawn cards.
+   • Dawn, Boss's Orders, Ivysaur, Basic Grass Energy, Bug Catching Set, Basic Grass Energy, Basic Grass Energy
+Franster2900 drew 7 cards for the opening hand.
+- 7 drawn cards.
+andresg85 took a mulligan.
+- Cards revealed from Mulligan 1
+   • Dawn, Boss's Orders, Ivysaur, Basic Grass Energy, Bug Catching Set, Basic Grass Energy, Basic Grass Energy
+Franster2900 took a mulligan.
+- Cards revealed from Mulligan 1
+   • Poké Pad, Team Rocket's Petrel, Basic Darkness Energy, Basic Darkness Energy, Toxtricity, Dark Bell, Lillie's Determination
+andresg85 played Chikorita to the Active Spot.
+Franster2900 played Munkidori to the Active Spot.
+
+andresg85's Turn
+andresg85 drew Bulbasaur.
+andresg85 played Bulbasaur to the Bench.
+andresg85 played Poké Pad.
+- andresg85 drew Ivysaur.
+- andresg85 shuffled their deck.
+andresg85 attached Basic Grass Energy to Bulbasaur on the Bench.
+andresg85 ended their turn.
+
+Franster2900's Turn
+Franster2900 drew a card.
+Franster2900 played Brute Bonnet to the Bench.
+Franster2900 attached Basic Darkness Energy to Munkidori in the Active Spot.
+Franster2900 played Team Rocket's Petrel.
+- Franster2900 drew Lillie's Determination.
+- Franster2900 shuffled their deck.
+Franster2900 ended their turn.
+
+andresg85's Turn
+andresg85 drew Bulbasaur.
+andresg85 evolved Bulbasaur to Ivysaur on the Bench.
+andresg85 attached Basic Grass Energy to Ivysaur on the Bench.
+andresg85 played Forest of Vitality to the Stadium spot.
+andresg85 played Bulbasaur to the Bench.
+andresg85 played Lillie's Determination.
+- andresg85 shuffled Ultra Ball into their deck.
+- andresg85 drew 8 cards.
+   • Teal Mask Ogerpon ex, Meganium, Ultra Ball, Bug Catching Set, Poké Pad, Basic Grass Energy, Judge, Grand Tree
+andresg85 played Poké Pad.
+- andresg85 drew Ivysaur.
+- andresg85 shuffled their deck.
+andresg85 evolved Bulbasaur to Ivysaur on the Bench.
+andresg85 played Teal Mask Ogerpon ex to the Bench.
+andresg85 played Ultra Ball.
+- andresg85 discarded 2 cards.
+   • Bug Catching Set, Grand Tree
+- andresg85 drew Mega Venusaur ex.
+- andresg85 shuffled their deck.
+andresg85 evolved Ivysaur to Mega Venusaur ex on the Bench.
+andresg85's Mega Venusaur ex used Solar Transfer.
+andresg85 ended their turn.
+
+Franster2900's Turn
+Franster2900 drew a card.
+Franster2900 played Buddy-Buddy Poffin.
+- Franster2900 drew 2 cards and played them to the Bench.
+   • Toxel, Toxel
+- Franster2900 shuffled their deck.
+Franster2900 attached Basic Darkness Energy to Brute Bonnet on the Bench.
+Franster2900 played Lillie's Determination.
+- Franster2900 shuffled 3 cards into their deck.
+- Franster2900 drew 8 cards.
+Franster2900 attached Air Balloon to Munkidori in the Active Spot.
+Franster2900 attached Air Balloon to Toxel on the Bench.
+Franster2900 ended their turn.
+
+andresg85's Turn
+andresg85 drew Lana's Aid.
+andresg85 attached Basic Grass Energy to Chikorita in the Active Spot.
+andresg85 retreated Chikorita to the Bench.
+- Basic Grass Energy was discarded from andresg85's Chikorita.
+andresg85's Mega Venusaur ex is now in the Active Spot.
+andresg85 played Lana's Aid.
+- andresg85 moved andresg85's Basic Grass Energy to their hand.
+andresg85's Teal Mask Ogerpon ex used Teal Dance.
+- andresg85 attached Basic Grass Energy to Teal Mask Ogerpon ex on the Bench.
+- andresg85 drew Fezandipiti ex.
+andresg85's Mega Venusaur ex used Solar Transfer.
+- andresg85 attached Basic Grass Energy to Mega Venusaur ex in the Active Spot.
+andresg85 played Fezandipiti ex to the Bench.
+andresg85 ended their turn.
+
+Franster2900's Turn
+Franster2900 drew a card.
+Franster2900 retreated Munkidori to the Bench.
+Franster2900's Brute Bonnet is now in the Active Spot.
+Franster2900 evolved Toxel to Toxtricity on the Bench.
+Franster2900 played Dark Bell.
+- andresg85's Mega Venusaur ex is now Confused.
+Franster2900's Brute Bonnet used Poison Spray.
+- andresg85's Mega Venusaur ex is now Poisoned.
+
+Pokémon Checkup
+1 damage counter was placed on andresg85's Mega Venusaur ex for the Special Condition Poisoned.
+
+andresg85's Turn
+andresg85 drew Teal Mask Ogerpon ex.
+andresg85 played Teal Mask Ogerpon ex to the Bench.
+andresg85 played Judge.
+- andresg85 shuffled Meganium into their deck.
+- Franster2900 shuffled 5 cards into their deck.
+- andresg85 drew 4 cards.
+   • Boss's Orders, Lillie's Determination, Judge, Team Rocket's Petrel
+- Franster2900 drew 4 cards.
+andresg85's Mega Venusaur ex used Solar Transfer.
+andresg85 ended their turn.
+
+Pokémon Checkup
+1 damage counter was placed on andresg85's Mega Venusaur ex for the Special Condition Poisoned.
+
+Franster2900's Turn
+Franster2900 drew a card.
+Franster2900 attached Basic Darkness Energy to Brute Bonnet in the Active Spot.
+Franster2900 played Lillie's Determination.
+- Franster2900 shuffled 3 cards into their deck.
+- Franster2900 drew 8 cards.
+Franster2900 evolved Toxel to Toxtricity on the Bench.
+
+Pokémon Checkup
+1 damage counter was placed on andresg85's Mega Venusaur ex for the Special Condition Poisoned.
+
+andresg85's Turn
+andresg85 drew Dawn.
+andresg85 played Dawn.
+- andresg85 drew 3 cards.
+   • Bulbasaur, Ivysaur, Mega Venusaur ex
+- andresg85 shuffled their deck.
+andresg85 evolved Ivysaur to Mega Venusaur ex on the Bench.
+andresg85 ended their turn.
+
+Pokémon Checkup
+1 damage counter was placed on andresg85's Mega Venusaur ex for the Special Condition Poisoned.
+
+Franster2900's Turn
+Franster2900 drew a card.
+Franster2900 played Team Rocket's Factory to the Stadium spot.
+- andresg85 discarded Forest of Vitality.
+Franster2900 played Mega Darkrai ex to the Bench.
+Franster2900's Toxtricity used Sinister Surge.
+- Franster2900 attached Basic Darkness Energy to Mega Darkrai ex on the Bench.
+- Franster2900 shuffled their deck.
+- Franster2900 put 2 damage counters on Franster2900's Mega Darkrai ex.
+Franster2900's Toxtricity used Sinister Surge.
+- Franster2900 attached Basic Darkness Energy to Mega Darkrai ex on the Bench.
+- Franster2900 shuffled their deck.
+- Franster2900 put 2 damage counters on Franster2900's Mega Darkrai ex.
+Franster2900 attached Basic Darkness Energy to Brute Bonnet in the Active Spot.
+Franster2900 played Pokégear 3.0.
+- Franster2900 drew Team Rocket's Petrel.
+- Franster2900 shuffled their deck.
+Franster2900 played Team Rocket's Petrel.
+- Franster2900 drew Ultra Ball.
+- Franster2900 shuffled their deck.
+Franster2900 played Team Rocket's Factory.
+- Franster2900 drew 2 cards.
+Franster2900's Munkidori used Adrena-Brain.
+- Franster2900 moved 3 damage counters from Franster2900's Mega Darkrai ex to Franster2900's Mega Venusaur ex.
+Franster2900's Brute Bonnet used Relentless Punches on andresg85’s Mega Venusaur ex for 400 damage.
+- Damage breakdown:
+   • Base damage: 50 damage
+   • 7 damage counters: 350 damage
+   • Total damage: 400 damage
+
+andresg85's Mega Venusaur ex was Knocked Out!
+- 5 cards were discarded from andresg85's Mega Venusaur ex.
+   • Basic Grass Energy, Basic Grass Energy, Basic Grass Energy, Ivysaur, Bulbasaur
+Franster2900 took 3 Prize cards.
+A card was added to Franster2900's hand.
+A card was added to Franster2900's hand.
+A card was added to Franster2900's hand.
+andresg85's Mega Venusaur ex is now in the Active Spot.
+
+andresg85's Turn
+andresg85 drew Ultra Ball.
+andresg85 played Bulbasaur to the Bench.
+andresg85 played Ultra Ball.
+- andresg85 discarded 2 cards.
+   • Team Rocket's Petrel, Boss's Orders
+- andresg85 drew Mega Venusaur ex.
+- andresg85 shuffled their deck.
+andresg85 played Judge.
+- andresg85 shuffled 3 cards into their deck.
+   • Lillie's Determination, Ivysaur, Mega Venusaur ex
+- Franster2900 shuffled 10 cards into their deck.
+- andresg85 drew 4 cards.
+   • Night Stretcher, Basic Grass Energy, Forest of Vitality, Bug Catching Set
+- Franster2900 drew 4 cards.
+andresg85 played Night Stretcher.
+- andresg85 moved andresg85's Basic Grass Energy to their hand.
+andresg85 attached Basic Grass Energy to Mega Venusaur ex in the Active Spot.
+andresg85 played Bug Catching Set.
+- andresg85 drew 2 cards.
+   • Basic Grass Energy, Bayleef
+- andresg85 shuffled their deck.
+andresg85 evolved Chikorita to Bayleef on the Bench.
+andresg85's Teal Mask Ogerpon ex used Teal Dance.
+- andresg85 attached Basic Grass Energy to Teal Mask Ogerpon ex on the Bench.
+- andresg85 drew Bayleef.
+andresg85's Teal Mask Ogerpon ex used Teal Dance.
+- andresg85 attached Basic Grass Energy to Teal Mask Ogerpon ex on the Bench.
+- andresg85 drew Mega Venusaur ex.
+andresg85's Mega Venusaur ex used Solar Transfer.
+- andresg85 attached Basic Grass Energy to Mega Venusaur ex in the Active Spot.
+- andresg85 attached Basic Grass Energy to Mega Venusaur ex in the Active Spot.
+andresg85 ended their turn.
+
+Franster2900's Turn
+Franster2900 drew a card.
+Franster2900 played Munkidori to the Bench.
+Franster2900 attached Basic Darkness Energy to Munkidori on the Bench.
+Franster2900's Brute Bonnet used Poison Spray.
+- andresg85's Mega Venusaur ex is now Poisoned.
+
+Pokémon Checkup
+1 damage counter was placed on andresg85's Mega Venusaur ex for the Special Condition Poisoned.
+
+andresg85's Turn
+andresg85 drew Wally's Compassion.
+andresg85 played Wally's Compassion.
+- andresg85's Mega Venusaur ex healed 10 damage.
+- andresg85 moved andresg85's 3 cards to their hand.
+   • Basic Grass Energy, Basic Grass Energy, Basic Grass Energy
+andresg85 attached Basic Grass Energy to Mega Venusaur ex in the Active Spot.
+andresg85's Teal Mask Ogerpon ex used Teal Dance.
+- andresg85 attached Basic Grass Energy to Teal Mask Ogerpon ex on the Bench.
+- andresg85 drew Ivysaur.
+andresg85's Teal Mask Ogerpon ex used Teal Dance.
+- andresg85 attached Basic Grass Energy to Teal Mask Ogerpon ex on the Bench.
+- andresg85 drew Lillie's Determination.
+andresg85 evolved Bulbasaur to Ivysaur on the Bench.
+andresg85 played Forest of Vitality to the Stadium spot.
+- Franster2900 discarded Team Rocket's Factory.
+andresg85 evolved Ivysaur to Mega Venusaur ex on the Bench.
+andresg85's Mega Venusaur ex used Solar Transfer.
+- andresg85 attached Basic Grass Energy to Mega Venusaur ex in the Active Spot.
+- andresg85 attached Basic Grass Energy to Mega Venusaur ex in the Active Spot.
+andresg85 ended their turn.
+
+Pokémon Checkup
+1 damage counter was placed on andresg85's Mega Venusaur ex for the Special Condition Poisoned.
+
+Franster2900's Turn
+Franster2900 drew a card.
+Franster2900's Toxtricity used Sinister Surge.
+- Franster2900 attached Basic Darkness Energy to Mega Darkrai ex on the Bench.
+- Franster2900 shuffled their deck.
+- Franster2900 put 2 damage counters on Franster2900's Mega Darkrai ex.
+Franster2900 retreated Brute Bonnet to the Bench.
+- 3 cards were discarded from Franster2900's Brute Bonnet.
+   • Basic Darkness Energy, Basic Darkness Energy, Basic Darkness Energy
+Franster2900's Mega Darkrai ex is now in the Active Spot.
+Franster2900's Mega Darkrai ex used Abyss Eye.
+andresg85's Mega Venusaur ex was Knocked Out!
+- 5 cards were discarded from andresg85's Mega Venusaur ex.
+   • Basic Grass Energy, Basic Grass Energy, Basic Grass Energy, Ivysaur, Bulbasaur
+Franster2900 took 3 Prize cards.
+A card was added to Franster2900's hand.
+A card was added to Franster2900's hand.
+A card was added to Franster2900's hand.
+Opponent took all of their Prize cards. Franster2900 wins.
+
