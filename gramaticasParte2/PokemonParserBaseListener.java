@@ -40,6 +40,18 @@ public class PokemonParserBaseListener implements PokemonParserListener {
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
+	@Override public void enterSetup_entry(PokemonParser.Setup_entryContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitSetup_entry(PokemonParser.Setup_entryContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
 	@Override public void enterCoin_toss(PokemonParser.Coin_tossContext ctx) { }
 	/**
 	 * {@inheritDoc}
@@ -88,25 +100,37 @@ public class PokemonParserBaseListener implements PokemonParserListener {
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterDescripcion_cartas(PokemonParser.Descripcion_cartasContext ctx) { }
+	@Override public void enterMulligan_reveal(PokemonParser.Mulligan_revealContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitDescripcion_cartas(PokemonParser.Descripcion_cartasContext ctx) { }
+	@Override public void exitMulligan_reveal(PokemonParser.Mulligan_revealContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterSetup_actions(PokemonParser.Setup_actionsContext ctx) { }
+	@Override public void enterMulligan_bonus(PokemonParser.Mulligan_bonusContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitSetup_actions(PokemonParser.Setup_actionsContext ctx) { }
+	@Override public void exitMulligan_bonus(PokemonParser.Mulligan_bonusContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterTake_mulligan_action(PokemonParser.Take_mulligan_actionContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitTake_mulligan_action(PokemonParser.Take_mulligan_actionContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
@@ -136,6 +160,18 @@ public class PokemonParserBaseListener implements PokemonParserListener {
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
+	@Override public void enterTurn_entry(PokemonParser.Turn_entryContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitTurn_entry(PokemonParser.Turn_entryContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
 	@Override public void enterTurn_action(PokemonParser.Turn_actionContext ctx) { }
 	/**
 	 * {@inheritDoc}
@@ -143,18 +179,6 @@ public class PokemonParserBaseListener implements PokemonParserListener {
 	 * <p>The default implementation does nothing.</p>
 	 */
 	@Override public void exitTurn_action(PokemonParser.Turn_actionContext ctx) { }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
-	@Override public void enterBullet_line(PokemonParser.Bullet_lineContext ctx) { }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
-	@Override public void exitBullet_line(PokemonParser.Bullet_lineContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
@@ -220,13 +244,97 @@ public class PokemonParserBaseListener implements PokemonParserListener {
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterSub_effect(PokemonParser.Sub_effectContext ctx) { }
+	@Override public void enterDamage_weakness_clause(PokemonParser.Damage_weakness_clauseContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitSub_effect(PokemonParser.Sub_effectContext ctx) { }
+	@Override public void exitDamage_weakness_clause(PokemonParser.Damage_weakness_clauseContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterRetreat_action(PokemonParser.Retreat_actionContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitRetreat_action(PokemonParser.Retreat_actionContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterActive_pokemon_update(PokemonParser.Active_pokemon_updateContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitActive_pokemon_update(PokemonParser.Active_pokemon_updateContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterTake_prize_action(PokemonParser.Take_prize_actionContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitTake_prize_action(PokemonParser.Take_prize_actionContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterKnockout_action(PokemonParser.Knockout_actionContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitKnockout_action(PokemonParser.Knockout_actionContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterCard_added_to_hand(PokemonParser.Card_added_to_handContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitCard_added_to_hand(PokemonParser.Card_added_to_handContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterDiscarded_card_from_pokemon(PokemonParser.Discarded_card_from_pokemonContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitDiscarded_card_from_pokemon(PokemonParser.Discarded_card_from_pokemonContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterDamage_taken_action(PokemonParser.Damage_taken_actionContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitDamage_taken_action(PokemonParser.Damage_taken_actionContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
@@ -244,6 +352,294 @@ public class PokemonParserBaseListener implements PokemonParserListener {
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
+	@Override public void enterSub_effect(PokemonParser.Sub_effectContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitSub_effect(PokemonParser.Sub_effectContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterDrawn_cards_effect(PokemonParser.Drawn_cards_effectContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitDrawn_cards_effect(PokemonParser.Drawn_cards_effectContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterDraw_number_effect(PokemonParser.Draw_number_effectContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitDraw_number_effect(PokemonParser.Draw_number_effectContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterDraw_single_card_effect(PokemonParser.Draw_single_card_effectContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitDraw_single_card_effect(PokemonParser.Draw_single_card_effectContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterDraw_named_card_effect(PokemonParser.Draw_named_card_effectContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitDraw_named_card_effect(PokemonParser.Draw_named_card_effectContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterDraw_and_play_effect(PokemonParser.Draw_and_play_effectContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitDraw_and_play_effect(PokemonParser.Draw_and_play_effectContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterDraw_and_play_named_effect(PokemonParser.Draw_and_play_named_effectContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitDraw_and_play_named_effect(PokemonParser.Draw_and_play_named_effectContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterShuffle_deck_effect(PokemonParser.Shuffle_deck_effectContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitShuffle_deck_effect(PokemonParser.Shuffle_deck_effectContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterShuffle_cards_into_deck_effect(PokemonParser.Shuffle_cards_into_deck_effectContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitShuffle_cards_into_deck_effect(PokemonParser.Shuffle_cards_into_deck_effectContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterShuffle_named_card_into_deck_effect(PokemonParser.Shuffle_named_card_into_deck_effectContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitShuffle_named_card_into_deck_effect(PokemonParser.Shuffle_named_card_into_deck_effectContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterEvolve_pokemon_effect(PokemonParser.Evolve_pokemon_effectContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitEvolve_pokemon_effect(PokemonParser.Evolve_pokemon_effectContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterDiscard_number_effect(PokemonParser.Discard_number_effectContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitDiscard_number_effect(PokemonParser.Discard_number_effectContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterDiscard_named_card_effect(PokemonParser.Discard_named_card_effectContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitDiscard_named_card_effect(PokemonParser.Discard_named_card_effectContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterDiscard_from_pokemon_effect(PokemonParser.Discard_from_pokemon_effectContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitDiscard_from_pokemon_effect(PokemonParser.Discard_from_pokemon_effectContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterDiscard_named_from_pokemon_effect(PokemonParser.Discard_named_from_pokemon_effectContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitDiscard_named_from_pokemon_effect(PokemonParser.Discard_named_from_pokemon_effectContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterPut_damage_counters_effect(PokemonParser.Put_damage_counters_effectContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitPut_damage_counters_effect(PokemonParser.Put_damage_counters_effectContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterSwitch_active_pokemon_effect(PokemonParser.Switch_active_pokemon_effectContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitSwitch_active_pokemon_effect(PokemonParser.Switch_active_pokemon_effectContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterAttach_card_effect(PokemonParser.Attach_card_effectContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitAttach_card_effect(PokemonParser.Attach_card_effectContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterMove_card_to_hand_effect(PokemonParser.Move_card_to_hand_effectContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitMove_card_to_hand_effect(PokemonParser.Move_card_to_hand_effectContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterDamage_taken_effect(PokemonParser.Damage_taken_effectContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitDamage_taken_effect(PokemonParser.Damage_taken_effectContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterMulligan_reveal_effect(PokemonParser.Mulligan_reveal_effectContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitMulligan_reveal_effect(PokemonParser.Mulligan_reveal_effectContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterDamage_breakdown(PokemonParser.Damage_breakdownContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitDamage_breakdown(PokemonParser.Damage_breakdownContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterDamage_breakdown_entry(PokemonParser.Damage_breakdown_entryContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitDamage_breakdown_entry(PokemonParser.Damage_breakdown_entryContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterBullet_line(PokemonParser.Bullet_lineContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitBullet_line(PokemonParser.Bullet_lineContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
 	@Override public void enterCard_name(PokemonParser.Card_nameContext ctx) { }
 	/**
 	 * {@inheritDoc}
@@ -251,6 +647,90 @@ public class PokemonParserBaseListener implements PokemonParserListener {
 	 * <p>The default implementation does nothing.</p>
 	 */
 	@Override public void exitCard_name(PokemonParser.Card_nameContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterPokemon_card(PokemonParser.Pokemon_cardContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitPokemon_card(PokemonParser.Pokemon_cardContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterEnergy_card(PokemonParser.Energy_cardContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitEnergy_card(PokemonParser.Energy_cardContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterItem_card(PokemonParser.Item_cardContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitItem_card(PokemonParser.Item_cardContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterSupporter_card(PokemonParser.Supporter_cardContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitSupporter_card(PokemonParser.Supporter_cardContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterStadium_card(PokemonParser.Stadium_cardContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitStadium_card(PokemonParser.Stadium_cardContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterAttack_name(PokemonParser.Attack_nameContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitAttack_name(PokemonParser.Attack_nameContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterNumber(PokemonParser.NumberContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitNumber(PokemonParser.NumberContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
@@ -268,25 +748,25 @@ public class PokemonParserBaseListener implements PokemonParserListener {
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterConcede(PokemonParser.ConcedeContext ctx) { }
+	@Override public void enterEnd_reason(PokemonParser.End_reasonContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitConcede(PokemonParser.ConcedeContext ctx) { }
+	@Override public void exitEnd_reason(PokemonParser.End_reasonContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterPrize_cards(PokemonParser.Prize_cardsContext ctx) { }
+	@Override public void enterLine_end(PokemonParser.Line_endContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitPrize_cards(PokemonParser.Prize_cardsContext ctx) { }
+	@Override public void exitLine_end(PokemonParser.Line_endContext ctx) { }
 
 	/**
 	 * {@inheritDoc}
