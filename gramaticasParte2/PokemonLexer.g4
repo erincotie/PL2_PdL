@@ -1,9 +1,6 @@
-
 lexer grammar PokemonLexer;
 
-// ------------------------------------------------------------
-// Signos de puntuacion y estructura del log
-// ------------------------------------------------------------
+// Signos de puntuacion y delimitadores
 PUNTO: '.';
 COMA: ',';
 RAYA: '-';
@@ -13,13 +10,9 @@ PARENTESIS_ABRIR: '(';
 PARENTESIS_CERRAR: ')';
 EXCLAMACION: '!';
 APOS_S: ('\'' | '’') 's';
-
-// Se conserva el salto de linea para distinguir cada mensaje.
 NEWLINE: '\r'? '\n';
 
-// ------------------------------------------------------------
-// Palabras reservadas del log
-// ------------------------------------------------------------
+// Palabras reservadas y expresiones comunes
 SETUP: 'Setup';
 TURN: 'turn';
 TURN_MAYUS: 'Turn';
@@ -33,6 +26,7 @@ TOSS: 'toss';
 DECIDED: 'decided';
 GO: 'go';
 FIRST: 'first';
+SECOND: 'second';
 DREW: 'drew';
 DRAWN: 'drawn';
 A: 'a';
@@ -43,85 +37,200 @@ FOR: 'for';
 THE: 'the';
 OPENING: 'opening';
 HAND: 'hand';
-SEVEN: '7';
+SEVEN: 'seven';
 PLAYED: 'played';
 DISCARDED: 'discarded';
 TO: 'to';
 ACTIVE: 'Active';
-SPOT: [sS] [pP] [oO] [tT];
+SPOT: 'Spot'
+    | 'spot';
 BENCH: 'Bench';
 IN: 'in';
 ON: 'on';
 ATTACHED: 'attached';
+
 EVOLVED: 'evolved';
+
 USED: 'used';
+
 DAMAGE_BREAKDOWN: 'Damage breakdown';
+
 BASE_DAMAGE: 'Base damage';
+
 TOTAL_DAMAGE: 'Total damage';
+
 DAMAGE: 'damage';
+
 DAMAGE_MAYUS: 'Damage';
-BASE: 'Base';
-TOTAL: 'Total';
+
+BASE: 'base';
+
+TOTAL: 'total';
+
 ITEM: 'Item';
+
 ATTACK: 'Attack';
+
 WAS: 'was';
+
 WERE: 'were';
-K_O: 'Knocked Out!';
+
+K_O: 'Knocked Out';
+
 TOOK: 'took';
+
 MORE_WORD: 'more';
+
 PRIZE: 'Prize';
+
 ADDED: 'added';
+
 SWITCHED: 'switched';
+
 WITH: 'with';
+
 BECOME: 'become';
-POKEMON: 'Pokemon' | 'Pokémon';
+
+POKEMON: 'Pokémon'
+    | 'Pokemon';
+
 RETREATED: 'retreated';
+
 SHUFFLED: 'shuffled';
+
 THEIR: 'their';
+
 DECK: 'deck';
+
 MOVED: 'moved';
+
 ENDED: 'ended';
-ALL: 'All';
+
+ALL: 'All'
+    | 'all';
+
 TAKEN: 'taken';
+
 WINS: 'wins';
-OPPONENT: 'Opponent' | 'opponent';
-CONCEDED: 'conceded' | 'Conceded';
-NO: 'No';
-BENCHED: 'Benched';
+
+OPPONENT: 'Opponent';
+
+CONCEDED: 'conceded';
+
+NO: 'No'
+    | 'no';
+
+BENCHED: 'Benched' | 'benched';
+
 BACKUP: 'backup';
+
 AND: 'and';
+
 IT: 'it';
+
 THEM: 'them';
+
 INTO: 'into';
+
 PUT: 'put';
-COUNTERS: 'damage counters' | 'counters';
+
+COUNTERS: 'counters';
+
+DAMAGE_COUNTERS: 'damage counters';
+
 FROM: 'from';
+
 STADIUM: 'Stadium';
+
 IS: 'is';
+
 NOW: 'now';
-MULLIGAN: 'Mulligan' | 'mulligan';
+
+MULLIGAN: 'Mulligan'
+    | 'mulligan';
+
 REVEALED: 'revealed';
+
 BECAUSE: 'because';
+
 AT: 'at';
+
 LEAST: 'least';
-WEAKNESS: 'Weakness';
+
+WEAKNESS: 'Weakness'
+    | 'weakness';
+
 OF: 'of';
+
 LESS: 'less';
-RESISTANCE: 'Resistance';
+
+RESISTANCE: 'Resistance'
+    | 'resistance';
+
 HEALED: 'healed';
-DIDNT: 'didn\'t';
+
+DIDNT: 'didn\'t'
+    | 'didn’t';
+
 TAKE: 'take';
+
 AN: 'an';
+
 ACTION: 'action';
+
 TIME: 'time';
+
 TOO: 'too';
+
 LONG: 'long';
+
 INACTIVE: 'inactive';
-// ------------------------------------------------------------
-// Nombres de Pokémon
-// ------------------------------------------------------------
-CARTA_POKEMON:
-      'Riolu'
+
+SELECTED: 'selected';
+
+ENERGY: 'Energy';
+
+EXCITED: 'Excited';
+
+RAN: 'ran';
+
+OUT: 'out';
+
+// Estados especiales del Pokemon. Se agrupan en tokens concretos para que
+// el parser pueda reconocerlos con una sola regla reutilizable.
+ASLEEP: 'Asleep'
+    | 'asleep';
+
+BURNED: 'Burned'
+    | 'burned';
+
+CONFUSED: 'Confused'
+    | 'confused';
+
+PARALYZED: 'Paralyzed'
+    | 'paralyzed'
+    | 'Paralysed'
+    | 'paralysed';
+
+POISONED: 'Poisoned'
+    | 'poisoned';
+
+
+// Tipos usados en clausulas de debilidad y resistencia
+TIPOS_WEAK_RES: 'Grass'
+    | 'Fire'
+    | 'Psychic'
+    | 'Fighting'
+    | 'Metal'
+    | 'Darkness'
+    | 'Colorless'
+    | 'Lightning'
+    | 'Dragon'
+    | 'Water'
+    | 'Fairy';
+
+// Catalogo de cartas Pokemon conocidas
+CARTA_POKEMON: 'Riolu'
     | 'Mega Lucario ex'
     | 'Lucario'
     | 'Makuhita'
@@ -151,8 +260,6 @@ CARTA_POKEMON:
     | 'Hydreigon ex'
     | 'Latios'
     | 'Mega Latias ex'
-    | 'Genesect'
-    | 'Steven\'s Metagross'
     | 'N\'s Zorua'
     | 'N\'s Zoroark ex'
     | 'N\'s Darumaka'
@@ -168,8 +275,10 @@ CARTA_POKEMON:
     | 'Dusknoir'
     | 'Charmander'
     | 'Charmeleon'
-    | 'Mega Charizard ex'
+    | 'Mega Charizard X ex'
     | 'Mega Charizard Y ex'
+    | 'Mega Charizard ex'
+    | 'Charizard'
     | 'Oricorio ex'
     | 'Reshiram'
     | 'Electrike'
@@ -383,28 +492,11 @@ CARTA_POKEMON:
     | 'Mudkip'
     | 'Marshtomp'
     | 'Swampert'
-    ;
+    | 'Mega Darkrai ex'
+    | 'Brute Bonnet';
 
-// ------------------------------------------------------------
-// Tipos de debilidad y resistencia
-// ------------------------------------------------------------
-TIPOS_WEAK_RES:
-      'Grass'
-    | 'Fire'
-    | 'Psychic'
-    | 'Fighting'
-    | 'Metal'
-    | 'Darkness'
-    | 'Colorless'
-    | 'Lightning'
-    | 'Dragon'
-    ;
-
-// ------------------------------------------------------------
-// Energias
-// ------------------------------------------------------------
-CARTA_ENERGIA:
-      'Basic Grass Energy'
+// Catalogo de energias conocidas
+CARTA_ENERGIA: 'Basic Grass Energy'
     | 'Basic Fire Energy'
     | 'Basic Psychic Energy'
     | 'Basic Fighting Energy'
@@ -412,6 +504,8 @@ CARTA_ENERGIA:
     | 'Basic Darkness Energy'
     | 'Basic Electric Energy'
     | 'Basic Lightning Energy'
+    | 'Basic Water Energy'
+    | 'Basic Fairy Energy'
     | 'Rocky Fighting Energy'
     | 'Neo Upper Energy'
     | 'Prism Energy'
@@ -428,16 +522,10 @@ CARTA_ENERGIA:
     | 'Lucky Energy'
     | 'Capture Energy'
     | 'Speed Lightning Energy'
-    | 'Powerful Colorless Energy'
-    | 'Basic Water Energy'
-    | 'Basic Fairy Energy'
-    ;
+    | 'Powerful Colorless Energy';
 
-// ------------------------------------------------------------
-// Cartas de Objeto
-// ------------------------------------------------------------
-CARTA_ITEM:
-      'Ultra Ball'
+// Catalogo de objetos conocidos
+CARTA_ITEM: 'Ultra Ball'
     | 'Poké Pad'
     | 'Poke Pad'
     | 'Night Stretcher'
@@ -493,13 +581,12 @@ CARTA_ITEM:
     | 'Tool Scrapper'
     | 'Enhanced Hammer'
     | 'Switch Cart'
-    ;
+    | 'Pokégear 3.0'
+    | 'Pokegear 3.0'
+    | 'Dark Bell';
 
-// ------------------------------------------------------------
-// Cartas de Partidario
-// ------------------------------------------------------------
-CARTA_SUPPORTER:
-      'Lillie\'s Determination'
+// Catalogo de Supporters conocidos
+CARTA_SUPPORTER: 'Lillie\'s Determination'
     | 'Boss\'s Orders'
     | 'Judge'
     | 'Dawn'
@@ -538,14 +625,10 @@ CARTA_SUPPORTER:
     | 'Saguaro'
     | 'Tulip'
     | 'Jacq'
-    | 'Rika'
-    ;
+    | 'Rika';
 
-// ------------------------------------------------------------
-// Estadios
-// ------------------------------------------------------------
-CARTA_STADIUM:
-      'Forest of Vitality'
+// Catalogo de estadios conocidos
+CARTA_STADIUM: 'Forest of Vitality'
     | 'Grand Tree'
     | 'Full Metal Lab'
     | 'Gravity Mountain'
@@ -563,13 +646,10 @@ CARTA_STADIUM:
     | 'Beach Court'
     | 'Mesagoza'
     | 'Pokémon League Headquarters'
-    ;
+    | 'Team Rocket\'s Factory';
 
-// ------------------------------------------------------------
-// Ataques
-// ------------------------------------------------------------
-ATAQUE:
-      'Aura Jab'
+// Catalogo de ataques conocidos
+ATAQUE: 'Aura Jab'
     | 'Mega Brave'
     | 'Lunar Cycle'
     | 'Heave-Ho Catcher'
@@ -670,15 +750,17 @@ ATAQUE:
     | 'Lost Mine'
     | 'Moonlight Shuriken'
     | 'Star Requiem'
-    ;
+    | 'Inferno X'
+    | 'Excited Turbo';
 
-// ------------------------------------------------------------
-// Fragmentos y tokens generales
-// ------------------------------------------------------------
+
 fragment DIGITO: [0-9];
 fragment LETRA: [a-zA-ZáéíóúÁÉÍÓÚñÑüÜ];
-
 NUM: DIGITO+;
 ID: (LETRA | DIGITO | '_')+;
-
 WS: [ \t]+ -> skip;
+
+// Ultimo recurso del lexer: conserva un caracter no contemplado por las
+// reglas anteriores. El parser solo tolera estos caracteres dentro de la
+// alternativa generica de los efectos con guion, no en toda la partida.
+OTRO: .;

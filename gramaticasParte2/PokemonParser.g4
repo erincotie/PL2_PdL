@@ -1,4 +1,3 @@
-
 parser grammar PokemonParser;
 
 options {
@@ -6,16 +5,10 @@ options {
     language = Java;
 }
 
-// ------------------------------------------------------------
-// Programa principal
-// ------------------------------------------------------------
 program
-    : NEWLINE* setup turn_block* end NEWLINE* EOF
+    : NEWLINE* setup (NEWLINE* turn_block)* NEWLINE* end NEWLINE* EOF
     ;
 
-// ------------------------------------------------------------
-// Configuracion inicial
-// ------------------------------------------------------------
 setup
     : SETUP line_end setup_entry*
     ;
@@ -42,11 +35,11 @@ win_coin
     ;
 
 turn_decision
-    : ID DECIDED TO GO FIRST PUNTO
+    : ID DECIDED TO GO (FIRST | SECOND) PUNTO
     ;
 
 draw_cards_init
-    : ID DREW SEVEN CARDS FOR THE OPENING HAND PUNTO
+    : ID DREW number CARDS FOR THE OPENING HAND PUNTO
     ;
 
 mulligan_reveal
@@ -61,15 +54,12 @@ take_mulligan_action
     : ID TOOK A MULLIGAN PUNTO
     ;
 
-// ------------------------------------------------------------
-// Turnos
-// ------------------------------------------------------------
 turn_block
     : turn_header line_end turn_entry*
     ;
 
 turn_header
-    : ID APOS_S TURN_MAYUS
+    : ID APOS_S TURN_MAYUS number?
     ;
 
 turn_entry
@@ -89,6 +79,7 @@ turn_action
     | use_ability_or_attack
     | retreat_action
     | active_pokemon_update
+    | special_condition_action
     | take_prize_action
     | knockout_action
     | card_added_to_hand
@@ -100,9 +91,7 @@ turn_action
     ;
 
 play_cards
-    : ID PLAYED card_name
-      (TO THE (BENCH | ACTIVE SPOT | STADIUM SPOT))?
-      PUNTO
+    : ID PLAYED card_name (TO THE (BENCH | ACTIVE SPOT | STADIUM SPOT))? PUNTO
     ;
 
 draw_action
@@ -110,15 +99,11 @@ draw_action
     ;
 
 attach_energy
-    : ID ATTACHED card_name TO pokemon_card
-      ((IN | ON) THE (BENCH | ACTIVE SPOT))?
-      PUNTO
+    : ID ATTACHED card_name TO pokemon_card ((IN | ON) THE (BENCH | ACTIVE SPOT))? PUNTO
     ;
 
 evolve_pokemon
-    : ID EVOLVED pokemon_card TO pokemon_card
-      ((IN | ON) THE (BENCH | ACTIVE SPOT))?
-      PUNTO
+    : ID EVOLVED pokemon_card TO pokemon_card ((IN | ON) THE (BENCH | ACTIVE SPOT))? PUNTO
     ;
 
 use_ability_or_attack
@@ -146,13 +131,27 @@ active_pokemon_update
     : (ID APOS_S)? pokemon_card IS NOW IN THE ACTIVE SPOT PUNTO
     ;
 
+// Todos los estados especiales comparten la misma estructura textual.
+// Asi se evita crear una regla distinta para cada estado.
+special_condition_action
+    : (ID APOS_S)? pokemon_card IS NOW special_condition PUNTO
+    ;
+
+special_condition
+    : ASLEEP
+    | BURNED
+    | CONFUSED
+    | PARALYZED
+    | POISONED
+    ;
+
 take_prize_action
     : ID TOOK (A | number) PRIZE CARD? PUNTO
     | ID TOOK number PRIZE CARDS PUNTO
     ;
 
 knockout_action
-    : (ID APOS_S)? pokemon_card WAS K_O
+    : (ID APOS_S)? pokemon_card WAS K_O (PUNTO | EXCLAMACION)?
     ;
 
 card_added_to_hand
@@ -177,41 +176,61 @@ inactive_action
     : ID DIDNT TAKE AN ACTION IN TIME PUNTO
     ;
 
-// ------------------------------------------------------------
-// Final del turno
-// ------------------------------------------------------------
 end_turn
     : ID ENDED THEIR TURN PUNTO
     ;
 
-// ------------------------------------------------------------
-// Subefectos
-// ------------------------------------------------------------
+// Primero se intentan reconocer los efectos habituales con reglas concretas.
+// Si aparece un efecto nuevo, se permite una alternativa de reserva, pero solo
+// en lineas secundarias que empiezan por guion. Las acciones principales de la
+// partida siguen necesitando encajar en sus reglas especificas.
 sub_effect
-    : RAYA (
-          drawn_cards_effect
-        | draw_and_play_effect
-        | draw_and_play_named_effect
-        | draw_number_effect
-        | draw_single_card_effect
-        | draw_named_card_effect
-        | shuffle_deck_effect
-        | shuffle_cards_into_deck_effect
-        | shuffle_named_card_into_deck_effect
-        | evolve_pokemon_effect
-        | discard_number_effect
-        | discard_named_card_effect
-        | discard_from_pokemon_effect
-        | discard_named_from_pokemon_effect
-        | put_damage_counters_effect
-        | switch_active_pokemon_effect
-        | attach_card_effect
-        | move_card_to_hand_effect
-        | damage_taken_effect
-        | mulligan_reveal_effect
-        | heal_pokemon_effect
-      )
-      PUNTO
+    : RAYA (known_sub_effect PUNTO? | unknown_sub_effect)
+    ;
+
+known_sub_effect
+    : drawn_cards_effect
+    | draw_and_play_effect
+    | draw_and_play_named_effect
+    | draw_number_effect
+    | draw_single_card_effect
+    | draw_named_card_effect
+    | shuffle_deck_effect
+    | shuffle_cards_into_deck_effect
+    | shuffle_named_card_into_deck_effect
+    | evolve_pokemon_effect
+    | discard_number_effect
+    | discard_named_card_effect
+    | discard_from_pokemon_effect
+    | discard_named_from_pokemon_effect
+    | put_damage_counters_effect
+    | switch_active_pokemon_effect
+    | attach_card_effect
+    | move_card_to_hand_effect
+    | damage_taken_effect
+    | mulligan_reveal_effect
+    | heal_pokemon_effect
+    | special_condition_action
+    | chose_effect
+    ;
+
+// Alternativa de reserva para efectos no catalogados (por ejemplo, una
+// habilidad nueva). Exige un primer token reconocible y consume solo el resto
+// de ESA linea: nunca puede tragarse el siguiente turno ni el resto del log.
+// Es deliberadamente menos estricta que known_sub_effect, pero queda limitada
+// a lineas con guion; no hace que cualquier accion principal sea valida.
+unknown_sub_effect
+    : (ID | NUM | CARTA_POKEMON | CARTA_ENERGIA | CARTA_ITEM | CARTA_SUPPORTER
+      | CARTA_STADIUM | ATAQUE | DAMAGE_BREAKDOWN | BASE_DAMAGE | TOTAL_DAMAGE
+      | PUNTO_RELLENO | PARENTESIS_ABRIR | A | A_MAYUS | CARD | CARDS | DREW
+      | DRAWN | DISCARDED | ATTACHED | HEALED | CHOSE | IS | DECK | ENERGY
+      | PRIZE | WAS | WERE | TOOK | MOVED | SHUFFLED | EVOLVED | USED | OPPONENT
+      | ASLEEP | BURNED | CONFUSED | PARALYZED | POISONED)
+      (~NEWLINE)+
+    ;
+
+chose_effect
+    : ID CHOSE attack_name
     ;
 
 drawn_cards_effect
@@ -251,8 +270,7 @@ shuffle_named_card_into_deck_effect
     ;
 
 evolve_pokemon_effect
-    : ID EVOLVED pokemon_card TO pokemon_card
-      ((IN | ON) THE (BENCH | ACTIVE SPOT))?
+    : ID EVOLVED pokemon_card TO pokemon_card ((IN | ON) THE (BENCH | ACTIVE SPOT))?
     ;
 
 discard_number_effect
@@ -264,8 +282,7 @@ discard_named_card_effect
     ;
 
 discard_from_pokemon_effect
-    : number (CARD | CARDS) (WAS | WERE) DISCARDED
-      FROM ID APOS_S pokemon_card
+    : number (CARD | CARDS) (WAS | WERE) DISCARDED FROM ID APOS_S pokemon_card
     ;
 
 discard_named_from_pokemon_effect
@@ -273,29 +290,25 @@ discard_named_from_pokemon_effect
     ;
 
 put_damage_counters_effect
-    : ID PUT number COUNTERS ON ID APOS_S pokemon_card
+    : ID PUT number (DAMAGE_COUNTERS | COUNTERS) ON ID APOS_S pokemon_card
     ;
 
 switch_active_pokemon_effect
-    : ID APOS_S pokemon_card WAS SWITCHED WITH
-      ID APOS_S pokemon_card TO BECOME THE ACTIVE POKEMON
+    : ID APOS_S pokemon_card WAS SWITCHED WITH ID APOS_S pokemon_card TO BECOME THE ACTIVE POKEMON
     ;
 
 attach_card_effect
-    : ID ATTACHED card_name TO pokemon_card
-      ((ON | IN) THE (BENCH | ACTIVE SPOT))
+    : ID ATTACHED card_name TO pokemon_card ((ON | IN) THE (BENCH | ACTIVE SPOT))?
     ;
 
 move_card_to_hand_effect
-    : ID MOVED ID APOS_S card_name TO THEIR HAND
+    : ID MOVED ID APOS_S (number (CARD | CARDS) | card_name) TO THEIR HAND
     ;
 
 damage_taken_effect
     : ID APOS_S pokemon_card TOOK number DAMAGE
-    | ID APOS_S pokemon_card TOOK number MORE_WORD DAMAGE
-      BECAUSE OF TIPOS_WEAK_RES WEAKNESS
-    | ID APOS_S pokemon_card TOOK RAYA number LESS DAMAGE
-      BECAUSE OF TIPOS_WEAK_RES RESISTANCE
+    | ID APOS_S pokemon_card TOOK number MORE_WORD DAMAGE BECAUSE OF TIPOS_WEAK_RES WEAKNESS
+    | ID APOS_S pokemon_card TOOK RAYA number LESS DAMAGE BECAUSE OF TIPOS_WEAK_RES RESISTANCE
     ;
 
 mulligan_reveal_effect
@@ -306,42 +319,25 @@ heal_pokemon_effect
     : (ID APOS_S)? pokemon_card HEALED number DAMAGE
     ;
 
-// ------------------------------------------------------------
-// Desglose del daño
-// ------------------------------------------------------------
 damage_breakdown
-    : RAYA DAMAGE_BREAKDOWN DOS_PUNTOS? line_end
-      damage_breakdown_entry+
+    : RAYA DAMAGE_BREAKDOWN DOS_PUNTOS? line_end damage_breakdown_entry+
     ;
 
 damage_breakdown_entry
-    : PUNTO_RELLENO BASE_DAMAGE DOS_PUNTOS? number DAMAGE line_end
-
-    | PUNTO_RELLENO PARENTESIS_ABRIR ITEM PARENTESIS_CERRAR
-      card_name DOS_PUNTOS? RAYA? number DAMAGE line_end
-
-    | PUNTO_RELLENO PARENTESIS_ABRIR ATTACK PARENTESIS_CERRAR
-      attack_name DOS_PUNTOS? RAYA? number DAMAGE line_end
-
-    | PUNTO_RELLENO WEAKNESS TO TIPOS_WEAK_RES
-      DOS_PUNTOS? RAYA? number DAMAGE line_end
-
-    | PUNTO_RELLENO RESISTANCE TO TIPOS_WEAK_RES
-      DOS_PUNTOS? RAYA? number DAMAGE line_end
-
+    : PUNTO_RELLENO number (SELECTED | ATTACHED) ENERGY DOS_PUNTOS number DAMAGE line_end
+    | PUNTO_RELLENO number PRIZE CARDS DOS_PUNTOS? number DAMAGE line_end
+    | PUNTO_RELLENO BASE_DAMAGE DOS_PUNTOS? number DAMAGE line_end
+    | PUNTO_RELLENO PARENTESIS_ABRIR ITEM PARENTESIS_CERRAR card_name DOS_PUNTOS? RAYA? number DAMAGE line_end
+    | PUNTO_RELLENO PARENTESIS_ABRIR ATTACK PARENTESIS_CERRAR attack_name DOS_PUNTOS? RAYA? number DAMAGE line_end
+    | PUNTO_RELLENO WEAKNESS TO TIPOS_WEAK_RES DOS_PUNTOS? RAYA? number DAMAGE line_end
+    | PUNTO_RELLENO RESISTANCE TO TIPOS_WEAK_RES DOS_PUNTOS? RAYA? number DAMAGE line_end
     | PUNTO_RELLENO TOTAL_DAMAGE DOS_PUNTOS? number DAMAGE line_end
     ;
 
-// ------------------------------------------------------------
-// Listas de cartas
-// ------------------------------------------------------------
 bullet_line
     : PUNTO_RELLENO card_name (COMA card_name)*
     ;
 
-// ------------------------------------------------------------
-// Clasificacion de cartas
-// ------------------------------------------------------------
 card_name
     : pokemon_card
     | energy_card
@@ -350,47 +346,30 @@ card_name
     | stadium_card
     ;
 
-pokemon_card
-    : CARTA_POKEMON
-    ;
-
-energy_card
-    : CARTA_ENERGIA
-    ;
-
-item_card
-    : CARTA_ITEM
-    ;
-
-supporter_card
-    : CARTA_SUPPORTER
-    ;
-
-stadium_card
-    : CARTA_STADIUM
-    ;
-
-attack_name
-    : ATAQUE
-    ;
+pokemon_card: CARTA_POKEMON;
+energy_card: CARTA_ENERGIA;
+item_card: CARTA_ITEM;
+supporter_card: CARTA_SUPPORTER;
+stadium_card: CARTA_STADIUM;
+attack_name: ATAQUE;
 
 number
     : NUM
     | SEVEN
     ;
 
-// ------------------------------------------------------------
-// Final de la partida
-// ------------------------------------------------------------
 end
     : end_reason ID WINS PUNTO
     ;
 
 end_reason
     : OPPONENT CONCEDED PUNTO
+    | OPPONENT TOOK ALL OF THEIR PRIZE CARDS PUNTO
     | ALL PRIZE CARDS TAKEN PUNTO
     | NO BENCHED POKEMON FOR BACKUP PUNTO
     | OPPONENT WAS INACTIVE FOR TOO LONG PUNTO
+    | OPPONENT APOS_S DECK RAN OUT OF CARDS PUNTO
+    | NO BENCHED POKEMON FOR BACKUP PUNTO
     ;
 
 line_end
