@@ -17,6 +17,8 @@ public class EstadoJuego {
     private Map<String, Map<String, Integer>> mano; //guarda el jugador con sus cartas y las unidades de cada una pq en el tutorial sale que puedes tener varias cartas de energía p.ej
     private Map<String, Integer> cartasDesconocidas;
 
+    private Map<String, Integer> premiosRestantes;
+
     public EstadoJuego()
     {
         jugadorActivo = null;
@@ -27,6 +29,7 @@ public class EstadoJuego {
         banca = new HashMap<>();
         mano = new HashMap<>();
         cartasDesconocidas = new HashMap<>();
+        premiosRestantes = new HashMap<>();
     }
 
     //Añadir los jugadores a la lista
@@ -133,6 +136,36 @@ public class EstadoJuego {
         prepararMano(nomJugador);
         return cartasDesconocidas.get(nomJugador);
     }
+
+    //APARTADO DE PREMIOS -> los de cada jugador
+    //Consulta los que quedan
+    public int getPremiosRestantes(String nomJugador)
+    {
+        añadirJugador(nomJugador);
+        if(!premiosRestantes.containsKey(nomJugador))
+        {
+            premiosRestantes.put(nomJugador, 6);
+        }
+        return premiosRestantes.get(nomJugador);
+    }
+
+    //Establecemos el número que hay de premios en ese momento
+    public void setPremiosRestantes(String nomJugador, int premios)
+    {
+        añadirJugador(nomJugador);
+        premiosRestantes.put(nomJugador, Math.max(0, premios));
+    }
+
+    //Cuando el jugador coge el premio por KO
+    public void cogerPremio(String nomJugador)
+    {
+        int premios = getPremiosRestantes(nomJugador);
+        if (premios > 0)
+        {
+            premiosRestantes.put(nomJugador, premios - 1);
+        }
+    }
+    
 
     //Ganador de la partida
     public void winner(String nomJugador)
