@@ -84,6 +84,55 @@ public class EstadoJuego {
 
     //APARTADO DE LAS CARTAS QUE TIENE CADA JUGADOR
     //Mano de un jugador al inicio
+    private void prepararMano(String nomJugador)
+    {
+        añadirJugador(nomJugador);
+        if (!mano.containsKey(nomJugador))
+        {
+            mano.put(nomJugador, new HashMap<>());
+        }
+        if(!cartasDesconocidas.containsKey(nomJugador))
+        {
+            cartasDesconocidas.put(nomJugador, 0);
+        }
+    }
+
+    //Añadimos carta CONOCIDA a la mano
+    public void robarCartaConocida(String nomJugador, String carta)
+    {
+        prepararMano(nomJugador);
+        Map<String, Integer> m = mano.get(nomJugador);
+
+        if(m.containsKey(carta))
+        {
+            m.put(carta, m.get(carta) + 1);
+        }
+        else
+        {
+            m.put(carta, 1);
+        }
+    }
+
+    //Añadimos carta DESCONOCIDA a la mano
+    public void robarCartaDesconocida(String nomJugador)
+    {
+        prepararMano(nomJugador);
+        cartasDesconocidas.put(nomJugador, cartasDesconocidas.get(nomJugador) + 1);
+    }
+
+    //Consulta de cartas conocidas
+    public Map<String, Integer> getMano(String nomJugador)
+    {
+        prepararMano(nomJugador);
+        return new HashMap<>(mano.get(nomJugador));
+    }
+
+    //Consultar cartas desconocidas
+    public int getCartasDesconocidas(String nomJugador)
+    {
+        prepararMano(nomJugador);
+        return cartasDesconocidas.get(nomJugador);
+    }
 
     //Ganador de la partida
     public void winner(String nomJugador)
