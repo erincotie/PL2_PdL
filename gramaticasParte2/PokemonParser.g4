@@ -177,15 +177,9 @@ end_turn
     : ID ENDED THEIR TURN PUNTO
     ;
 
-// Primero se intentan reconocer los efectos habituales con reglas concretas.
-// Si aparece un efecto nuevo, se permite una alternativa de reserva, pero solo
-// en lineas secundarias que empiezan por guion. Las acciones principales de la
-// partida siguen necesitando encajar en sus reglas especificas.
-sub_effect
-    : RAYA (known_sub_effect PUNTO? | unknown_sub_effect)
-    ;
+//  Se reconocer los efectos habituales con reglas concretas.
 
-known_sub_effect
+sub_effect
     : drawn_cards_effect
     | draw_and_play_effect
     | draw_and_play_named_effect
@@ -209,21 +203,6 @@ known_sub_effect
     | heal_pokemon_effect
     | special_condition_action
     | chose_effect
-    ;
-
-// Alternativa de reserva para efectos no catalogados (por ejemplo, una
-// habilidad nueva). Exige un primer token reconocible y consume solo el resto
-// de ESA linea: nunca puede tragarse el siguiente turno ni el resto del log.
-// Es deliberadamente menos estricta que known_sub_effect, pero queda limitada
-// a lineas con guion; no hace que cualquier accion principal sea valida.
-unknown_sub_effect
-    : (ID | NUM | CARTA_POKEMON | CARTA_ENERGIA | CARTA_ITEM | CARTA_SUPPORTER
-      | CARTA_STADIUM | ATAQUE | DAMAGE_BREAKDOWN | BASE_DAMAGE | TOTAL_DAMAGE
-      | PUNTO_RELLENO | PARENTESIS_ABRIR | A | A_MAYUS | CARD | CARDS | DREW
-      | DRAWN | DISCARDED | ATTACHED | HEALED | CHOSE | IS | DECK | ENERGY
-      | PRIZE | WAS | WERE | TOOK | MOVED | SHUFFLED | EVOLVED | USED | OPPONENT
-      | ASLEEP | BURNED | CONFUSED | PARALYZED | POISONED)
-      (~NEWLINE)+
     ;
 
 chose_effect
