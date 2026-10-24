@@ -30,6 +30,8 @@ public class Analizador{
 
         //Se genera el arbol sintactico a partir del lexer, parser y el fichero de input
         ParseTree tree = parser.program();
+        JuegoListener listener = new JuegoListener();
+        ParseTreeWalker.DEFAULT.walk(listener, tree);
 
         //Para recorrer un arbol utilizaremos un listener, con lo que primero necesitamos inicializar un recorredor (walker)
         // luego inicializar un escuchador (listener) y decirle que recorra el arbol
