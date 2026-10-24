@@ -237,16 +237,17 @@ public class EstadoJuego {
         System.out.println("RESUMEN DE LA PARTIDA");
         for (String jugador : jugadores) {
             System.out.println("Jugador activo: " + jugador);
-            System.out.println("Turno: " + turnos);
             System.out.println("Pokemon activo: " + getPokemonActivo(jugador));
             System.out.println("Banquillo: " + getBanquillo(jugador));
             System.out.println("Cartas conocidas: " + getMano(jugador));
             System.out.println("Cartas desconocidas: " + getCartasDesconocidas(jugador));
-            System.out.println("Premios restantes (por coger): " + getPremiosRestantes(jugador));
             System.out.println("KOs realizados: " + getKO(jugador));
             System.out.println("Daño infligido total: " + getDañoTotal(jugador));
+            System.out.println("Premios: "+ getPremiosRestantes(jugador));
+            System.out.println("Premios restantes (por coger): " + getPremiosRestantes(jugador));
         }
 
+        System.out.println("Turnos totales: " + turnos);
         System.out.println("Ganador de la partida: " + ganador);
     }
 }
