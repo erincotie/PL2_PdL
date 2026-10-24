@@ -19,6 +19,9 @@ public class EstadoJuego {
 
     private Map<String, Integer> premiosRestantes;
 
+    private Map<String, Integer> kos; //los kos que ha hecho cada jugador
+    private Map<String, Integer> dañoTotal; 
+
     public EstadoJuego()
     {
         jugadorActivo = null;
@@ -30,6 +33,8 @@ public class EstadoJuego {
         mano = new HashMap<>();
         cartasDesconocidas = new HashMap<>();
         premiosRestantes = new HashMap<>();
+        kos = new HashMap<>();
+        dañoTotal = new HashMap<>();
     }
 
     //Añadir los jugadores a la lista
@@ -165,6 +170,53 @@ public class EstadoJuego {
             premiosRestantes.put(nomJugador, premios - 1);
         }
     }
+
+    //APARTADO DE KO Y DAÑO
+    //Registro del ko
+    public void registroKO(String nomJugador)
+    {
+        añadirJugador(nomJugador);
+        if(!kos.containsKey(nomJugador))
+        {
+            kos.put(nomJugador, 0); //inicializamos si no ha hecho
+        }
+        kos.put(nomJugador, kos.get(nomJugador) + 1); //añadimos cuando haya hecho alguno
+    }
+
+    //Consulta de los ko
+    public int getKO(String nomJugador)
+    {
+        if(!kos.containsKey(nomJugador))
+        {
+            return 0; //el jugador no hizo ninguno 
+        }
+        return kos.get(nomJugador);
+    }
+    
+    //Suma del daño de los ataques
+    public void añadirDaño(String nomJugador, int daño)
+    {
+        añadirJugador(nomJugador);
+        if(!dañoTotal.containsKey(nomJugador))
+        {
+            dañoTotal.put(nomJugador, 0);
+        }
+
+        if(daño > 0)
+        {
+            dañoTotal.put(nomJugador, dañoTotal.get(nomJugador) + daño); //registramos el daño q hizo
+        }
+    }
+
+    //Consulta del daño total
+    public int getDañoTotal(String nomJugador)
+    {
+        if(!dañoTotal.containsKey(nomJugador))
+        {
+            return 0;
+        }
+        return dañoTotal.get(nomJugador);
+    }
     
 
     //Ganador de la partida
@@ -183,8 +235,18 @@ public class EstadoJuego {
     public void imprimirResumen()
     {
         System.out.println("RESUMEN DE LA PARTIDA");
-        System.out.println("Jugadores: " + jugadores);
-        System.out.println("Turno: " + turnos);
+        for (String jugador : jugadores) {
+            System.out.println("Jugador activo: " + jugador);
+            System.out.println("Turno: " + turnos);
+            System.out.println("Pokemon activo: " + getPokemonActivo(jugador));
+            System.out.println("Banquillo: " + getBanquillo(jugador));
+            System.out.println("Cartas conocidas: " + getMano(jugador));
+            System.out.println("Cartas desconocidas: " + getCartasDesconocidas(jugador));
+            System.out.println("Premios restantes (por coger): " + getPremiosRestantes(jugador));
+            System.out.println("KOs realizados: " + getKO(jugador));
+            System.out.println("Daño infligido total: " + getDañoTotal(jugador));
+        }
+
         System.out.println("Ganador de la partida: " + ganador);
     }
 }
