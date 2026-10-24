@@ -1,0 +1,409 @@
+Setup
+raseccaos chose tails for the opening coin flip.
+SergioPeiteado won the coin toss.
+SergioPeiteado decided to go second.
+raseccaos drew 7 cards for the opening hand.
+- 7 drawn cards.
+   • Poké Pad, Teal Mask Ogerpon ex, Forest of Vitality, Meganium, Bayleef, Bug Catching Set, Night Stretcher
+SergioPeiteado drew 7 cards for the opening hand.
+- 7 drawn cards.
+raseccaos played Teal Mask Ogerpon ex to the Active Spot.
+SergioPeiteado played N's Darumaka to the Active Spot.
+SergioPeiteado played N's Darumaka to the Bench.
+
+raseccaos's Turn
+raseccaos drew Ultra Ball.
+raseccaos played Bug Catching Set.
+- raseccaos drew 2 cards.
+   • Basic Grass Energy, Bulbasaur
+- raseccaos shuffled their deck.
+raseccaos played Bulbasaur to the Bench.
+raseccaos played Poké Pad.
+- raseccaos drew Chikorita.
+- raseccaos shuffled their deck.
+raseccaos played Chikorita to the Bench.
+raseccaos played Forest of Vitality to the Stadium spot.
+raseccaos attached Basic Grass Energy to Bulbasaur on the Bench.
+raseccaos ended their turn.
+
+SergioPeiteado's Turn
+SergioPeiteado drew a card.
+SergioPeiteado played Poké Pad.
+- SergioPeiteado drew N's Zorua.
+- SergioPeiteado shuffled their deck.
+SergioPeiteado played N's Zorua to the Bench.
+SergioPeiteado attached Basic Darkness Energy to N's Zorua on the Bench.
+SergioPeiteado attached Air Balloon to N's Darumaka in the Active Spot.
+SergioPeiteado ended their turn.
+
+raseccaos's Turn
+raseccaos drew Basic Grass Energy.
+raseccaos evolved Chikorita to Bayleef on the Bench.
+raseccaos attached Basic Grass Energy to Bulbasaur on the Bench.
+raseccaos evolved Bayleef to Meganium on the Bench.
+raseccaos ended their turn.
+
+SergioPeiteado's Turn
+SergioPeiteado drew a card.
+SergioPeiteado attached Basic Darkness Energy to N's Darumaka in the Active Spot.
+SergioPeiteado evolved N's Darumaka to N's Darmanitan in the Active Spot.
+SergioPeiteado ended their turn.
+
+raseccaos's Turn
+raseccaos drew Basic Grass Energy.
+raseccaos attached Basic Grass Energy to Teal Mask Ogerpon ex in the Active Spot.
+raseccaos ended their turn.
+
+SergioPeiteado's Turn
+SergioPeiteado drew a card.
+SergioPeiteado played Janine's Secret Art.
+- SergioPeiteado attached Basic Darkness Energy to N's Zorua on the Bench.
+- SergioPeiteado shuffled their deck.
+SergioPeiteado ended their turn.
+
+raseccaos's Turn
+raseccaos drew Poké Pad.
+raseccaos played Ultra Ball.
+- raseccaos discarded 2 cards.
+   • Night Stretcher, Poké Pad
+- raseccaos drew Ivysaur.
+- raseccaos shuffled their deck.
+raseccaos evolved Bulbasaur to Ivysaur on the Bench.
+raseccaos ended their turn.
+
+SergioPeiteado's Turn
+SergioPeiteado drew a card.
+SergioPeiteado attached Hero's Cape to N's Zorua on the Bench.
+SergioPeiteado played Lillie's Determination.
+- SergioPeiteado shuffled a card into their deck.
+- SergioPeiteado drew 8 cards.
+SergioPeiteado evolved N's Zorua to N's Zoroark ex on the Bench.
+SergioPeiteado evolved N's Darumaka to N's Darmanitan on the Bench.
+SergioPeiteado played N's Zorua to the Bench.
+SergioPeiteado played Buddy-Buddy Poffin.
+- SergioPeiteado drew 2 cards and played them to the Bench.
+   • N's Zorua, N's Zorua
+- SergioPeiteado shuffled their deck.
+SergioPeiteado's N's Zoroark ex used Trade.
+- SergioPeiteado discarded Buddy-Buddy Poffin.
+- SergioPeiteado drew 2 cards.
+SergioPeiteado attached Basic Darkness Energy to N's Darmanitan in the Active Spot.
+SergioPeiteado retreated N's Darmanitan to the Bench.
+- Basic Darkness Energy was discarded from SergioPeiteado's N's Darmanitan.
+SergioPeiteado's N's Zoroark ex is now in the Active Spot.
+SergioPeiteado's N's Zoroark ex used Night Joker on raseccaos’s Teal Mask Ogerpon ex for 90 damage.
+- SergioPeiteado chose Flamebody Cannon
+- raseccaos's Ivysaur took 90 damage.
+- 2 cards were discarded from SergioPeiteado's N's Zoroark ex.
+   • Basic Darkness Energy, Basic Darkness Energy
+
+raseccaos's Turn
+raseccaos drew Ivysaur.
+raseccaos ended their turn.
+
+SergioPeiteado's Turn
+SergioPeiteado drew a card.
+SergioPeiteado played Ultra Ball.
+- SergioPeiteado discarded 2 cards.
+   • Redeemable Ticket, Lillie's Determination
+- SergioPeiteado drew Pecharunt ex.
+- SergioPeiteado shuffled their deck.
+SergioPeiteado's N's Zoroark ex used Trade.
+- SergioPeiteado discarded Cyrano.
+- SergioPeiteado drew 2 cards.
+SergioPeiteado played Team Rocket's Petrel.
+- SergioPeiteado drew N's Castle.
+- SergioPeiteado shuffled their deck.
+SergioPeiteado played N's Castle to the Stadium spot.
+- raseccaos discarded Forest of Vitality.
+SergioPeiteado retreated N's Zoroark ex to the Bench.
+SergioPeiteado's N's Zorua is now in the Active Spot.
+SergioPeiteado ended their turn.
+
+raseccaos's Turn
+raseccaos drew Teal Mask Ogerpon ex.
+raseccaos played Teal Mask Ogerpon ex to the Bench.
+raseccaos ended their turn.
+
+SergioPeiteado's Turn
+SergioPeiteado drew a card.
+SergioPeiteado evolved N's Zorua to N's Zoroark ex on the Bench.
+SergioPeiteado attached Basic Darkness Energy to N's Zoroark ex on the Bench.
+SergioPeiteado ended their turn.
+
+raseccaos's Turn
+raseccaos drew Judge.
+raseccaos played Judge.
+- raseccaos shuffled Ivysaur into their deck.
+- SergioPeiteado shuffled 2 cards into their deck.
+- raseccaos drew 4 cards.
+   • Bayleef, Basic Grass Energy, Wally's Compassion, Fezandipiti ex
+- SergioPeiteado drew 4 cards.
+raseccaos attached Basic Grass Energy to Teal Mask Ogerpon ex in the Active Spot.
+raseccaos played Fezandipiti ex to the Bench.
+raseccaos's Teal Mask Ogerpon ex used Myriad Leaf Shower on SergioPeiteado’s N's Zorua for 300 damage. SergioPeiteado's N's Zorua took 150 more damage because of Grass Weakness.
+- Damage breakdown:
+   • Base damage: 30 damage
+   • 4 attached Energy: 120 damage
+   • Weakness to Grass: 150 damage
+   • Total damage: 300 damage
+
+SergioPeiteado's N's Zorua was Knocked Out!
+raseccaos took a Prize card.
+Dawn was added to raseccaos's hand.
+SergioPeiteado's N's Zorua is now in the Active Spot.
+
+SergioPeiteado's Turn
+SergioPeiteado drew a card.
+SergioPeiteado played Fezandipiti ex to the Bench.
+SergioPeiteado played N's PP Up.
+- SergioPeiteado attached Basic Darkness Energy to N's Zoroark ex on the Bench.
+SergioPeiteado attached Basic Darkness Energy to N's Darmanitan on the Bench.
+SergioPeiteado's Fezandipiti ex used Flip the Script.
+- SergioPeiteado drew 3 cards.
+SergioPeiteado's N's Zoroark ex used Trade.
+- SergioPeiteado discarded N's Zekrom.
+- SergioPeiteado drew 2 cards.
+SergioPeiteado played Night Stretcher.
+- SergioPeiteado moved SergioPeiteado's Basic Darkness Energy to their hand.
+SergioPeiteado played Boss's Orders.
+- raseccaos's Meganium was switched with raseccaos's Teal Mask Ogerpon ex to become the Active Pokémon.
+raseccaos's Meganium is now in the Active Spot.
+SergioPeiteado's N's Zoroark ex used Trade.
+- SergioPeiteado discarded Poké Pad.
+- SergioPeiteado drew 2 cards.
+SergioPeiteado ended their turn.
+
+raseccaos's Turn
+raseccaos drew Lillie's Determination.
+raseccaos played Lillie's Determination.
+- raseccaos shuffled 3 cards into their deck.
+   • Bayleef, Wally's Compassion, Dawn
+- raseccaos drew 6 cards.
+   • Basic Grass Energy, Forest of Vitality, Boss's Orders, Mega Venusaur ex, Forest of Vitality, Boss's Orders
+raseccaos evolved Ivysaur to Mega Venusaur ex on the Bench.
+raseccaos played Forest of Vitality to the Stadium spot.
+- SergioPeiteado discarded N's Castle.
+raseccaos attached Basic Grass Energy to Teal Mask Ogerpon ex on the Bench.
+raseccaos's Mega Venusaur ex used Solar Transfer.
+- raseccaos attached Basic Grass Energy to Teal Mask Ogerpon ex on the Bench.
+- raseccaos attached Basic Grass Energy to Teal Mask Ogerpon ex on the Bench.
+- raseccaos attached Basic Grass Energy to Meganium in the Active Spot.
+- raseccaos attached Basic Grass Energy to Meganium in the Active Spot.
+raseccaos retreated Meganium to the Bench.
+- Basic Grass Energy was discarded from raseccaos's Meganium.
+raseccaos's Teal Mask Ogerpon ex is now in the Active Spot.
+raseccaos ended their turn.
+
+SergioPeiteado's Turn
+SergioPeiteado drew a card.
+SergioPeiteado played N's Castle to the Stadium spot.
+- raseccaos discarded Forest of Vitality.
+SergioPeiteado played Cyrano.
+- SergioPeiteado drew 2 cards.
+   • Pecharunt ex, N's Zoroark ex
+- SergioPeiteado shuffled their deck.
+SergioPeiteado attached Basic Darkness Energy to N's Zorua in the Active Spot.
+SergioPeiteado's N's Zorua used Scratch on raseccaos’s Teal Mask Ogerpon ex for 20 damage.
+
+raseccaos's Turn
+raseccaos drew Lillie's Determination.
+raseccaos played Forest of Vitality to the Stadium spot.
+- SergioPeiteado discarded N's Castle.
+raseccaos played Lillie's Determination.
+- raseccaos shuffled 2 cards into their deck.
+   • Boss's Orders, Boss's Orders
+- raseccaos drew 6 cards.
+   • Bug Catching Set, Bug Catching Set, Dawn, Wally's Compassion, Grand Tree, Basic Grass Energy
+raseccaos's Teal Mask Ogerpon ex used Teal Dance.
+- raseccaos attached Basic Grass Energy to Teal Mask Ogerpon ex in the Active Spot.
+- raseccaos drew Bulbasaur.
+raseccaos played Bulbasaur to the Bench.
+raseccaos played Bug Catching Set.
+- raseccaos drew 2 cards.
+   • Basic Grass Energy, Basic Grass Energy
+- raseccaos shuffled their deck.
+raseccaos's Teal Mask Ogerpon ex used Teal Dance.
+- raseccaos attached Basic Grass Energy to Teal Mask Ogerpon ex on the Bench.
+- raseccaos drew Chikorita.
+raseccaos attached Basic Grass Energy to Teal Mask Ogerpon ex in the Active Spot.
+raseccaos played Bug Catching Set.
+- raseccaos drew 2 cards.
+   • Bayleef, Ivysaur
+- raseccaos shuffled their deck.
+raseccaos's Teal Mask Ogerpon ex used Myriad Leaf Shower on SergioPeiteado’s N's Zorua for 360 damage. SergioPeiteado's N's Zorua took 180 more damage because of Grass Weakness.
+- Damage breakdown:
+   • Base damage: 30 damage
+   • 5 attached Energy: 150 damage
+   • Weakness to Grass: 180 damage
+   • Total damage: 360 damage
+
+SergioPeiteado's N's Zorua was Knocked Out!
+Basic Darkness Energy was discarded from SergioPeiteado's N's Zorua.
+raseccaos took a Prize card.
+Forest of Vitality was added to raseccaos's hand.
+SergioPeiteado's N's Zoroark ex is now in the Active Spot.
+
+SergioPeiteado's Turn
+SergioPeiteado drew a card.
+SergioPeiteado played Pecharunt ex to the Bench.
+SergioPeiteado played Energy Recycler.
+- SergioPeiteado shuffled 2 cards into their deck.
+   • Basic Darkness Energy, Basic Darkness Energy
+SergioPeiteado attached Basic Darkness Energy to Pecharunt ex on the Bench.
+SergioPeiteado's Fezandipiti ex used Flip the Script.
+- SergioPeiteado drew 3 cards.
+SergioPeiteado's N's Zoroark ex used Trade.
+- SergioPeiteado discarded Night Stretcher.
+- SergioPeiteado drew 2 cards.
+SergioPeiteado's N's Zoroark ex used Trade.
+- SergioPeiteado discarded Buddy-Buddy Poffin.
+- SergioPeiteado drew 2 cards.
+SergioPeiteado played Ultra Ball.
+- SergioPeiteado discarded 2 cards.
+   • Judge, N's Reshiram
+- SergioPeiteado shuffled their deck.
+SergioPeiteado attached Powerglass to Pecharunt ex on the Bench.
+SergioPeiteado's N's Zoroark ex used Night Joker on raseccaos’s Teal Mask Ogerpon ex for 90 damage.
+- SergioPeiteado chose Flamebody Cannon
+- raseccaos's Bulbasaur took 90 damage.
+- 2 cards were discarded from SergioPeiteado's N's Zoroark ex.
+   • Basic Darkness Energy, Basic Darkness Energy
+raseccaos's Bulbasaur was Knocked Out!
+SergioPeiteado took a Prize card.
+A card was added to SergioPeiteado's hand.
+
+raseccaos's Turn
+raseccaos drew Meganium.
+raseccaos played Chikorita to the Bench.
+raseccaos evolved Chikorita to Bayleef on the Bench.
+raseccaos evolved Bayleef to Meganium on the Bench.
+raseccaos played Wally's Compassion.
+- raseccaos's Mega Venusaur ex healed 90 damage.
+raseccaos played Grand Tree to the Stadium spot.
+- raseccaos discarded Forest of Vitality.
+raseccaos's Fezandipiti ex used Flip the Script.
+- raseccaos drew 3 cards.
+   • Boss's Orders, Team Rocket's Petrel, Judge
+raseccaos's Mega Venusaur ex used Solar Transfer.
+- raseccaos attached Basic Grass Energy to Teal Mask Ogerpon ex on the Bench.
+- raseccaos attached Basic Grass Energy to Teal Mask Ogerpon ex on the Bench.
+raseccaos's Mega Venusaur ex used Solar Transfer.
+raseccaos's Mega Venusaur ex used Solar Transfer.
+- raseccaos attached Basic Grass Energy to Teal Mask Ogerpon ex on the Bench.
+raseccaos ended their turn.
+
+SergioPeiteado's Turn
+SergioPeiteado drew a card.
+SergioPeiteado played N's PP Up.
+- SergioPeiteado attached Basic Darkness Energy to N's Zoroark ex on the Bench.
+SergioPeiteado played Boss's Orders.
+- raseccaos's Teal Mask Ogerpon ex was switched with raseccaos's Teal Mask Ogerpon ex to become the Active Pokémon.
+raseccaos's Teal Mask Ogerpon ex is now in the Active Spot.
+SergioPeiteado attached Basic Darkness Energy to Pecharunt ex on the Bench.
+SergioPeiteado ended their turn.
+
+raseccaos's Turn
+raseccaos drew Colress's Tenacity.
+raseccaos played Colress's Tenacity.
+- raseccaos drew Basic Grass Energy.
+- raseccaos shuffled their deck.
+raseccaos attached Basic Grass Energy to Teal Mask Ogerpon ex in the Active Spot.
+raseccaos's Teal Mask Ogerpon ex used Myriad Leaf Shower on SergioPeiteado’s N's Zoroark ex for 1020 damage. SergioPeiteado's N's Zoroark ex took 510 more damage because of Grass Weakness.
+- Damage breakdown:
+   • Base damage: 30 damage
+   • 16 attached Energy: 480 damage
+   • Weakness to Grass: 510 damage
+   • Total damage: 1020 damage
+
+SergioPeiteado's N's Zoroark ex was Knocked Out!
+- 2 cards were discarded from SergioPeiteado's N's Zoroark ex.
+   • N's Zorua, Hero's Cape
+raseccaos took 2 Prize cards.
+Bug Catching Set was added to raseccaos's hand.
+Lillie's Determination was added to raseccaos's hand.
+SergioPeiteado's Pecharunt ex is now in the Active Spot.
+
+SergioPeiteado's Turn
+SergioPeiteado drew a card.
+SergioPeiteado attached Basic Darkness Energy to N's Zoroark ex on the Bench.
+SergioPeiteado's N's Zoroark ex used Trade.
+- SergioPeiteado discarded Lillie's Determination.
+- SergioPeiteado drew 2 cards.
+SergioPeiteado's Pecharunt ex used Irritated Outburst on raseccaos’s Teal Mask Ogerpon ex for 240 damage.
+- Damage breakdown:
+   • 4 Prize cards: 240 damage
+
+raseccaos's Teal Mask Ogerpon ex was Knocked Out!
+- 8 cards were discarded from raseccaos's Teal Mask Ogerpon ex.
+   • Basic Grass Energy, Basic Grass Energy, Basic Grass Energy, Basic Grass Energy, Basic Grass Energy, Basic Grass Energy, Basic Grass Energy, Basic Grass Energy
+SergioPeiteado took 2 Prize cards.
+A card was added to SergioPeiteado's hand.
+A card was added to SergioPeiteado's hand.
+raseccaos's Fezandipiti ex is now in the Active Spot.
+
+raseccaos's Turn
+raseccaos drew Mega Venusaur ex.
+raseccaos's Fezandipiti ex used Flip the Script.
+- raseccaos drew 3 cards.
+   • Ivysaur, Bulbasaur, Ultra Ball
+raseccaos played Bulbasaur to the Bench.
+raseccaos played Ultra Ball.
+- raseccaos discarded 2 cards.
+   • Lillie's Determination, Dawn
+- raseccaos drew Mega Venusaur ex.
+- raseccaos shuffled their deck.
+raseccaos played Forest of Vitality to the Stadium spot.
+- raseccaos discarded Grand Tree.
+raseccaos evolved Bulbasaur to Ivysaur on the Bench.
+raseccaos evolved Ivysaur to Mega Venusaur ex on the Bench.
+raseccaos played Bug Catching Set.
+- raseccaos drew 2 cards.
+   • Teal Mask Ogerpon ex, Teal Mask Ogerpon ex
+- raseccaos shuffled their deck.
+raseccaos played Team Rocket's Petrel.
+- raseccaos drew Lana's Aid.
+- raseccaos shuffled their deck.
+raseccaos ended their turn.
+
+SergioPeiteado's Turn
+SergioPeiteado drew a card.
+SergioPeiteado's Pecharunt ex used Subjugating Chains.
+- SergioPeiteado's Fezandipiti ex was switched with SergioPeiteado's Pecharunt ex to become the Active Pokémon.
+- SergioPeiteado's Fezandipiti ex is now Poisoned.
+SergioPeiteado's Fezandipiti ex is now in the Active Spot.
+SergioPeiteado attached Basic Darkness Energy to Fezandipiti ex in the Active Spot.
+SergioPeiteado retreated Fezandipiti ex to the Bench.
+- Basic Darkness Energy was discarded from SergioPeiteado's Fezandipiti ex.
+SergioPeiteado's N's Darmanitan is now in the Active Spot.
+SergioPeiteado's N's Darmanitan used Back Draft on raseccaos’s Fezandipiti ex for 270 damage.
+- Damage breakdown:
+   • 9 attached Energy: 270 damage
+
+raseccaos's Fezandipiti ex was Knocked Out!
+SergioPeiteado took 2 Prize cards.
+A card was added to SergioPeiteado's hand.
+A card was added to SergioPeiteado's hand.
+raseccaos's Teal Mask Ogerpon ex is now in the Active Spot.
+
+raseccaos's Turn
+raseccaos drew Lillie's Determination.
+raseccaos played Lana's Aid.
+- raseccaos moved raseccaos's 3 cards to their hand.
+   • Basic Grass Energy, Basic Grass Energy, Basic Grass Energy
+raseccaos attached Basic Grass Energy to Teal Mask Ogerpon ex in the Active Spot.
+raseccaos's Teal Mask Ogerpon ex used Teal Dance.
+- raseccaos attached Basic Grass Energy to Teal Mask Ogerpon ex in the Active Spot.
+- raseccaos drew Meowth ex.
+raseccaos played Teal Mask Ogerpon ex to the Bench.
+raseccaos's Teal Mask Ogerpon ex used Teal Dance.
+- raseccaos attached Basic Grass Energy to Teal Mask Ogerpon ex on the Bench.
+- raseccaos drew Boss's Orders.
+raseccaos's Mega Venusaur ex used Solar Transfer.
+- raseccaos attached Basic Grass Energy to Teal Mask Ogerpon ex on the Bench.
+- raseccaos attached Basic Grass Energy to Teal Mask Ogerpon ex on the Bench.
+raseccaos ended their turn.
+
+SergioPeiteado's Turn
+Opponent's deck ran out of cards. raseccaos wins.
+
