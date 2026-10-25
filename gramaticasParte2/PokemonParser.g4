@@ -47,7 +47,7 @@ mulligan_reveal
     ;
 
 mulligan_bonus
-    : ID DREW number MORE_WORD CARD BECAUSE ID TOOK AT LEAST number MULLIGAN PUNTO
+    : ID DREW number MORE_WORD (CARD|CARDS) BECAUSE ID TOOK AT LEAST number MULLIGAN PUNTO
     ;
 
 take_mulligan_action
@@ -164,7 +164,7 @@ discarded_card_from_pokemon
 
 damage_taken
     : (ID APOS_S)? pokemon_card TOOK number DAMAGE PUNTO
-    | (ID APOS_S)? pokemon_card TOOK number MORE_WORD BECAUSE OF TIPOS_WEAK_RES WEAKNESS PUNTO
+    | (ID APOS_S)? pokemon_card TOOK number MORE_WORD DAMAGE BECAUSE OF TIPOS_WEAK_RES WEAKNESS PUNTO
     | ID APOS_S pokemon_card TOOK RAYA number LESS DAMAGE BECAUSE OF TIPOS_WEAK_RES RESISTANCE
     ;
 
