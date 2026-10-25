@@ -345,6 +345,13 @@ public class EstadoJuego {
         }
     }
 
+    //Si tiene resistencia
+    public void restarDaño(String nomJugador, int daño)
+    {
+        añadirJugador(nomJugador);
+        dañoTotal.put(nomJugador, Math.max(0, getDañoTotal(nomJugador) - daño));
+    }
+
     //Consulta del daño total
     public int getDañoTotal(String nomJugador)
     {
