@@ -47,7 +47,7 @@ mulligan_reveal
     ;
 
 mulligan_bonus
-    : ID DREW number MORE_WORD (CARDS|CARD) BECAUSE ID TOOK AT LEAST number MULLIGAN PUNTO
+    : ID DREW number MORE_WORD CARD BECAUSE ID TOOK AT LEAST number MULLIGAN PUNTO
     ;
 
 take_mulligan_action
@@ -114,11 +114,13 @@ use_ability_or_attack
     ;
 
 damage_weakness_clause
-    : ID APOS_S pokemon_card TOOK number MORE_WORD DAMAGE BECAUSE OF TIPOS_WEAK_RES WEAKNESS PUNTO
+    : ID APOS_S pokemon_card TOOK number MORE_WORD DAMAGE
+      BECAUSE OF TIPOS_WEAK_RES WEAKNESS PUNTO
     ;
 
 damage_resistance_clause
-    : ID APOS_S pokemon_card TOOK RAYA number LESS DAMAGE BECAUSE OF TIPOS_WEAK_RES RESISTANCE PUNTO
+    : ID APOS_S pokemon_card TOOK RAYA number LESS DAMAGE
+      BECAUSE OF TIPOS_WEAK_RES RESISTANCE PUNTO
     ;
 
 retreat_action
@@ -162,7 +164,8 @@ discarded_card_from_pokemon
 
 damage_taken_action
     : (ID APOS_S)? pokemon_card TOOK number DAMAGE PUNTO
-    | (ID APOS_S)? pokemon_card TOOK number MORE_WORD DAMAGE BECAUSE OF TIPOS_WEAK_RES WEAKNESS PUNTO
+    | (ID APOS_S)? pokemon_card TOOK number MORE_WORD DAMAGE
+      BECAUSE OF TIPOS_WEAK_RES WEAKNESS PUNTO
     ;
 
 heal_pokemon
@@ -177,10 +180,13 @@ end_turn
     : ID ENDED THEIR TURN PUNTO
     ;
 
-//  Se reconocer los efectos habituales con reglas concretas.
-
+// Primero se intentan reconocer los efectos habituales con reglas concretas.
+// Si aparece un efecto nuevo, se permite una alternativa de reserva, pero solo
+// en lineas secundarias que empiezan por guion. Las acciones principales de la
+// partida siguen necesitando encajar en sus reglas especificas.
 sub_effect
-    : drawn_cards_effect
+    : RAYA 
+    (drawn_cards_effect
     | draw_and_play_effect
     | draw_and_play_named_effect
     | draw_number_effect
@@ -202,8 +208,9 @@ sub_effect
     | mulligan_reveal_effect
     | heal_pokemon_effect
     | special_condition_action
-    | chose_effect
+    | chose_effect) PUNTO?
     ;
+    
 
 chose_effect
     : ID CHOSE attack_name
@@ -308,8 +315,6 @@ damage_breakdown_entry
     | PUNTO_RELLENO WEAKNESS TO TIPOS_WEAK_RES DOS_PUNTOS? RAYA? number DAMAGE line_end
     | PUNTO_RELLENO RESISTANCE TO TIPOS_WEAK_RES DOS_PUNTOS? RAYA? number DAMAGE line_end
     | PUNTO_RELLENO TOTAL_DAMAGE DOS_PUNTOS? number DAMAGE line_end
-
-    | PUNTO_RELLENO NUM SELECTED ENERGY DOS_PUNTOS? NUM DAMAGE line_end
     ;
 
 bullet_line

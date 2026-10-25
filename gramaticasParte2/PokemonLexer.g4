@@ -90,7 +90,10 @@ SWITCHED: 'switched';
 WITH: 'with';
 
 BECOME: 'become';
-POKEMON: 'Pok'[eé]'mon';
+
+POKEMON: 'Pokémon'
+    | 'Pokemon';
+
 RETREATED: 'retreated';
 
 SHUFFLED: 'shuffled';
@@ -102,7 +105,10 @@ DECK: 'deck';
 MOVED: 'moved';
 
 ENDED: 'ended';
-ALL: [aA]'ll';
+
+ALL: 'All'
+    | 'all';
+
 TAKEN: 'taken';
 
 WINS: 'wins';
@@ -652,7 +658,6 @@ ATAQUE: 'Aura Jab'
     | 'Razor Leaf'
     | 'Solar Transfer'
     | 'Jungle Dump'
-    | 'Excited Turbo'
     | 'Push Down'
     | 'Wild Growth'
     | 'Solar Beam'
@@ -693,7 +698,6 @@ ATAQUE: 'Aura Jab'
     | 'Subjugating Chains'
     | 'Irritated Outburst'
     | 'Powerful Rage'
-    | 'Power Gem'
     | 'Virtuous Flame'
     | 'Shred'
     | 'Rampaging Thunder'
@@ -746,15 +750,12 @@ ATAQUE: 'Aura Jab'
     | 'Lost Mine'
     | 'Moonlight Shuriken'
     | 'Star Requiem'
-    | 'Inferno X';
+    | 'Inferno X'
+    | 'Excited Turbo';
+
 
 fragment DIGITO: [0-9];
 fragment LETRA: [a-zA-ZáéíóúÁÉÍÓÚñÑüÜ];
 NUM: DIGITO+;
 ID: (LETRA | DIGITO | '_')+;
 WS: [ \t]+ -> skip;
-
-// Ultimo recurso del lexer: conserva un caracter no contemplado por las
-// reglas anteriores. El parser solo tolera estos caracteres dentro de la
-// alternativa generica de los efectos con guion, no en toda la partida.
-OTRO: .;
