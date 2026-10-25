@@ -46,6 +46,31 @@ public class EstadoJuego {
         }
     }
 
+    //NUEVO: lista de jugadores (copia)
+    public List<String> getJugadores()
+    {
+        return new ArrayList<>(jugadores);
+    }
+
+    //NUEVO: jugador que tiene el turno actual
+    public String getJugadorActivo()
+    {
+        return jugadorActivo;
+    }
+
+    //NUEVO: el otro jugador (partida de 2). null si todavia no se conoce
+    public String getRival(String nomJugador)
+    {
+        for (String j : jugadores)
+        {
+            if (!j.equals(nomJugador))
+            {
+                return j;
+            }
+        }
+        return null;
+    }
+
     //Inicio de turno
     public void inicioTurno(String nomJugador)
     {
@@ -90,6 +115,70 @@ public class EstadoJuego {
         return new ArrayList<>(banca.get(nomJugador));
     }
 
+    //NUEVO: retirada. El activo pasa al banquillo y el puesto activo queda vacio
+    //hasta que llegue la linea "X is now in the Active Spot."
+    public void retirarActivoABanca(String nomJugador, String pokemon)
+    {
+        if (pokemon.equals(pokemonActivo.get(nomJugador)))
+        {
+            pokemonActivo.remove(nomJugador);
+            añadirBanquillo(nomJugador, pokemon);
+        }
+    }
+
+    //NUEVO: un pokemon pasa a ser el activo (sale del banquillo).
+    //Si habia otro activo distinto, se manda al banquillo (cambio por efecto).
+    public void promoverActivo(String nomJugador, String pokemon)
+    {
+        añadirJugador(nomJugador);
+        String actual = pokemonActivo.get(nomJugador);
+        if (pokemon.equals(actual))
+        {
+            return;
+        }
+        if (banca.containsKey(nomJugador))
+        {
+            banca.get(nomJugador).remove(pokemon);
+        }
+        if (actual != null)
+        {
+            añadirBanquillo(nomJugador, actual);
+        }
+        pokemonActivo.put(nomJugador, pokemon);
+    }
+
+    //NUEVO: evolucion. Sustituye el nombre en el activo o en el banquillo
+    public void evolucionar(String nomJugador, String desde, String hacia)
+    {
+        if (desde.equals(pokemonActivo.get(nomJugador)))
+        {
+            pokemonActivo.put(nomJugador, hacia);
+            return;
+        }
+        List<String> b = banca.get(nomJugador);
+        if (b != null)
+        {
+            int i = b.indexOf(desde);
+            if (i >= 0)
+            {
+                b.set(i, hacia);
+            }
+        }
+    }
+
+    //NUEVO: un pokemon es noqueado, desaparece del campo
+    public void pokemonNoqueado(String nomJugador, String pokemon)
+    {
+        if (pokemon.equals(pokemonActivo.get(nomJugador)))
+        {
+            pokemonActivo.remove(nomJugador);
+        }
+        else if (banca.containsKey(nomJugador))
+        {
+            banca.get(nomJugador).remove(pokemon);
+        }
+    }
+
     //APARTADO DE LAS CARTAS QUE TIENE CADA JUGADOR
     //Mano de un jugador al inicio
     private void prepararMano(String nomJugador)
@@ -126,6 +215,54 @@ public class EstadoJuego {
     {
         prepararMano(nomJugador);
         cartasDesconocidas.put(nomJugador, cartasDesconocidas.get(nomJugador) + 1);
+    }
+
+    //NUEVO: una carta que estaba como desconocida pasa a conocida (lista de bullets tras robar)
+    public void revelarCartaRobada(String nomJugador, String carta)
+    {
+        prepararMano(nomJugador);
+        int desconocidas = cartasDesconocidas.get(nomJugador);
+        if (desconocidas > 0)
+        {
+            cartasDesconocidas.put(nomJugador, desconocidas - 1);
+        }
+        robarCartaConocida(nomJugador, carta);
+    }
+
+    //NUEVO: quita una carta de la mano (jugarla, adjuntarla, descartarla...).
+    //Si no esta entre las conocidas y se permite, se descuenta una desconocida.
+    public boolean quitarCartaMano(String nomJugador, String carta, boolean permitirDesconocida)
+    {
+        prepararMano(nomJugador);
+        Map<String, Integer> m = mano.get(nomJugador);
+
+        Integer n = m.get(carta);
+        if (n != null)
+        {
+            if (n > 1)
+            {
+                m.put(carta, n - 1);
+            }
+            else
+            {
+                m.remove(carta);
+            }
+            return true;
+        }
+
+        if (permitirDesconocida && cartasDesconocidas.get(nomJugador) > 0)
+        {
+            cartasDesconocidas.put(nomJugador, cartasDesconocidas.get(nomJugador) - 1);
+            return true;
+        }
+        return false;
+    }
+
+    //NUEVO: quita varias cartas desconocidas (descartes del rival sin detalle)
+    public void quitarCartasDesconocidas(String nomJugador, int n)
+    {
+        prepararMano(nomJugador);
+        cartasDesconocidas.put(nomJugador, Math.max(0, cartasDesconocidas.get(nomJugador) - n));
     }
 
     //Consulta de cartas conocidas
@@ -236,14 +373,13 @@ public class EstadoJuego {
     {
         System.out.println("RESUMEN DE LA PARTIDA");
         for (String jugador : jugadores) {
-            System.out.println("Jugador activo: " + jugador);
+            System.out.println("Jugador: " + jugador);
             System.out.println("Pokemon activo: " + getPokemonActivo(jugador));
             System.out.println("Banquillo: " + getBanquillo(jugador));
             System.out.println("Cartas conocidas: " + getMano(jugador));
             System.out.println("Cartas desconocidas: " + getCartasDesconocidas(jugador));
             System.out.println("KOs realizados: " + getKO(jugador));
             System.out.println("Daño infligido total: " + getDañoTotal(jugador));
-            System.out.println("Premios: "+ getPremiosRestantes(jugador));
             System.out.println("Premios restantes (por coger): " + getPremiosRestantes(jugador));
         }
 

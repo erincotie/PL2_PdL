@@ -1,19 +1,15 @@
 import org.antlr.v4.runtime.*;
 import org.antlr.v4.runtime.tree.*;
 
-import java.io.FileInputStream;
-import java.io.InputStream;
+public class Analizador {
 
-public class Analizador{
-    
     //Metodo de entrada
-
-    public static void main(String[] args) throws Exception{
+    public static void main(String[] args) throws Exception {
         //Inicializamos la entrada de datos
         String inputFile = null;
-        if(args.length>0) inputFile = args[0];
+        if (args.length > 0) inputFile = args[0];
 
-        // Uso de CharStreams ANTLRInputStream, que sale en los videos esta deprecado
+        // Uso de CharStreams (ANTLRInputStream esta deprecado)
         CharStream input;
         if (inputFile != null) {
             input = CharStreams.fromFileName(inputFile);
@@ -24,22 +20,25 @@ public class Analizador{
         //Conectar con el lexer
         PokemonLexer lexer = new PokemonLexer(input);
 
-        //Iniciar un canal de tokens entre el lexer y parser
+        //Canal de tokens entre el lexer y el parser
         CommonTokenStream tokens = new CommonTokenStream(lexer);
         PokemonParser parser = new PokemonParser(tokens);
 
-        //Se genera el arbol sintactico a partir del lexer, parser y el fichero de input
+        //Se genera el arbol sintactico
         ParseTree tree = parser.program();
+
+        // Con errores sintacticos el arbol puede tener nodos incompletos,
+        // asi que no se recorre con el listener.
+        if (parser.getNumberOfSyntaxErrors() > 0) {
+            System.err.println("La partida tiene errores sintacticos: no se genera el resumen.");
+            return;
+        }
+
+        //Recorremos el arbol con el listener, que va rellenando EstadoJuego
         JuegoListener listener = new JuegoListener();
         ParseTreeWalker.DEFAULT.walk(listener, tree);
 
-        //Para recorrer un arbol utilizaremos un listener, con lo que primero necesitamos inicializar un recorredor (walker)
-        // luego inicializar un escuchador (listener) y decirle que recorra el arbol
-        ParseTreeWalker walker = new ParseTreeWalker();
-
-        //PokemonParserListener listener = new PokemonParserListener();
-
-        //walker.walk(listener, tree);
-
+        //Resumen final del estado
+        listener.getEstado().imprimirResumen();
     }
 }

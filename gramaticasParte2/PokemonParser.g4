@@ -84,7 +84,7 @@ turn_action
     | knockout_action
     | card_added_to_hand
     | discarded_card_from_pokemon
-    | damage_taken_action
+    | damage_taken
     | heal_pokemon
     | end_turn
     | inactive_action
@@ -162,10 +162,10 @@ discarded_card_from_pokemon
     : card_name WAS DISCARDED FROM ID APOS_S pokemon_card PUNTO
     ;
 
-damage_taken_action
+damage_taken
     : (ID APOS_S)? pokemon_card TOOK number DAMAGE PUNTO
-    | (ID APOS_S)? pokemon_card TOOK number MORE_WORD DAMAGE
-      BECAUSE OF TIPOS_WEAK_RES WEAKNESS PUNTO
+    | (ID APOS_S)? pokemon_card TOOK number MORE_WORD BECAUSE OF TIPOS_WEAK_RES WEAKNESS PUNTO
+    | ID APOS_S pokemon_card TOOK RAYA number LESS DAMAGE BECAUSE OF TIPOS_WEAK_RES RESISTANCE
     ;
 
 heal_pokemon
@@ -195,7 +195,7 @@ sub_effect
     | shuffle_deck_effect
     | shuffle_cards_into_deck_effect
     | shuffle_named_card_into_deck_effect
-    | evolve_pokemon_effect
+    | evolve_pokemon
     | discard_number_effect
     | discard_named_card_effect
     | discard_from_pokemon_effect
@@ -204,7 +204,7 @@ sub_effect
     | switch_active_pokemon_effect
     | attach_card_effect
     | move_card_to_hand_effect
-    | damage_taken_effect
+    | damage_taken
     | mulligan_reveal_effect
     | heal_pokemon_effect
     | special_condition_action
@@ -252,10 +252,6 @@ shuffle_named_card_into_deck_effect
     : ID SHUFFLED card_name INTO THEIR DECK
     ;
 
-evolve_pokemon_effect
-    : ID EVOLVED pokemon_card TO pokemon_card ((IN | ON) THE (BENCH | ACTIVE SPOT))?
-    ;
-
 discard_number_effect
     : ID DISCARDED number (CARD | CARDS)
     ;
@@ -286,12 +282,6 @@ attach_card_effect
 
 move_card_to_hand_effect
     : ID MOVED ID APOS_S (number (CARD | CARDS) | card_name) TO THEIR HAND
-    ;
-
-damage_taken_effect
-    : ID APOS_S pokemon_card TOOK number DAMAGE
-    | ID APOS_S pokemon_card TOOK number MORE_WORD DAMAGE BECAUSE OF TIPOS_WEAK_RES WEAKNESS
-    | ID APOS_S pokemon_card TOOK RAYA number LESS DAMAGE BECAUSE OF TIPOS_WEAK_RES RESISTANCE
     ;
 
 mulligan_reveal_effect
