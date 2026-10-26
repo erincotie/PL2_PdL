@@ -63,7 +63,7 @@ turn_header
 
 turn_action
     : (draw_action | attach_energy | evolve_pokemon | heal_pokemon
-       | discard_from_pokemon | pokemon_status | damage_taken) PUNTO
+       | discard_from_pokemon | pokemon_status | damage_taken) PUNTO?
     | play_cards
     | use_ability_or_attack
     | retreat_action
@@ -147,11 +147,6 @@ inactive_action
 end_turn
     : ID ENDED THEIR TURN PUNTO
     ;
-
-// Primero se intentan reconocer los efectos habituales con reglas concretas.
-// Si aparece un efecto nuevo, se permite una alternativa de reserva, pero solo
-// en lineas secundarias que empiezan por guion. Las acciones principales de la
-// partida siguen necesitando encajar en sus reglas especificas.
 
 sub_effect
     : RAYA (draw_action | attach_energy | evolve_pokemon | heal_pokemon
