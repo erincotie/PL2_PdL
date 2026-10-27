@@ -646,9 +646,6 @@ CARTA_SUPPORTER: 'Lillie\'s Determination'
     | 'Jacq'
     | 'Rika'
     | 'Lana\'s Aid'
-
-    // === NUEVAS ENTRADAS AÑADIDAS PARA log Venasaur_Derrota ===
-    // ============================================
     ;
 
 // Catalogo de estadios conocidos
@@ -671,12 +668,6 @@ CARTA_STADIUM: 'Full Metal Lab'
     | 'Team Rocket\'s Factory'
     | 'Forest of Vitality'
     | 'Grand Tree'
-
-    // === NUEVAS ENTRADAS AÑADIDAS PARA Venasaur_Derrota ===
-    /* 
-
-    */
-    // ============================================
     ;
 
 // Catalogo de ataques conocidos
@@ -784,14 +775,6 @@ ATAQUE: 'Aura Jab'
     | 'Star Requiem'
     | 'Inferno X'
     | 'Excited Turbo'
-    // === NUEVAS ENTRADAS AÑADIDAS PARA ESTE LOG ===
-    /* 
-    | 'Poison Spray'
-    | 'Adrena-Brain'
-    | 'Relentless Punches'
-    | 'Abyss Eye'
-    */
-    // ============================================
     ;
 
 
