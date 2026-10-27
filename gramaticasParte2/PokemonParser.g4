@@ -6,7 +6,9 @@ options {
 }
 
 program
-    : NEWLINE* setup (NEWLINE* turn_block)* NEWLINE* end NEWLINE* EOF
+    : NEWLINE* setup
+      (NEWLINE* (turn_block | pokemon_checkup_block))*
+      NEWLINE* end NEWLINE* EOF
     ;
 
 setup
@@ -110,6 +112,17 @@ special_condition
     | POISONED
     ;
 
+// NUEVA REGLA PARA RECONOCER EL BLOQUE POKEMON CHECKUP
+pokemon_checkup_block
+    : POKEMON CHECKUP line_end pokemon_checkup_entry+
+    ;
+
+//1 damage counter was placed on andresg85's Mega Venusaur ex for the Special Condition Poisoned.
+pokemon_checkup_entry
+    : number (DAMAGE_COUNTER | DAMAGE_COUNTERS | COUNTERS)
+      WAS PLACED ON (ID APOS_S)? pokemon_card
+      FOR THE SPECIAL CONDITION special_condition PUNTO line_end
+    ;
 take_prize_action
     : ID TOOK (A | number) PRIZE (CARD | CARDS)? PUNTO
     ;
@@ -153,9 +166,15 @@ sub_effect
             | discard_from_pokemon | pokemon_status | damage_taken
             | drawn_cards_effect | shuffle_effect | discard_effect
             | put_damage_counters_effect | switch_active_pokemon_effect
-            | move_card_to_hand_effect | chose_effect) PUNTO?
+            | move_card_to_hand_effect | move_damage_counters_effect | chose_effect) PUNTO?
     ;
 
+    //-Franster2900 moved 3 damage counters from Franster2900's Mega Darkrai ex to Franster2900's Mega Venusaur ex.
+move_damage_counters_effect
+    : ID MOVED number (DAMAGE_COUNTER | DAMAGE_COUNTERS | COUNTERS)
+      FROM ID APOS_S pokemon_card
+      TO ID APOS_S pokemon_card
+    ;
 pokemon_status
     : (ID APOS_S)? pokemon_card IS NOW (IN THE ACTIVE SPOT | special_condition)
     ;
@@ -204,6 +223,7 @@ damage_breakdown_entry
 breakdown_label
     : number (SELECTED | ATTACHED) ENERGY
     | number PRIZE CARDS
+    | number (DAMAGE_COUNTER | DAMAGE_COUNTERS | COUNTERS)// 7 damage counters: 350 damage
     | BASE_DAMAGE
     | PARENTESIS_ABRIR ITEM PARENTESIS_CERRAR card_name
     | PARENTESIS_ABRIR ATTACK PARENTESIS_CERRAR attack_name

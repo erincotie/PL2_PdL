@@ -138,6 +138,8 @@ COUNTERS: 'counters';
 
 DAMAGE_COUNTERS: 'damage counters';
 
+DAMAGE_COUNTER: 'damage counter';
+
 FROM: 'from';
 
 STADIUM: 'Stadium';
@@ -196,7 +198,13 @@ RAN: 'ran';
 
 OUT: 'out';
 
-// Estados especiales del Pokemon. Se agrupan en tokens concretos para que
+// NUEVAS ENTRADAS 
+CHECKUP: 'Checkup';
+PLACED: 'placed';
+SPECIAL: 'Special';
+CONDITION: 'Condition';
+
+// estados especiales del Pokemon. Se agrupan en tokens concretos para que
 // el parser pueda reconocerlos con una sola regla reutilizable.
 ASLEEP: 'Asleep'
     | 'asleep';
@@ -244,7 +252,22 @@ CARTA_POKEMON: 'Riolu'
     | 'Chikorita'
     | 'Bayleef'
     | 'Meganium'
+    | 'Fezandipiti ex'
     | 'Teal Mask Ogerpon ex'
+    | 'Munkidori'
+    | 'Brute Bonnet'
+    | 'Toxtricity'
+    | 'Oricorio ex'
+
+
+
+
+
+    // === NUEVAS ENTRADAS AÑADIDAS: cartas del log 8 Venasaur_Derrota===
+    /* 
+   
+    */
+    // ============================================
     | 'Steven\'s Beldum'
     | 'Steven\'s Metang'
     | 'Steven\'s Metagross ex'
@@ -279,7 +302,6 @@ CARTA_POKEMON: 'Riolu'
     | 'Mega Charizard Y ex'
     | 'Mega Charizard ex'
     | 'Charizard'
-    | 'Oricorio ex'
     | 'Reshiram'
     | 'Electrike'
     | 'Mega Manectric ex'
@@ -290,12 +312,9 @@ CARTA_POKEMON: 'Riolu'
     | 'Zeraora'
     | 'Carvanha'
     | 'Mega Sharpedo ex'
-    | 'Munkidori'
     | 'Seviper'
     | 'Toxel'
-    | 'Toxtricity'
     | 'Meowth ex'
-    | 'Fezandipiti ex'
     | 'Fan Rotom'
     | 'Hoothoot'
     | 'Noctowl'
@@ -492,8 +511,7 @@ CARTA_POKEMON: 'Riolu'
     | 'Mudkip'
     | 'Marshtomp'
     | 'Swampert'
-    | 'Mega Darkrai ex'
-    | 'Brute Bonnet';
+    | 'Mega Darkrai ex';
 
 // Catalogo de energias conocidas
 CARTA_ENERGIA: 'Basic Grass Energy'
@@ -583,7 +601,9 @@ CARTA_ITEM: 'Ultra Ball'
     | 'Switch Cart'
     | 'Pokégear 3.0'
     | 'Pokegear 3.0'
-    | 'Dark Bell';
+    | 'Dark Bell'
+   
+    ;
 
 // Catalogo de Supporters conocidos
 CARTA_SUPPORTER: 'Lillie\'s Determination'
@@ -594,7 +614,6 @@ CARTA_SUPPORTER: 'Lillie\'s Determination'
     | 'Team Rocket\'s Petrel'
     | 'Tarragon'
     | 'Salvatore'
-    | 'Lana\'s Aid'
     | 'Colress\'s Tenacity'
     | 'Wally\'s Compassion'
     | 'Black Belt\'s Training'
@@ -625,12 +644,15 @@ CARTA_SUPPORTER: 'Lillie\'s Determination'
     | 'Saguaro'
     | 'Tulip'
     | 'Jacq'
-    | 'Rika';
+    | 'Rika'
+    | 'Lana\'s Aid'
+
+    // === NUEVAS ENTRADAS AÑADIDAS PARA log Venasaur_Derrota ===
+    // ============================================
+    ;
 
 // Catalogo de estadios conocidos
-CARTA_STADIUM: 'Forest of Vitality'
-    | 'Grand Tree'
-    | 'Full Metal Lab'
+CARTA_STADIUM: 'Full Metal Lab'
     | 'Gravity Mountain'
     | 'N\'s Castle'
     | 'Jamming Tower'
@@ -646,7 +668,16 @@ CARTA_STADIUM: 'Forest of Vitality'
     | 'Beach Court'
     | 'Mesagoza'
     | 'Pokémon League Headquarters'
-    | 'Team Rocket\'s Factory';
+    | 'Team Rocket\'s Factory'
+    | 'Forest of Vitality'
+    | 'Grand Tree'
+
+    // === NUEVAS ENTRADAS AÑADIDAS PARA Venasaur_Derrota ===
+    /* 
+
+    */
+    // ============================================
+    ;
 
 // Catalogo de ataques conocidos
 ATAQUE: 'Aura Jab'
@@ -752,7 +783,16 @@ ATAQUE: 'Aura Jab'
     | 'Moonlight Shuriken'
     | 'Star Requiem'
     | 'Inferno X'
-    | 'Excited Turbo';
+    | 'Excited Turbo'
+    // === NUEVAS ENTRADAS AÑADIDAS PARA ESTE LOG ===
+    /* 
+    | 'Poison Spray'
+    | 'Adrena-Brain'
+    | 'Relentless Punches'
+    | 'Abyss Eye'
+    */
+    // ============================================
+    ;
 
 
 fragment DIGITO: [0-9];
