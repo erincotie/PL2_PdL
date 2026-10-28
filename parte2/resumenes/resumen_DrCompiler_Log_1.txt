@@ -1,0 +1,30 @@
+Turno detectado: DudeJaden
+Turno detectado: DrCompiler
+Turno detectado: DudeJaden
+Turno detectado: DrCompiler
+Turno detectado: DudeJaden
+Turno detectado: DrCompiler
+Turno detectado: DudeJaden
+Turno detectado: DrCompiler
+Turno detectado: DudeJaden
+Turno detectado: DrCompiler
+Ganador detectado: DrCompiler
+RESUMEN DE LA PARTIDA
+Jugador: DudeJaden
+Pokemon activo: ninguno
+Banquillo: [Solrock, Meowth ex, Solrock, Lunatone, Hariyama]
+Cartas conocidas: {}
+Cartas desconocidas: 17
+KOs realizados: 3
+Daño infligido total: 630
+Premios restantes (por coger): 3
+Jugador: DrCompiler
+Pokemon activo: Mega Lucario ex
+Banquillo: [Hariyama, Fezandipiti ex, Solrock, Meowth ex]
+Cartas conocidas: {Boss's Orders=2, Night Stretcher=1, Premium Power Pro=1, Tarragon=2, Ultra Ball=1, Gravity Mountain=1, Air Balloon=1, Basic Fighting Energy=5, Switch=2, Mega Lucario ex=1, Lillie's Determination=2, Hariyama=1, Lunatone=2, Team Rocket's Petrel=1, Meowth ex=1}
+Cartas desconocidas: 0
+KOs realizados: 2
+Daño infligido total: 860
+Premios restantes (por coger): 0
+Turnos totales: 10
+Ganador de la partida: DrCompiler

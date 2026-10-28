@@ -1,0 +1,23 @@
+Turno detectado: DrCompiler
+Turno detectado: PJPJPJPJPJPJ
+Turno detectado: DrCompiler
+Ganador detectado: DrCompiler
+RESUMEN DE LA PARTIDA
+Jugador: DrCompiler
+Pokemon activo: Dragapult ex
+Banquillo: [Meowth ex, Dreepy]
+Cartas conocidas: {Poké Pad=1, Buddy-Buddy Poffin=3, Lillie's Determination=2, Dusknoir=1, Drakloak=1}
+Cartas desconocidas: 0
+KOs realizados: 0
+Daño infligido total: 0
+Premios restantes (por coger): 6
+Jugador: PJPJPJPJPJPJ
+Pokemon activo: Teal Mask Ogerpon ex
+Banquillo: [Fan Rotom, Chikorita, Hoothoot]
+Cartas conocidas: {Hoothoot=1, Noctowl=1}
+Cartas desconocidas: 5
+KOs realizados: 0
+Daño infligido total: 0
+Premios restantes (por coger): 6
+Turnos totales: 3
+Ganador de la partida: DrCompiler

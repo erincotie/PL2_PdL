@@ -1,0 +1,46 @@
+Turno detectado: raseccaos
+Turno detectado: SergioPeiteado
+Turno detectado: raseccaos
+Turno detectado: SergioPeiteado
+Turno detectado: raseccaos
+Turno detectado: SergioPeiteado
+Turno detectado: raseccaos
+Turno detectado: SergioPeiteado
+Turno detectado: raseccaos
+Turno detectado: SergioPeiteado
+Turno detectado: raseccaos
+Turno detectado: SergioPeiteado
+Turno detectado: raseccaos
+Turno detectado: SergioPeiteado
+Turno detectado: raseccaos
+Turno detectado: SergioPeiteado
+Turno detectado: raseccaos
+Turno detectado: SergioPeiteado
+Turno detectado: raseccaos
+Turno detectado: SergioPeiteado
+Turno detectado: raseccaos
+Turno detectado: SergioPeiteado
+Turno detectado: raseccaos
+Turno detectado: SergioPeiteado
+Turno detectado: raseccaos
+Turno detectado: SergioPeiteado
+Ganador detectado: raseccaos
+RESUMEN DE LA PARTIDA
+Jugador: raseccaos
+Pokemon activo: Teal Mask Ogerpon ex
+Banquillo: [Mega Venusaur ex, Meganium, Meganium, Mega Venusaur ex, Teal Mask Ogerpon ex]
+Cartas conocidas: {Wally's Compassion=1, Dawn=1, Boss's Orders=4, Lillie's Determination=1, Ivysaur=2, Bayleef=1, Mega Venusaur ex=1, Meowth ex=1, Judge=1, Teal Mask Ogerpon ex=1}
+Cartas desconocidas: 0
+KOs realizados: 3
+Daño infligido total: 1680
+Premios restantes (por coger): 2
+Jugador: SergioPeiteado
+Pokemon activo: N's Darmanitan
+Banquillo: [N's Darmanitan, N's Zoroark ex, Pecharunt ex, Fezandipiti ex]
+Cartas conocidas: {N's Zoroark ex=1, Pecharunt ex=1}
+Cartas desconocidas: 6
+KOs realizados: 3
+Daño infligido total: 710
+Premios restantes (por coger): 1
+Turnos totales: 26
+Ganador de la partida: raseccaos

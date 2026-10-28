@@ -1,0 +1,25 @@
+Turno detectado: Sungki750915
+Turno detectado: SergioPeiteado
+Turno detectado: Sungki750915
+Turno detectado: SergioPeiteado
+Turno detectado: Sungki750915
+Ganador detectado: SergioPeiteado
+RESUMEN DE LA PARTIDA
+Jugador: SergioPeiteado
+Pokemon activo: Fezandipiti ex
+Banquillo: []
+Cartas conocidas: {Buddy-Buddy Poffin=1, Energy Recycler=1, N's Zorua=2, Air Balloon=1, N's PP Up=1, Judge=1}
+Cartas desconocidas: 1
+KOs realizados: 0
+Daño infligido total: 0
+Premios restantes (por coger): 6
+Jugador: Sungki750915
+Pokemon activo: Riolu
+Banquillo: []
+Cartas conocidas: {Riolu=1}
+Cartas desconocidas: 2
+KOs realizados: 0
+Daño infligido total: 0
+Premios restantes (por coger): 6
+Turnos totales: 5
+Ganador de la partida: SergioPeiteado

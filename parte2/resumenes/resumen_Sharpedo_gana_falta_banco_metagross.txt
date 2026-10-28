@@ -1,0 +1,31 @@
+Turno detectado: raseccaos
+Turno detectado: SergioPeiteado
+Turno detectado: raseccaos
+Turno detectado: SergioPeiteado
+Turno detectado: raseccaos
+Turno detectado: SergioPeiteado
+Turno detectado: raseccaos
+Turno detectado: SergioPeiteado
+Turno detectado: raseccaos
+Turno detectado: SergioPeiteado
+Turno detectado: raseccaos
+Ganador detectado: raseccaos
+RESUMEN DE LA PARTIDA
+Jugador: SergioPeiteado
+Pokemon activo: ninguno
+Banquillo: []
+Cartas conocidas: {}
+Cartas desconocidas: 3
+KOs realizados: 0
+Daño infligido total: 0
+Premios restantes (por coger): 6
+Jugador: raseccaos
+Pokemon activo: Mega Sharpedo ex
+Banquillo: [Carvanha, Munkidori, Toxtricity, Meowth ex, Toxel]
+Cartas conocidas: {Mega Sharpedo ex=1, Legacy Energy=1, Energy Recycler=1, Boss's Orders=1, Lillie's Determination=2, Toxel=1, Carvanha=1, Ultra Ball=1, Buddy-Buddy Poffin=1, Munkidori=1}
+Cartas desconocidas: 0
+KOs realizados: 4
+Daño infligido total: 450
+Premios restantes (por coger): 1
+Turnos totales: 11
+Ganador de la partida: raseccaos

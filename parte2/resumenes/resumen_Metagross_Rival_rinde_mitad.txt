@@ -1,0 +1,39 @@
+Turno detectado: PureM2K
+Turno detectado: andresg85
+Turno detectado: PureM2K
+Turno detectado: andresg85
+Turno detectado: PureM2K
+Turno detectado: andresg85
+Turno detectado: PureM2K
+Turno detectado: andresg85
+Turno detectado: PureM2K
+Turno detectado: andresg85
+Turno detectado: PureM2K
+Turno detectado: andresg85
+Turno detectado: PureM2K
+Turno detectado: andresg85
+Turno detectado: PureM2K
+Turno detectado: andresg85
+Turno detectado: PureM2K
+Turno detectado: andresg85
+Turno detectado: PureM2K
+Ganador detectado: andresg85
+RESUMEN DE LA PARTIDA
+Jugador: andresg85
+Pokemon activo: Steven's Metagross ex
+Banquillo: [Steven's Metang, Jellicent ex, Fezandipiti ex, Steven's Beldum]
+Cartas conocidas: {Mega Skarmory ex=1, Steven's Metang=1, Boss's Orders=1, Ultra Ball=1, Poké Pad=1, Judge=1, Rare Candy=2}
+Cartas desconocidas: 0
+KOs realizados: 2
+Daño infligido total: 950
+Premios restantes (por coger): 2
+Jugador: PureM2K
+Pokemon activo: Teal Mask Ogerpon ex
+Banquillo: [Teal Mask Ogerpon ex, Meowth ex, Fezandipiti ex]
+Cartas conocidas: {Mega Venusaur ex=3, Teal Mask Ogerpon ex=1}
+Cartas desconocidas: 19
+KOs realizados: 2
+Daño infligido total: 1190
+Premios restantes (por coger): 2
+Turnos totales: 19
+Ganador de la partida: andresg85

@@ -1,0 +1,33 @@
+Turno detectado: raseccaos
+Turno detectado: SergioPeiteado
+Turno detectado: raseccaos
+Turno detectado: SergioPeiteado
+Turno detectado: raseccaos
+Turno detectado: SergioPeiteado
+Turno detectado: raseccaos
+Turno detectado: SergioPeiteado
+Turno detectado: raseccaos
+Turno detectado: SergioPeiteado
+Turno detectado: raseccaos
+Turno detectado: SergioPeiteado
+Turno detectado: raseccaos
+Ganador detectado: raseccaos
+RESUMEN DE LA PARTIDA
+Jugador: SergioPeiteado
+Pokemon activo: ninguno
+Banquillo: [Mega Manectric ex, Mega Eelektross ex, Zeraora, Tynamo]
+Cartas conocidas: {Iris's Fighting Spirit=1, Eelektrik=1}
+Cartas desconocidas: 8
+KOs realizados: 3
+Daño infligido total: 390
+Premios restantes (por coger): 3
+Jugador: raseccaos
+Pokemon activo: Dragapult ex
+Banquillo: [Dragapult ex, Drakloak, Fezandipiti ex, Duskull]
+Cartas conocidas: {Basic Psychic Energy=2, Boss's Orders=3, Dragapult ex=1, Buddy-Buddy Poffin=1, Dusknoir=2, Rare Candy=4, Hilda=1, Switch=2, Dawn=1, Lillie's Determination=2, Drakloak=1, Team Rocket's Petrel=2, Judge=2}
+Cartas desconocidas: 0
+KOs realizados: 3
+Daño infligido total: 800
+Premios restantes (por coger): 0
+Turnos totales: 13
+Ganador de la partida: raseccaos

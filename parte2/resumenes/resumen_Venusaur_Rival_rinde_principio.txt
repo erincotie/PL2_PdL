@@ -1,0 +1,20 @@
+Ganador detectado: andresg85
+RESUMEN DE LA PARTIDA
+Jugador: andresg85
+Pokemon activo: ninguno
+Banquillo: []
+Cartas conocidas: {Basic Grass Energy=1, Lana's Aid=1, Ultra Ball=1, Boss's Orders=1, Lillie's Determination=2, Teal Mask Ogerpon ex=1}
+Cartas desconocidas: 0
+KOs realizados: 0
+Daño infligido total: 0
+Premios restantes (por coger): 6
+Jugador: CocoFBaby
+Pokemon activo: ninguno
+Banquillo: []
+Cartas conocidas: {}
+Cartas desconocidas: 0
+KOs realizados: 0
+Daño infligido total: 0
+Premios restantes (por coger): 6
+Turnos totales: 0
+Ganador de la partida: andresg85

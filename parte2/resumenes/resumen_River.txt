@@ -1,0 +1,35 @@
+Turno detectado: Riverflow2018
+Turno detectado: Solrak06_
+Turno detectado: Riverflow2018
+Turno detectado: Solrak06_
+Turno detectado: Riverflow2018
+Turno detectado: Solrak06_
+Turno detectado: Riverflow2018
+Turno detectado: Solrak06_
+Turno detectado: Riverflow2018
+Turno detectado: Solrak06_
+Turno detectado: Riverflow2018
+Turno detectado: Solrak06_
+Turno detectado: Riverflow2018
+Turno detectado: Solrak06_
+Turno detectado: Riverflow2018
+Ganador detectado: Riverflow2018
+RESUMEN DE LA PARTIDA
+Jugador: Solrak06_
+Pokemon activo: ninguno
+Banquillo: [Lunatone, Solrock, Riolu, Okidogi]
+Cartas conocidas: {}
+Cartas desconocidas: 2
+KOs realizados: 1
+Daño infligido total: 220
+Premios restantes (por coger): 5
+Jugador: Riverflow2018
+Pokemon activo: Mega Manectric ex
+Banquillo: [Mega Eelektross ex, Eelektrik, Fezandipiti ex, Mega Manectric ex, Electrike]
+Cartas conocidas: {Iris's Fighting Spirit=2, Zekrom ex=1, Basic Lightning Energy=3, Lillie's Determination=1, Carmine=1, Tynamo=2, Zeraora=1, Buddy-Buddy Poffin=1, Gravity Mountain=2, Eelektrik=2}
+Cartas desconocidas: 1
+KOs realizados: 3
+Daño infligido total: 720
+Premios restantes (por coger): 0
+Turnos totales: 15
+Ganador de la partida: Riverflow2018

@@ -1,0 +1,39 @@
+Turno detectado: raseccaos
+Turno detectado: GBlime
+Turno detectado: raseccaos
+Turno detectado: GBlime
+Turno detectado: raseccaos
+Turno detectado: GBlime
+Turno detectado: raseccaos
+Turno detectado: GBlime
+Turno detectado: raseccaos
+Turno detectado: GBlime
+Turno detectado: raseccaos
+Turno detectado: GBlime
+Turno detectado: raseccaos
+Turno detectado: GBlime
+Turno detectado: raseccaos
+Turno detectado: GBlime
+Turno detectado: raseccaos
+Turno detectado: GBlime
+Turno detectado: raseccaos
+Ganador detectado: raseccaos
+RESUMEN DE LA PARTIDA
+Jugador: raseccaos
+Pokemon activo: Mega Lucario ex
+Banquillo: [Meowth ex, Fezandipiti ex, Solrock, Hariyama]
+Cartas conocidas: {Solrock=1, Boss's Orders=1, Switch=1, Hariyama=1, Mega Lucario ex=1, Night Stretcher=1, Tarragon=1, Premium Power Pro=3, Lunatone=1, Salvatore=1, Gravity Mountain=1, Basic Fighting Energy=2}
+Cartas desconocidas: 0
+KOs realizados: 4
+Daño infligido total: 1020
+Premios restantes (por coger): 0
+Jugador: GBlime
+Pokemon activo: ninguno
+Banquillo: [Steven's Metagross ex, Mew ex, Genesect ex, Steven's Beldum]
+Cartas conocidas: {Zweilous=1, Steven's Metagross ex=2, Boss's Orders=1, Hydreigon ex=1}
+Cartas desconocidas: 10
+KOs realizados: 1
+Daño infligido total: 360
+Premios restantes (por coger): 5
+Turnos totales: 19
+Ganador de la partida: raseccaos

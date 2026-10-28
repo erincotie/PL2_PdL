@@ -1,0 +1,38 @@
+Turno detectado: raseccaos
+Turno detectado: Riverflow2018
+Turno detectado: raseccaos
+Turno detectado: Riverflow2018
+Turno detectado: raseccaos
+Turno detectado: Riverflow2018
+Turno detectado: raseccaos
+Turno detectado: Riverflow2018
+Turno detectado: raseccaos
+Turno detectado: Riverflow2018
+Turno detectado: raseccaos
+Turno detectado: Riverflow2018
+Turno detectado: raseccaos
+Turno detectado: Riverflow2018
+Turno detectado: raseccaos
+Turno detectado: Riverflow2018
+Turno detectado: raseccaos
+Turno detectado: Riverflow2018
+Ganador detectado: Riverflow2018
+RESUMEN DE LA PARTIDA
+Jugador: Riverflow2018
+Pokemon activo: Mega Charizard X ex
+Banquillo: [Reshiram, Oricorio ex, Fezandipiti ex]
+Cartas conocidas: {}
+Cartas desconocidas: 15
+KOs realizados: 3
+Daño infligido total: 990
+Premios restantes (por coger): 0
+Jugador: raseccaos
+Pokemon activo: ninguno
+Banquillo: [Latios, Mega Latias ex, Genesect ex, Hydreigon ex]
+Cartas conocidas: {Steven's Beldum=3, Basic Psychic Energy=1, Zweilous=1, Steven's Metang=2, Dawn=1, Boss's Orders=1, Basic Darkness Energy=1, Lillie's Clefairy ex=1, Steven's Metagross ex=4, Buddy-Buddy Poffin=2, Mew ex=1, Hydreigon ex=1}
+Cartas desconocidas: 0
+KOs realizados: 2
+Daño infligido total: 460
+Premios restantes (por coger): 1
+Turnos totales: 18
+Ganador de la partida: Riverflow2018
