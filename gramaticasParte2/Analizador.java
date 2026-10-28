@@ -3,13 +3,12 @@ import org.antlr.v4.runtime.tree.*;
 
 public class Analizador {
 
-    //Metodo de entrada
+    // Uso: java Analizador <fichero_log>
     public static void main(String[] args) throws Exception {
-        //Inicializamos la entrada de datos
+        // Entrada: el fichero indicado o, si no se indica, la entrada estándar
         String inputFile = null;
         if (args.length > 0) inputFile = args[0];
 
-        // Uso de CharStreams (ANTLRInputStream esta deprecado)
         CharStream input;
         if (inputFile != null) {
             input = CharStreams.fromFileName(inputFile);
@@ -17,28 +16,35 @@ public class Analizador {
             input = CharStreams.fromStream(System.in);
         }
 
-        //Conectar con el lexer
+        // Lexer. Además del aviso por consola de ANTLR, se cuentan sus errores
         PokemonLexer lexer = new PokemonLexer(input);
+        final int[] erroresLexicos = {0};
+        lexer.addErrorListener(new BaseErrorListener() {
+            @Override
+            public void syntaxError(Recognizer<?, ?> recognizer, Object simbolo, int linea,
+                                    int columna, String mensaje, RecognitionException e) {
+                erroresLexicos[0]++;
+            }
+        });
 
-        //Canal de tokens entre el lexer y el parser
+        // Tokens del lexer al parser
         CommonTokenStream tokens = new CommonTokenStream(lexer);
         PokemonParser parser = new PokemonParser(tokens);
 
-        //Se genera el arbol sintactico
+        // Árbol sintáctico
         ParseTree tree = parser.program();
 
-        // Con errores sintacticos el arbol puede tener nodos incompletos,
-        // asi que no se recorre con el listener.
-        if (parser.getNumberOfSyntaxErrors() > 0) {
-            System.err.println("La partida tiene errores sintacticos: no se genera el resumen.");
+        // Con errores el árbol puede estar incompleto, así que no se recorre con el listener
+        if (erroresLexicos[0] > 0 || parser.getNumberOfSyntaxErrors() > 0) {
+            System.err.println("La partida tiene errores lexicos o sintacticos: no se genera el resumen.");
             return;
         }
 
-        //Recorremos el arbol con el listener, que va rellenando EstadoJuego
+        // El listener recorre el árbol y va actualizando EstadoJuego
         JuegoListener listener = new JuegoListener();
         ParseTreeWalker.DEFAULT.walk(listener, tree);
 
-        //Resumen final del estado
+        // Resumen final
         listener.getEstado().imprimirResumen();
     }
 }

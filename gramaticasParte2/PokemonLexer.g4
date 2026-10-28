@@ -33,6 +33,7 @@ A: 'a';
 A_MAYUS: 'A';
 CARD: 'card';
 CARDS: 'cards';
+CARDS_MAYUS: 'Cards'; // "- Cards revealed from Mulligan N"
 FOR: 'for';
 THE: 'the';
 OPENING: 'opening';
@@ -198,14 +199,13 @@ RAN: 'ran';
 
 OUT: 'out';
 
-// NUEVAS ENTRADAS 
+// Pokémon Checkup
 CHECKUP: 'Checkup';
 PLACED: 'placed';
 SPECIAL: 'Special';
 CONDITION: 'Condition';
 
-// estados especiales del Pokemon. Se agrupan en tokens concretos para que
-// el parser pueda reconocerlos con una sola regla reutilizable.
+// Condiciones especiales
 ASLEEP: 'Asleep'
     | 'asleep';
 
@@ -258,16 +258,6 @@ CARTA_POKEMON: 'Riolu'
     | 'Brute Bonnet'
     | 'Toxtricity'
     | 'Oricorio ex'
-
-
-
-
-
-    // === NUEVAS ENTRADAS AÑADIDAS: cartas del log 8 Venasaur_Derrota===
-    /* 
-   
-    */
-    // ============================================
     | 'Steven\'s Beldum'
     | 'Steven\'s Metang'
     | 'Steven\'s Metagross ex'

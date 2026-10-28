@@ -5,21 +5,21 @@ import java.util.HashMap;
 
 
 public class EstadoJuego {
-    //Informacion de la partida
+    // Información de la partida
     private String jugadorActivo;
     private String ganador;
     private int turnos;
-    private List<String> jugadores; //guardamos el id de ambos jugadores de la partida
+    private List<String> jugadores; // nombres de los dos jugadores
 
-    private Map<String, String> pokemonActivo; //indica el pokemon que está activo para ese jugador
-    private Map<String, List<String>> banca; //indica los pokemons de reserva del jugador
+    private Map<String, String> pokemonActivo; // Pokémon activo de cada jugador
+    private Map<String, List<String>> banca; // Pokémon en la banca de cada jugador
 
-    private Map<String, Map<String, Integer>> mano; //guarda el jugador con sus cartas y las unidades de cada una pq en el tutorial sale que puedes tener varias cartas de energía p.ej
+    private Map<String, Map<String, Integer>> mano; // cartas conocidas de cada jugador y número de copias
     private Map<String, Integer> cartasDesconocidas;
 
     private Map<String, Integer> premiosRestantes;
 
-    private Map<String, Integer> kos; //los kos que ha hecho cada jugador
+    private Map<String, Integer> kos; // KOs hechos por cada jugador
     private Map<String, Integer> dañoTotal; 
 
     public EstadoJuego()
@@ -37,7 +37,7 @@ public class EstadoJuego {
         dañoTotal = new HashMap<>();
     }
 
-    //Añadir los jugadores a la lista
+    // Registra un jugador si aún no está
     public void añadirJugador(String nombre)
     {
         if(!jugadores.contains(nombre))
@@ -46,19 +46,19 @@ public class EstadoJuego {
         }
     }
 
-    //NUEVO: lista de jugadores (copia)
+    // Copia de la lista de jugadores
     public List<String> getJugadores()
     {
         return new ArrayList<>(jugadores);
     }
 
-    //NUEVO: jugador que tiene el turno actual
+    // Jugador que tiene el turno actual
     public String getJugadorActivo()
     {
         return jugadorActivo;
     }
 
-    //NUEVO: el otro jugador (partida de 2). null si todavia no se conoce
+    // El otro jugador de la partida, o null si aún no se conoce
     public String getRival(String nomJugador)
     {
         for (String j : jugadores)
@@ -71,7 +71,7 @@ public class EstadoJuego {
         return null;
     }
 
-    //Inicio de turno
+    // Inicio de turno
     public void inicioTurno(String nomJugador)
     {
         añadirJugador(nomJugador);
@@ -79,15 +79,15 @@ public class EstadoJuego {
         turnos++;
     }
 
-    //APARTADO DE POKEMON ACTIVO Y EN BANQUILLO
-    //Añadimos el pokemon activo en ese momento al jugador correspondiente
+    // POKÉMON ACTIVO Y BANCA
+    // Fija el Pokémon activo de un jugador
     public void setPokemonActivo(String nomJugador, String pokemon)
     {
         añadirJugador(nomJugador);
         pokemonActivo.put(nomJugador, pokemon);
     }
 
-    //Añadimos los pokemons al banquillo
+    // Añade un Pokémon a la banca
     public void añadirBanquillo(String nomJugador, String pokemon)
     {
         añadirJugador(nomJugador);
@@ -99,13 +99,13 @@ public class EstadoJuego {
 
     }
 
-    //Consulta de que pokemon está activo en ese momento
+    // Pokémon activo de un jugador
     public String getPokemonActivo(String nomJugador)
     {
         return pokemonActivo.get(nomJugador);
     }
 
-    //Consulta de los pokemons en el banquillo
+    // Copia de la banca de un jugador
     public List<String> getBanquillo(String nomJugador)
     {
         if (!banca.containsKey(nomJugador))
@@ -115,8 +115,8 @@ public class EstadoJuego {
         return new ArrayList<>(banca.get(nomJugador));
     }
 
-    //NUEVO: retirada. El activo pasa al banquillo y el puesto activo queda vacio
-    //hasta que llegue la linea "X is now in the Active Spot."
+    // Retirada: el activo pasa a la banca y el puesto queda vacío
+    // hasta la línea "X is now in the Active Spot."
     public void retirarActivoABanca(String nomJugador, String pokemon)
     {
         if (pokemon.equals(pokemonActivo.get(nomJugador)))
@@ -126,8 +126,7 @@ public class EstadoJuego {
         }
     }
 
-    //NUEVO: un pokemon pasa a ser el activo (sale del banquillo).
-    //Si habia otro activo distinto, se manda al banquillo (cambio por efecto).
+    // Un Pokémon de la banca pasa a ser el activo; si había otro, vuelve a la banca
     public void promoverActivo(String nomJugador, String pokemon)
     {
         añadirJugador(nomJugador);
@@ -147,7 +146,7 @@ public class EstadoJuego {
         pokemonActivo.put(nomJugador, pokemon);
     }
 
-    //NUEVO: evolucion. Sustituye el nombre en el activo o en el banquillo
+    // Evolución: sustituye el nombre en el puesto activo o en la banca
     public void evolucionar(String nomJugador, String desde, String hacia)
     {
         if (desde.equals(pokemonActivo.get(nomJugador)))
@@ -166,7 +165,7 @@ public class EstadoJuego {
         }
     }
 
-    //NUEVO: un pokemon es noqueado, desaparece del campo
+    // KO: el Pokémon sale del campo
     public void pokemonNoqueado(String nomJugador, String pokemon)
     {
         if (pokemon.equals(pokemonActivo.get(nomJugador)))
@@ -179,8 +178,8 @@ public class EstadoJuego {
         }
     }
 
-    //APARTADO DE LAS CARTAS QUE TIENE CADA JUGADOR
-    //Mano de un jugador al inicio
+    // MANO
+    // Inicializa la mano de un jugador
     private void prepararMano(String nomJugador)
     {
         añadirJugador(nomJugador);
@@ -194,7 +193,7 @@ public class EstadoJuego {
         }
     }
 
-    //Añadimos carta CONOCIDA a la mano
+    // Añade una carta conocida a la mano
     public void robarCartaConocida(String nomJugador, String carta)
     {
         prepararMano(nomJugador);
@@ -210,14 +209,14 @@ public class EstadoJuego {
         }
     }
 
-    //Añadimos carta DESCONOCIDA a la mano
+    // Añade una carta desconocida a la mano
     public void robarCartaDesconocida(String nomJugador)
     {
         prepararMano(nomJugador);
         cartasDesconocidas.put(nomJugador, cartasDesconocidas.get(nomJugador) + 1);
     }
 
-    //NUEVO: una carta que estaba como desconocida pasa a conocida (lista de bullets tras robar)
+    // Una carta desconocida pasa a conocida (lista de cartas tras un robo)
     public void revelarCartaRobada(String nomJugador, String carta)
     {
         prepararMano(nomJugador);
@@ -229,8 +228,8 @@ public class EstadoJuego {
         robarCartaConocida(nomJugador, carta);
     }
 
-    //NUEVO: quita una carta de la mano (jugarla, adjuntarla, descartarla...).
-    //Si no esta entre las conocidas y se permite, se descuenta una desconocida.
+    // Quita una carta de la mano al jugarla, adjuntarla o descartarla.
+    // Si no está entre las conocidas y se permite, se descuenta una desconocida.
     public boolean quitarCartaMano(String nomJugador, String carta, boolean permitirDesconocida)
     {
         prepararMano(nomJugador);
@@ -258,29 +257,29 @@ public class EstadoJuego {
         return false;
     }
 
-    //NUEVO: quita varias cartas desconocidas (descartes del rival sin detalle)
+    // Quita varias cartas desconocidas (descartes del rival sin detallar)
     public void quitarCartasDesconocidas(String nomJugador, int n)
     {
         prepararMano(nomJugador);
         cartasDesconocidas.put(nomJugador, Math.max(0, cartasDesconocidas.get(nomJugador) - n));
     }
 
-    //Consulta de cartas conocidas
+    // Cartas conocidas de un jugador
     public Map<String, Integer> getMano(String nomJugador)
     {
         prepararMano(nomJugador);
         return new HashMap<>(mano.get(nomJugador));
     }
 
-    //Consultar cartas desconocidas
+    // Número de cartas desconocidas de un jugador
     public int getCartasDesconocidas(String nomJugador)
     {
         prepararMano(nomJugador);
         return cartasDesconocidas.get(nomJugador);
     }
 
-    //APARTADO DE PREMIOS -> los de cada jugador
-    //Consulta los que quedan
+    // PREMIOS
+    // Premios que le quedan por coger a un jugador
     public int getPremiosRestantes(String nomJugador)
     {
         añadirJugador(nomJugador);
@@ -291,14 +290,14 @@ public class EstadoJuego {
         return premiosRestantes.get(nomJugador);
     }
 
-    //Establecemos el número que hay de premios en ese momento
+    // Fija el número de premios restantes
     public void setPremiosRestantes(String nomJugador, int premios)
     {
         añadirJugador(nomJugador);
         premiosRestantes.put(nomJugador, Math.max(0, premios));
     }
 
-    //Cuando el jugador coge el premio por KO
+    // El jugador coge un premio
     public void cogerPremio(String nomJugador)
     {
         int premios = getPremiosRestantes(nomJugador);
@@ -308,29 +307,29 @@ public class EstadoJuego {
         }
     }
 
-    //APARTADO DE KO Y DAÑO
-    //Registro del ko
+    // KOs Y DAÑO
+    // Suma un KO al jugador
     public void registroKO(String nomJugador)
     {
         añadirJugador(nomJugador);
         if(!kos.containsKey(nomJugador))
         {
-            kos.put(nomJugador, 0); //inicializamos si no ha hecho
+            kos.put(nomJugador, 0);
         }
-        kos.put(nomJugador, kos.get(nomJugador) + 1); //añadimos cuando haya hecho alguno
+        kos.put(nomJugador, kos.get(nomJugador) + 1);
     }
 
-    //Consulta de los ko
+    // KOs de un jugador
     public int getKO(String nomJugador)
     {
         if(!kos.containsKey(nomJugador))
         {
-            return 0; //el jugador no hizo ninguno 
+            return 0;
         }
         return kos.get(nomJugador);
     }
     
-    //Suma del daño de los ataques
+    // Suma daño infligido por un jugador
     public void añadirDaño(String nomJugador, int daño)
     {
         añadirJugador(nomJugador);
@@ -341,18 +340,11 @@ public class EstadoJuego {
 
         if(daño > 0)
         {
-            dañoTotal.put(nomJugador, dañoTotal.get(nomJugador) + daño); //registramos el daño q hizo
+            dañoTotal.put(nomJugador, dañoTotal.get(nomJugador) + daño);
         }
     }
 
-    //Si tiene resistencia
-    public void restarDaño(String nomJugador, int daño)
-    {
-        añadirJugador(nomJugador);
-        dañoTotal.put(nomJugador, Math.max(0, getDañoTotal(nomJugador) - daño));
-    }
-
-    //Consulta del daño total
+    // Daño total infligido por un jugador
     public int getDañoTotal(String nomJugador)
     {
         if(!dañoTotal.containsKey(nomJugador))
@@ -363,25 +355,26 @@ public class EstadoJuego {
     }
     
 
-    //Ganador de la partida
+    // Ganador de la partida
     public void winner(String nomJugador)
     {
         ganador = nomJugador;
     }
 
-    //Número de turnos 
+    // Número de turnos
     public int getTurnos()
     {
         return turnos;
     }
 
-    //RESUMEN DEL ESTADO DEL JUEGO
+    // RESUMEN DE LA PARTIDA
     public void imprimirResumen()
     {
         System.out.println("RESUMEN DE LA PARTIDA");
         for (String jugador : jugadores) {
             System.out.println("Jugador: " + jugador);
-            System.out.println("Pokemon activo: " + getPokemonActivo(jugador));
+            String activo = getPokemonActivo(jugador);
+            System.out.println("Pokemon activo: " + (activo == null ? "ninguno" : activo));
             System.out.println("Banquillo: " + getBanquillo(jugador));
             System.out.println("Cartas conocidas: " + getMano(jugador));
             System.out.println("Cartas desconocidas: " + getCartasDesconocidas(jugador));

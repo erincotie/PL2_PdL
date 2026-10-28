@@ -44,7 +44,7 @@ draw_cards_init
     ;
 
 mulligan_reveal
-    : RAYA ID REVEALED FROM MULLIGAN number
+    : RAYA CARDS_MAYUS REVEALED FROM MULLIGAN number
     ;
 
 mulligan_bonus
@@ -112,12 +112,12 @@ special_condition
     | POISONED
     ;
 
-// NUEVA REGLA PARA RECONOCER EL BLOQUE POKEMON CHECKUP
+// Bloque Pokémon Checkup
 pokemon_checkup_block
     : POKEMON CHECKUP line_end pokemon_checkup_entry+
     ;
 
-//1 damage counter was placed on andresg85's Mega Venusaur ex for the Special Condition Poisoned.
+// Ej.: 1 damage counter was placed on andresg85's Mega Venusaur ex for the Special Condition Poisoned.
 pokemon_checkup_entry
     : number (DAMAGE_COUNTER | DAMAGE_COUNTERS | COUNTERS)
       WAS PLACED ON (ID APOS_S)? pokemon_card
@@ -169,7 +169,7 @@ sub_effect
             | move_card_to_hand_effect | move_damage_counters_effect | chose_effect) PUNTO?
     ;
 
-    //-Franster2900 moved 3 damage counters from Franster2900's Mega Darkrai ex to Franster2900's Mega Venusaur ex.
+// Ej.: - Franster2900 moved 3 damage counters from Franster2900's Mega Darkrai ex to Franster2900's Mega Venusaur ex.
 move_damage_counters_effect
     : ID MOVED number (DAMAGE_COUNTER | DAMAGE_COUNTERS | COUNTERS)
       FROM ID APOS_S pokemon_card
@@ -223,7 +223,7 @@ damage_breakdown_entry
 breakdown_label
     : number (SELECTED | ATTACHED) ENERGY
     | number PRIZE CARDS
-    | number (DAMAGE_COUNTER | DAMAGE_COUNTERS | COUNTERS)// 7 damage counters: 350 damage
+    | number (DAMAGE_COUNTER | DAMAGE_COUNTERS | COUNTERS) // Ej.: 7 damage counters: 350 damage
     | BASE_DAMAGE
     | PARENTESIS_ABRIR ITEM PARENTESIS_CERRAR card_name
     | PARENTESIS_ABRIR ATTACK PARENTESIS_CERRAR attack_name

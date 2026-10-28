@@ -6,48 +6,46 @@ public class JuegoListener extends PokemonParserBaseListener {
 
     private final EstadoJuego estado = new EstadoJuego();
 
-    // se utiliza una variable para indicar que tipo de sentencia es la que corresponde a la linea que comience con
-    // el bullet, ya que hay distintos tipos
+    // Significado de una lista de cartas (• Carta A, Carta B); depende de la línea anterior
     private enum ModoBullet {
-        NINGUNO,    // se ignora si no se puede categorizar en ninguna de las siguientes
-        ROBO,       // un jugador roba cartas pasan de "desconocida" a "conocida" en la mano del jugador conocido
-        DESCARTE,   // un jugador descarta cartas de la mano
-        MULLIGAN,   // mano revelada en un mulligan: vuelve al mazo, se quita de la mano
-        A_BANCA,    // cartas jugadas directamente al banquillo
-        A_ACTIVO    // carta robada y jugada directamente al puesto activo
+        NINGUNO,    // la lista se ignora
+        ROBO,       // cartas robadas: pasan de desconocidas a conocidas
+        DESCARTE,   // cartas descartadas de la mano
+        MULLIGAN,   // mano revelada en un mulligan: vuelve al mazo
+        A_BANCA,    // cartas robadas y jugadas a la banca
+        A_ACTIVO    // carta robada y jugada al puesto activo
     }
 
-    private ModoBullet modo = ModoBullet.NINGUNO; //inicialmente comenzamos con ningun modo
-    private String jugadorBullet = null;     // jugador al que pertenece la lista actual de acciones
-    private int descartesPendientes = 0;     // "discarded N cards" aun sin detallar en bullets
-    private String ultimoJugadorRobo = null; // para la linea "N drawn cards", que no lleva jugador
+    private ModoBullet modo = ModoBullet.NINGUNO;
+    private String jugadorBullet = null;     // jugador al que pertenece la lista actual
+    private int descartesPendientes = 0;     // "discarded N cards" aún sin detallar en la lista
+    private String ultimoJugadorRobo = null; // "N drawn cards" no indica el jugador
+    private String ultimoJugadorMulligan = null; // "Cards revealed from Mulligan N" no indica el jugador
 
-    //Funciones auxiliares
+    // Funciones auxiliares
 
-    //Esta funcioón devuelve el entero correspondiente con el nodo terminal de un numero
+    // Valor entero de una regla number
     private int valor(PokemonParser.NumberContext n) {
         if (n == null) return 0;
-        //Como tenemos un token seven, ya que se utiliza mucho, utilizamos esta regla especifica
+        // El 7 tiene su propio token (SEVEN)
         if (n.SEVEN() != null) return 7;
-        //Si es cualquier otro numero se convierte a mano
         return Integer.parseInt(n.NUM().getText());
     }
 
-    //Funcion que devuelve el id de un nodo terminal. si es nulo, devuelve null, y sino su texto
+    // Texto de un ID, o null si la línea no lo incluye
     private String id(TerminalNode t) {
         return (t == null) ? null : t.getText();
     }
 
-    //Cuando se detecta una linea con bullet, se abre el modo correspondiente y se asigna el jugador al que le corresponden las sentencias
+    // Prepara la interpretación de la próxima lista de cartas
     private void abrirModo(ModoBullet m, String jugador) {
         modo = m;
         jugadorBullet = jugador;
     }
 
-    // Se llama cada vez que llega una linea que NO es bullet: la lista anterior termina.
+    // Se llama con cada línea que no es una lista de cartas: la lista anterior termina
     private void cerrarModo() {
-        // Si se descartaron N cartas y los bullets no las detallaron
-        // (mano oculta del rival), se quitan N cartas desconocidas.
+        // Si se descartaron N cartas sin detallarlas (mano oculta del rival), se quitan N desconocidas
         if (modo == ModoBullet.DESCARTE && descartesPendientes > 0 && jugadorBullet != null) {
             estado.quitarCartasDesconocidas(jugadorBullet, descartesPendientes);
         }
@@ -56,7 +54,7 @@ public class JuegoListener extends PokemonParserBaseListener {
         descartesPendientes = 0;
     }
 
-    // Roba n cartas cuyo nombre aun no se conoce y espera una posible lista de bullets.
+    // Roba n cartas desconocidas; si después llega una lista, se revelan
     private void robarDesconocidas(String jugador, int n) {
         for (int i = 0; i < n; i++) {
             estado.robarCartaDesconocida(jugador);
@@ -65,22 +63,20 @@ public class JuegoListener extends PokemonParserBaseListener {
         abrirModo(ModoBullet.ROBO, jugador);
     }
 
-    // Busca el dueño de un pokemon cuando la linea no incluye el nombre de jugador.
+    // Dueño de un Pokémon cuando la línea no incluye el jugador
     private String buscarDueno(String idExplicito, String pokemon, boolean preferirRival) {
         if (idExplicito != null) return idExplicito;
 
         List<String> candidatos = new ArrayList<>();
         for (String j : estado.getJugadores()) {
-            //Si el pokemon usado esta en su pokemon activo, o en su banquillo se añade el jugador a los posibles 
+            // Candidatos: jugadores que tienen ese Pokémon en el puesto activo o en la banca
             if (pokemon.equals(estado.getPokemonActivo(j)) || estado.getBanquillo(j).contains(pokemon)) {
                 candidatos.add(j);
             }
         }
-        //si solo hay un candidato posible (es decir el otro jugador no lo tiene ni en banquillo ni en activo)
         if (candidatos.size() == 1) return candidatos.get(0);
 
-        //si los dos jugadores tienen ese pokemon-> se devuelve el jugador activo en ese momento (que sea su turno), 
-        // a menos que tengamos el booleano preferir rival activado
+        // Si lo tienen los dos, se elige el jugador del turno actual, o su rival si preferirRival es true
         String actual = estado.getJugadorActivo();
         for (String j : candidatos) {
             boolean esActual = j.equals(actual);
@@ -89,7 +85,7 @@ public class JuegoListener extends PokemonParserBaseListener {
         return actual;
     }
 
-    // Evolucion: cambia el pokemon en el campo y gasta la carta de la mano.
+    // Evolución: cambia el Pokémon en el campo y la carta sale de la mano
     private void aplicarEvolucion(String jugador, String desde, String hacia) {
         estado.evolucionar(jugador, desde, hacia);
         estado.quitarCartaMano(jugador, hacia, true);
@@ -99,7 +95,7 @@ public class JuegoListener extends PokemonParserBaseListener {
         return estado;
     }
 
-    //si la linea no comienza por un bullet, se cierra el modo bullet
+    // Una línea que no es lista de cartas cierra la lista anterior
     @Override
     public void enterSetup_entry(PokemonParser.Setup_entryContext ctx) {
         if (ctx.common_entry() == null) cerrarModo();
@@ -115,7 +111,7 @@ public class JuegoListener extends PokemonParserBaseListener {
         if(ctx.bullet_line() == null) cerrarModo();
     }
 
-    //Si la proxima linea es un bullet se elige el modo correspondiente y se realizan las funciones necesarias usando la clase estadoJuego
+    // Cada carta de la lista se interpreta según el modo abierto
     @Override
     public void enterBullet_line(PokemonParser.Bullet_lineContext ctx) {
         if (modo == ModoBullet.NINGUNO || jugadorBullet == null) return;
@@ -147,7 +143,7 @@ public class JuegoListener extends PokemonParserBaseListener {
         }
     }
 
-    //Se añaden los jugadores al estado Juego durante las lineas de setup, como coin tos, win coin y turn decision
+    // Los jugadores se registran en las líneas del setup
     @Override
     public void enterCoin_toss(PokemonParser.Coin_tossContext ctx) {
         estado.añadirJugador(ctx.ID().getText());
@@ -166,9 +162,10 @@ public class JuegoListener extends PokemonParserBaseListener {
     @Override
     public void enterTake_mulligan_action(PokemonParser.Take_mulligan_actionContext ctx) {
         estado.añadirJugador(ctx.ID().getText());
+        ultimoJugadorMulligan = ctx.ID().getText();
     }
 
-    //Al robar cartas, se utiliza la funcion correspondiente y se espera si se van a revelar o no que cartas se roban
+    // Mano inicial: cartas desconocidas hasta que se revelen en una lista
     @Override
     public void enterDraw_cards_init(PokemonParser.Draw_cards_initContext ctx) {
         robarDesconocidas(ctx.ID().getText(), valor(ctx.number()));
@@ -176,7 +173,8 @@ public class JuegoListener extends PokemonParserBaseListener {
 
     @Override
     public void enterMulligan_reveal(PokemonParser.Mulligan_revealContext ctx) {
-        abrirModo(ModoBullet.MULLIGAN, ctx.ID().getText());
+        // Las cartas reveladas son del jugador que acaba de hacer el mulligan
+        abrirModo(ModoBullet.MULLIGAN, ultimoJugadorMulligan);
     }
 
     @Override
@@ -185,7 +183,7 @@ public class JuegoListener extends PokemonParserBaseListener {
         robarDesconocidas(ctx.ID(0).getText(), valor(ctx.number(0)));
     }
 
-    //cada vez que comienza un turno se cierra el modo anterior, y se imprime a quien le corresponde el turno
+    // Inicio de turno
     @Override
     public void enterTurn_header(PokemonParser.Turn_headerContext ctx) {
         cerrarModo();
@@ -194,7 +192,7 @@ public class JuegoListener extends PokemonParserBaseListener {
         System.out.println("Turno detectado: " + jugador);
     }
 
-    //cuando termina la partida se usa la clase estado Juego para imprimir el ganador
+    // Fin de la partida
     @Override
     public void enterEnd(PokemonParser.EndContext ctx) {
         cerrarModo();
@@ -203,18 +201,15 @@ public class JuegoListener extends PokemonParserBaseListener {
         System.out.println("Ganador detectado: " + ganador);
     }
 
-   //Acciones: play cards 
+    // Jugar una carta: sale de la mano y, si es un Pokémon, va a la banca o al puesto activo
     @Override
     public void enterPlay_cards(PokemonParser.Play_cardsContext ctx) {
-        //Se buscan en los nodos inferiores: el nombre del jugador y de la carta jugada
         String jugador = ctx.ID().getText();
         PokemonParser.Card_nameContext c = ctx.card_name();
         String carta = c.getText();
 
-        //Se borran de la mano 
         estado.quitarCartaMano(jugador, carta, true);
 
-        //dependiendo de a donde se jueguen, se colocan en bench o en active spot
         if (c.pokemon_card() != null) {
             if (ctx.BENCH() != null) {
                 estado.añadirBanquillo(jugador, carta);
@@ -224,7 +219,7 @@ public class JuegoListener extends PokemonParserBaseListener {
         }
     }
 
-    //Similar a robar carta, pero para la energia
+    // Adjuntar una carta: sale de la mano
     @Override
     public void enterAttach_energy(PokemonParser.Attach_energyContext ctx) {
         estado.quitarCartaMano(ctx.ID().getText(), ctx.card_name().getText(), true);
@@ -237,30 +232,14 @@ public class JuegoListener extends PokemonParserBaseListener {
                 ctx.pokemon_card(1).getText());
     }
 
-    //Al entrar en un ataque -> se guarda el daño producido en el estado de juego
+    // Ataque: "for N damage" ya es el daño final, con la debilidad o la resistencia aplicadas.
+    // Por eso la línea "took N more/less damage because of..." no vuelve a modificar el daño.
     @Override
     public void enterUse_ability_or_attack(PokemonParser.Use_ability_or_attackContext ctx) {
         String atacante = ctx.ID(0).getText();
         if (ctx.number() != null) {
             estado.añadirDaño(atacante, valor(ctx.number()));
         }
-    }
-
-    // "X took N more damage because of ... Weakness": daño extra del atacante (el rival del que lo recibe)
-    //AQUI: HAY QUE COMPROBAR SI FUNCIONA CON LA RESISTENCIA!!!!
-    @Override
-    public void enterDamage_taken(PokemonParser.Damage_takenContext ctx) {
-        if (ctx.MORE_WORD() == null && ctx.LESS() == null) return;
-        String pokemon = ctx.pokemon_card().getText();
-        String defensor = buscarDueno(id(ctx.ID()), pokemon, true);
-        String atacante = (defensor == null) ? null : estado.getRival(defensor);
-        if (atacante == null) return;
-
-        int n = valor(ctx.number());
-        //si se incluye la palabra more, implica que hay un weakness -> sumar daño
-        if (ctx.MORE_WORD() != null) estado.añadirDaño(atacante, n);
-        //si no, implica una resistencia -> restar daño
-        else estado.restarDaño(atacante, n);
     }
 
     @Override
@@ -277,7 +256,7 @@ public class JuegoListener extends PokemonParserBaseListener {
         }
     }
 
-    //Al coger una prize card, se recoge el numero de prize cards cogidas por el jugador especifico
+    // Premios: uno, o N si la línea lo indica
     @Override
     public void enterTake_prize_action(PokemonParser.Take_prize_actionContext ctx) {
         String jugador = ctx.ID().getText();
@@ -287,7 +266,7 @@ public class JuegoListener extends PokemonParserBaseListener {
         }
     }
 
-    //Se guarda tambien las acciones de KO, por jugador (uno para el atacante a favor, y uno para el defensor en contra)
+    // KO: el Pokémon sale del campo y el KO se cuenta para el rival de su dueño
     @Override
     public void enterKnockout_action(PokemonParser.Knockout_actionContext ctx) {
         String pokemon = ctx.pokemon_card().getText();
@@ -311,7 +290,7 @@ public class JuegoListener extends PokemonParserBaseListener {
         }
     }
 
-    //Efectos: robar cartas sin linea bullet
+    // "N drawn cards": la lista siguiente es del último jugador que robó
     @Override
     public void enterDrawn_cards_effect(PokemonParser.Drawn_cards_effectContext ctx) {
         if (ultimoJugadorRobo != null) {
@@ -319,60 +298,62 @@ public class JuegoListener extends PokemonParserBaseListener {
         }
     }
 
-    //como ahora hay una sola regla de draw cards, de aqui sacamos toda la funcionalidad
+    // Robo: una carta, N cartas o una carta concreta; a veces se juega en la misma línea
     @Override
     public void enterDraw_action(PokemonParser.Draw_actionContext ctx) {
         String jugador = ctx.ID().getText();
-        //Dependiendo del draw object se roban una, varias, conocidas o no
         PokemonParser.Draw_objectContext o = ctx.draw_object();
 
 
         if (ctx.PLAYED() != null) {               // roba y juega directamente
             boolean banca = ctx.BENCH() != null;
-            //si conocemos el numero de cartas, pero no su nombre
+            // N cartas: los nombres llegan en la lista siguiente
             if (o.number() != null) {
                 abrirModo(banca ? ModoBullet.A_BANCA : ModoBullet.A_ACTIVO, jugador);
-            } else if (o.card_name() != null) { //si se conoce el nombre de la carta, se añade al bench o al active
+            } else if (o.card_name() != null) {
                 String carta = o.card_name().getText();
                 if (banca) estado.añadirBanquillo(jugador, carta);
                 else estado.setPokemonActivo(jugador, carta);
             }
-        //los mismos casos pero sin que se jueguen las cartas
         } else if (o.number() != null) {
             robarDesconocidas(jugador, valor(o.number()));
         } else if (o.card_name() != null) {
             estado.robarCartaConocida(jugador, o.card_name().getText());
-        } else {                                   // A CARD -> no hay numero, pero se sabe q solo es una
+        } else {                                   // "a card": una carta desconocida
             estado.robarCartaDesconocida(jugador);
         }
     }
 
-    //para la regla de descartarse cartas
+    // Descarte: N cartas (detalladas en la lista siguiente) o una carta concreta
     @Override
     public void enterDiscard_effect(PokemonParser.Discard_effectContext ctx) {
         String jugador = ctx.ID().getText();
-        //si se sabe el numero -> se sabe el nombre porque no se conocen las cartas que se descarta el oponente
         if (ctx.number() != null) {
             abrirModo(ModoBullet.DESCARTE, jugador);
             descartesPendientes = valor(ctx.number());
-        } else {    //si no se saben los numeros (o es una sola carta)
+        } else {
             estado.quitarCartaMano(jugador, ctx.card_name().getText(), true);
         }
     }
 
-    // Cada contador de daño son 10 puntos de daño.
+    // Contadores de daño: 10 puntos cada uno. Solo cuentan si se ponen en un Pokémon del rival
     @Override
     public void enterPut_damage_counters_effect(PokemonParser.Put_damage_counters_effectContext ctx) {
-        estado.añadirDaño(ctx.ID(0).getText(), valor(ctx.number()) * 10);
+        // ID(0) = quien los pone, ID(1) = dueño del Pokémon
+        String quien = ctx.ID(0).getText();
+        String dueno = ctx.ID(1).getText();
+        if (!quien.equals(dueno)) {
+            estado.añadirDaño(quien, valor(ctx.number()) * 10);
+        }
     }
 
-    // pokemon_card(0) = el que pasa a ser el Pokemon Activo.
+    // pokemon_card(0) = el que pasa a ser el Pokémon activo
     @Override
     public void enterSwitch_active_pokemon_effect(PokemonParser.Switch_active_pokemon_effectContext ctx) {
         estado.promoverActivo(ctx.ID(0).getText(), ctx.pokemon_card(0).getText());
     }
 
-    // ID(0) = quien recibe las cartas en la mano.
+    // ID(0) = quien recibe las cartas en la mano
     @Override
     public void enterMove_card_to_hand_effect(PokemonParser.Move_card_to_hand_effectContext ctx) {
         String jugador = ctx.ID(0).getText();
